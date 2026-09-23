@@ -1,0 +1,78 @@
+{
+  "kind": "inspection_of_user_executed_live_agent_artifact",
+  "inspected_at": "2026-09-23T12:09:46.490121+00:00",
+  "source_bundle": ".cache/agent-live.cPVgNp/forecasts/forecast-3bd7a5659d75a23ee6b9aea4/bundle.json",
+  "source_events": ".cache/agent-live.cPVgNp/forecasts/forecast-3bd7a5659d75a23ee6b9aea4/events.jsonl",
+  "source_files_in_git": false,
+  "forecast_id": "forecast-3bd7a5659d75a23ee6b9aea4",
+  "created_at": "2026-09-23T12:03:55.192945Z",
+  "forecast_origin": "2026-01-31T18:00:00Z",
+  "site_id": "turbine_1",
+  "horizon_hours": 48,
+  "rows": 48,
+  "executor": "openai_responses",
+  "power_model_version": "ml-9ffc3398a6c80f479aed4063",
+  "weather_version": "gfs-8e9ba8aecc67611f65bf768c",
+  "bundle_sha256": "3978561f44688ce2ac4a1482ebd1fbb891c8c6deb1d8b25c83cdf1aebb6fecb9",
+  "events_file_sha256": "2b8405c86adc4adc9dada6f2d8a41af64651fbe7c708d5a394b8fe47112dfbc6",
+  "events": [
+    {
+      "recorded_at": "2026-09-23T12:03:47.248088Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "list_weather_candidates",
+      "status": "success",
+      "duration_seconds": 0.0
+    },
+    {
+      "recorded_at": "2026-09-23T12:03:48.539187Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "fetch_weather",
+      "status": "success",
+      "duration_seconds": 0.049
+    },
+    {
+      "recorded_at": "2026-09-23T12:03:51.477313Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "validate_weather",
+      "status": "success",
+      "duration_seconds": 0.001
+    },
+    {
+      "recorded_at": "2026-09-23T12:03:52.784644Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "predict_power",
+      "status": "success",
+      "duration_seconds": 0.16
+    },
+    {
+      "recorded_at": "2026-09-23T12:03:53.927091Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "analyse_forecast",
+      "status": "success",
+      "duration_seconds": 0.0
+    },
+    {
+      "recorded_at": "2026-09-23T12:03:55.199861Z",
+      "forecast_origin": "2026-01-31T18:00:00Z",
+      "tool": "publish_forecast",
+      "status": "success",
+      "duration_seconds": 0.009
+    }
+  ],
+  "checks": {
+    "bundle_checksum": true,
+    "weather_checksum": true,
+    "weather_grid_and_historical_availability": true,
+    "model_artifact_load_and_checksum": true,
+    "model_cutoff": true,
+    "prediction_grid_and_range": true,
+    "events_match_bundle": true,
+    "all_six_tools_success": true,
+    "predictions_equal_saved_deterministic_release": true
+  },
+  "limitations": [
+    "One turbine and one 48-hour release; no live-LLM February replay verified.",
+    "API response IDs, LLM model identifier and token usage are not recorded by the current logger.",
+    "This inspection did not issue another API request; evidence is the saved local backend artifact and tool log."
+  ]
+}

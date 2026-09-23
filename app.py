@@ -284,11 +284,11 @@ def render_agent(bundle, backend, configured):
 
 def render_replay(backend, config):
     with st.expander("Исторический replay февраля", expanded=False):
-        st.caption("Виртуальное время и час выпуска задаёт backend. Открытие страницы не запускает replay.")
+        st.caption("Даты относятся к выпускам в 23:00 Asia/Almaty. Для полного февраля начните с 31 января: этот выпуск покрывает первые часы 1 февраля. Открытие страницы не запускает replay.")
         with st.form("replay_form"):
             dates = st.columns(2)
-            start = dates[0].date_input("Первый день replay", date(2026, 2, 1), min_value=date(2026, 2, 1), max_value=date(2026, 2, 28))
-            end = dates[1].date_input("Последний день replay", date(2026, 2, 28), min_value=date(2026, 2, 1), max_value=date(2026, 2, 28))
+            start = dates[0].date_input("Дата первого выпуска", date(2026, 1, 31), min_value=date(2026, 1, 31), max_value=date(2026, 2, 28))
+            end = dates[1].date_input("Дата последнего выпуска", date(2026, 2, 28), min_value=date(2026, 1, 31), max_value=date(2026, 2, 28))
             submit = st.form_submit_button("Запустить replay", disabled=not backend.capabilities.get("run_replay") or bool(config.issues))
         if not backend.capabilities.get("run_replay"):
             st.info("Replay не подключён: модуль участника 2 пока отсутствует.")

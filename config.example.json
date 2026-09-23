@@ -1,7 +1,10 @@
 {
-  "timezone": null,
-  "timestamp_convention": null,
-  "normalization": null,
-  "default_origin": null,
-  "sites": []
+  "timezone": "Asia/Almaty",
+  "timestamp_convention": "target_time = issued_at + horizon_step hours",
+  "normalization": "0_1",
+  "default_origin": "2026-01-31T23:00:00+05:00",
+  "sites": [
+    {"site_id": "turbine_1"},
+    {"site_id": "turbine_2"}
+  ]
 }

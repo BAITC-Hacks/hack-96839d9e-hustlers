@@ -1,4 +1,5 @@
 import json
+from datetime import date
 from io import BytesIO
 import os
 from pathlib import Path
@@ -192,7 +193,8 @@ def test_partial_backend_replay_shows_errors_and_blocks_final_export(monkeypatch
     button = next(button for button in app.button if button.label == "Запустить replay")
     button.click().run()
     assert not app.exception
-    assert len(calls) == 1
+    # The first February targets require the January 31 release at 23:00 local.
+    assert calls == [(date(2026, 1, 31), date(2026, 2, 28))]
     replay = app.session_state["replay_result"]
     assert len(replay.bundles) == len(replay.errors) == 1
     assert any("Ошибок: 1" in item.value for item in app.markdown)
