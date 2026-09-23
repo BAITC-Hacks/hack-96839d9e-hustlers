@@ -1,0 +1,19 @@
+{
+  "site_id": "turbine_2",
+  "origin": "2026-01-31T18:00:00Z",
+  "horizon": 24,
+  "weather_version": "gfs-6023914a361229263d21eb00",
+  "model_metadata": {
+    "site_id": "turbine_2",
+    "version": "ml-03e3b3999293875db412a925",
+    "training_cutoff": "2026-01-31T17:00:00Z",
+    "normalization": "0_1",
+    "weather_schema": "gfs-0p25-nearest-v1",
+    "provider_model": "gfs_pgrb2.0p25",
+    "labels_available_by_cutoff": true,
+    "feature_version": "gfs-power-v1",
+    "purpose": "february_final"
+  },
+  "forecast_id": "forecast-d8b4dee185b786cf3132019e",
+  "created_at": "2026-09-23T11:30:49.616884Z"
+}

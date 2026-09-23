@@ -1,0 +1,2941 @@
+{
+  "weather_version": "gfs-922795d101ddfd39efa56ee9",
+  "schema_version": "gfs-0p25-nearest-v1",
+  "forecast_origin": "2026-02-28T18:00:00Z",
+  "run_initialized_at": "2026-02-28T00:00:00Z",
+  "horizon_hours": 48,
+  "evidence": [
+    {
+      "gfs_lead_hours": 19,
+      "fields": [
+        {
+          "start": 420479224,
+          "end": 421361933,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "7b1f7f59e67a0bc9b2cce20a43fc0c99e29d2eef2ba87770a408494741c5d748",
+          "byte_count": 882710,
+          "last_modified": "2026-02-28T03:38:20Z",
+          "etag": "\"e4463a79ab0a7f2203bb9fbba78ca107\""
+        },
+        {
+          "start": 426169411,
+          "end": 427139297,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "ecc95b0822e4c745adf941a7dda3486a103ca17e3d001e42a6b531de220ef7c7",
+          "byte_count": 969887,
+          "last_modified": "2026-02-28T03:38:20Z",
+          "etag": "\"e4463a79ab0a7f2203bb9fbba78ca107\""
+        },
+        {
+          "start": 427139298,
+          "end": 428084769,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "10cf7ae73de26df76066328fa10ae80a292bc27cfa1ce15fc804685cb68ae282",
+          "byte_count": 945472,
+          "last_modified": "2026-02-28T03:38:20Z",
+          "etag": "\"e4463a79ab0a7f2203bb9fbba78ca107\""
+        },
+        {
+          "start": 499782949,
+          "end": 500764916,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "d051b3ed599d5b9c2bc1ac9299b40505508822cbbfc7b540d0c6e90278270448",
+          "byte_count": 981968,
+          "last_modified": "2026-02-28T03:38:20Z",
+          "etag": "\"e4463a79ab0a7f2203bb9fbba78ca107\""
+        },
+        {
+          "start": 500764917,
+          "end": 501734146,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "1a7a32574ba331d65669bb3532abc5ec4b9408abef2bda12210b9768c4265e79",
+          "byte_count": 969230,
+          "last_modified": "2026-02-28T03:38:20Z",
+          "etag": "\"e4463a79ab0a7f2203bb9fbba78ca107\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f019"
+    },
+    {
+      "gfs_lead_hours": 20,
+      "fields": [
+        {
+          "start": 420673905,
+          "end": 421560249,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "4210361260f4f1fe6642165d6d22d6a5e87213bc705f9a69f18b48dcd2ce2b7a",
+          "byte_count": 886345,
+          "last_modified": "2026-02-28T03:53:21Z",
+          "etag": "\"23130ea20e07684db80eb2e68fa3c8e3\""
+        },
+        {
+          "start": 426358709,
+          "end": 427328453,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "aa0c964253e46b3a1a1236d941a4e7dbbaa915330b9dfc6aee36f17249a3c008",
+          "byte_count": 969745,
+          "last_modified": "2026-02-28T03:53:21Z",
+          "etag": "\"23130ea20e07684db80eb2e68fa3c8e3\""
+        },
+        {
+          "start": 427328454,
+          "end": 428273891,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "0229075c9224dc1ac1c8287062a8c55db13c0342d4d98f95d46b11ea9caeabe1",
+          "byte_count": 945438,
+          "last_modified": "2026-02-28T03:53:21Z",
+          "etag": "\"23130ea20e07684db80eb2e68fa3c8e3\""
+        },
+        {
+          "start": 500583974,
+          "end": 501562195,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "bbbb458cbe77c97510d6b510fedff97ada8cdd21ced18f8da0ab24eab60f43e3",
+          "byte_count": 978222,
+          "last_modified": "2026-02-28T03:53:21Z",
+          "etag": "\"23130ea20e07684db80eb2e68fa3c8e3\""
+        },
+        {
+          "start": 501562196,
+          "end": 502531092,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "f7d895183d87889afc18d3a359b2a5c22c4ebf00d4dd38707b696a7884f07335",
+          "byte_count": 968897,
+          "last_modified": "2026-02-28T03:53:21Z",
+          "etag": "\"23130ea20e07684db80eb2e68fa3c8e3\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f020"
+    },
+    {
+      "gfs_lead_hours": 21,
+      "fields": [
+        {
+          "start": 417466762,
+          "end": 418352201,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "c53cccbaf0d01ff1b34bd791cd36102be99ab2c4a3903de3a0ecaf53a0d168a6",
+          "byte_count": 885440,
+          "last_modified": "2026-02-28T03:39:35Z",
+          "etag": "\"cb62b14ce555dd3c7efedbc4952d9758\""
+        },
+        {
+          "start": 423149240,
+          "end": 424118610,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "dd53a06bf25d972c23df6b205e97c38e1d61f619e615abcc9e125fed33f313b2",
+          "byte_count": 969371,
+          "last_modified": "2026-02-28T03:39:35Z",
+          "etag": "\"cb62b14ce555dd3c7efedbc4952d9758\""
+        },
+        {
+          "start": 424118611,
+          "end": 425063695,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "d7a869e5b0c8a55c16d7309e6c838148050868bfd6231861f00fb5875b78bfcc",
+          "byte_count": 945085,
+          "last_modified": "2026-02-28T03:39:35Z",
+          "etag": "\"cb62b14ce555dd3c7efedbc4952d9758\""
+        },
+        {
+          "start": 497976262,
+          "end": 498957980,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "de2ecffd5263a997722b88cb93db79dce30400a8d511df8ba2413ea8fe809a80",
+          "byte_count": 981719,
+          "last_modified": "2026-02-28T03:39:35Z",
+          "etag": "\"cb62b14ce555dd3c7efedbc4952d9758\""
+        },
+        {
+          "start": 498957981,
+          "end": 499926455,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "7e9af0c436bb18220a37bf9c2274f8ff0213b433eb4fc70edab2448acdc5a74a",
+          "byte_count": 968475,
+          "last_modified": "2026-02-28T03:39:35Z",
+          "etag": "\"cb62b14ce555dd3c7efedbc4952d9758\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f021"
+    },
+    {
+      "gfs_lead_hours": 22,
+      "fields": [
+        {
+          "start": 417651429,
+          "end": 418535801,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "3e3a1ba30ba85422ad3f79f7af712d2145ed17e2545755acd417b52616ca02b8",
+          "byte_count": 884373,
+          "last_modified": "2026-02-28T03:39:37Z",
+          "etag": "\"5265b157ff544b71c5ecc40cc8623656\""
+        },
+        {
+          "start": 423325160,
+          "end": 424293639,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "0822293dc7cb987a9a3cfcb0a127c94eacfb9eb124c03c155286f519fe310b6b",
+          "byte_count": 968480,
+          "last_modified": "2026-02-28T03:39:37Z",
+          "etag": "\"5265b157ff544b71c5ecc40cc8623656\""
+        },
+        {
+          "start": 424293640,
+          "end": 425237694,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "72b7d9f46dcba749b19ec288915f10d4482215667684273dd5ccdcad26c32816",
+          "byte_count": 944055,
+          "last_modified": "2026-02-28T03:39:37Z",
+          "etag": "\"5265b157ff544b71c5ecc40cc8623656\""
+        },
+        {
+          "start": 498732934,
+          "end": 499710851,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "5c873a5f01c052e31c7bf0e68cc395ce3766fd436381bed40a4c296dad8e26cd",
+          "byte_count": 977918,
+          "last_modified": "2026-02-28T03:39:37Z",
+          "etag": "\"5265b157ff544b71c5ecc40cc8623656\""
+        },
+        {
+          "start": 499710852,
+          "end": 500678916,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "5aa3ed5c05e99edeb590b9ea65f2d8fa65ed0c9dd0edadbc3eff1687d805abfc",
+          "byte_count": 968065,
+          "last_modified": "2026-02-28T03:39:37Z",
+          "etag": "\"5265b157ff544b71c5ecc40cc8623656\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f022"
+    },
+    {
+      "gfs_lead_hours": 23,
+      "fields": [
+        {
+          "start": 418760810,
+          "end": 419644124,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "77978ac5df8a98289bda3342acf4609faa391bfdf154d5979331241d27ce4818",
+          "byte_count": 883315,
+          "last_modified": "2026-02-28T03:39:40Z",
+          "etag": "\"ff09207d3c74c84f739b221f589db2f1\""
+        },
+        {
+          "start": 424812739,
+          "end": 425780059,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "dc82b439709b6df358862b181b6763baed8832a858b6848d8facc53bc9a7b29d",
+          "byte_count": 967321,
+          "last_modified": "2026-02-28T03:39:40Z",
+          "etag": "\"ff09207d3c74c84f739b221f589db2f1\""
+        },
+        {
+          "start": 425780060,
+          "end": 426727242,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "564ecebe745bfb659e500e10790c23a510249644f92f4ad78d24b8c7f3fed1d6",
+          "byte_count": 947183,
+          "last_modified": "2026-02-28T03:39:40Z",
+          "etag": "\"ff09207d3c74c84f739b221f589db2f1\""
+        },
+        {
+          "start": 500773168,
+          "end": 501750403,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "3d4258eec474320a3fa3a5698e7a51b08f95cdcfcfa0ce0d8b8bdcee4d345dfc",
+          "byte_count": 977236,
+          "last_modified": "2026-02-28T03:39:40Z",
+          "etag": "\"ff09207d3c74c84f739b221f589db2f1\""
+        },
+        {
+          "start": 501750404,
+          "end": 502717923,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "4d295392b6718c5aa464ea2ff5961898b073af2a372d4bafbb3ef1eb4c1bd4bf",
+          "byte_count": 967520,
+          "last_modified": "2026-02-28T03:39:40Z",
+          "etag": "\"ff09207d3c74c84f739b221f589db2f1\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f023"
+    },
+    {
+      "gfs_lead_hours": 24,
+      "fields": [
+        {
+          "start": 417841126,
+          "end": 418720639,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "173a90e808025847c2793fda631dd391d23c0ad1f32d8490a504ac0888402e3b",
+          "byte_count": 879514,
+          "last_modified": "2026-02-28T03:40:24Z",
+          "etag": "\"a9a87107984ad99374f4a9a9ef25e35a\""
+        },
+        {
+          "start": 423891274,
+          "end": 424857135,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "fc09ea133a54db46e3b4aa4a35ffce915b434a88356d7aa24a9d4adfb2e20a26",
+          "byte_count": 965862,
+          "last_modified": "2026-02-28T03:40:24Z",
+          "etag": "\"a9a87107984ad99374f4a9a9ef25e35a\""
+        },
+        {
+          "start": 424857136,
+          "end": 425799690,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "ca22fb457ed2b82e33fbd4d3873f76217490be369a6cd925dc409e34656c4517",
+          "byte_count": 942555,
+          "last_modified": "2026-02-28T03:40:24Z",
+          "etag": "\"a9a87107984ad99374f4a9a9ef25e35a\""
+        },
+        {
+          "start": 500351946,
+          "end": 501328444,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "bd50990a59321dcb3847f3fd706634b6571902b77759863c801169686629ecf6",
+          "byte_count": 976499,
+          "last_modified": "2026-02-28T03:40:24Z",
+          "etag": "\"a9a87107984ad99374f4a9a9ef25e35a\""
+        },
+        {
+          "start": 501328445,
+          "end": 502291677,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "bbfd815b733f35d26252fc6fb1c4d93988c0ef8881f9603ae57a3a8862a60491",
+          "byte_count": 963233,
+          "last_modified": "2026-02-28T03:40:24Z",
+          "etag": "\"a9a87107984ad99374f4a9a9ef25e35a\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f024"
+    },
+    {
+      "gfs_lead_hours": 25,
+      "fields": [
+        {
+          "start": 418998411,
+          "end": 419877663,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "4fca7e5f4fd6ccc44495f54d51f9ca53f12f81a29e484425e03da0df8c2bf2cc",
+          "byte_count": 879253,
+          "last_modified": "2026-02-28T03:40:33Z",
+          "etag": "\"99843537c11216a92c9d5d46bc984d63\""
+        },
+        {
+          "start": 425072068,
+          "end": 426036361,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "c41d0c7c0bade3e5228eff30b80dc4fcc1e2f1f73cc4535632db0a9a2322f969",
+          "byte_count": 964294,
+          "last_modified": "2026-02-28T03:40:33Z",
+          "etag": "\"99843537c11216a92c9d5d46bc984d63\""
+        },
+        {
+          "start": 426036362,
+          "end": 426978425,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "1ed930faecc62d606054a71009475ce6811780776c8ae7afce32b608a2442ce7",
+          "byte_count": 942064,
+          "last_modified": "2026-02-28T03:40:33Z",
+          "etag": "\"99843537c11216a92c9d5d46bc984d63\""
+        },
+        {
+          "start": 498507584,
+          "end": 499486028,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "c6129723ebac87e4474bf292cc9be925e34226ff48188a35968f6f873218c3fa",
+          "byte_count": 978445,
+          "last_modified": "2026-02-28T03:40:33Z",
+          "etag": "\"99843537c11216a92c9d5d46bc984d63\""
+        },
+        {
+          "start": 499486029,
+          "end": 500448565,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "1712ff573a992d6931e8ecedf849ee933f8b04ea3d5eb6fcc69ca8b192d01b4d",
+          "byte_count": 962537,
+          "last_modified": "2026-02-28T03:40:33Z",
+          "etag": "\"99843537c11216a92c9d5d46bc984d63\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f025"
+    },
+    {
+      "gfs_lead_hours": 26,
+      "fields": [
+        {
+          "start": 418986061,
+          "end": 419865230,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "cea9beb35b04e509bd0b605d03c4f5723533ea1da6a661151c2b242af5d59b5e",
+          "byte_count": 879170,
+          "last_modified": "2026-02-28T03:40:38Z",
+          "etag": "\"ace4a13a958115ff81fd9feb31a26996\""
+        },
+        {
+          "start": 425054195,
+          "end": 426017670,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "5f9569883d54eb8676375470fc6b618acad9905d22a76f5c409af2f98b1114b9",
+          "byte_count": 963476,
+          "last_modified": "2026-02-28T03:40:38Z",
+          "etag": "\"ace4a13a958115ff81fd9feb31a26996\""
+        },
+        {
+          "start": 426017671,
+          "end": 426959422,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "045e3aea9a6834a3a0cc57756957e954f476a3ecb55d2938de96c51554739fb1",
+          "byte_count": 941752,
+          "last_modified": "2026-02-28T03:40:38Z",
+          "etag": "\"ace4a13a958115ff81fd9feb31a26996\""
+        },
+        {
+          "start": 499209297,
+          "end": 500183256,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "f53a14df4126cab1eee3d61fdf68da2e8f6c72b2222fbd53de5774395b9fb0b5",
+          "byte_count": 973960,
+          "last_modified": "2026-02-28T03:40:38Z",
+          "etag": "\"ace4a13a958115ff81fd9feb31a26996\""
+        },
+        {
+          "start": 500183257,
+          "end": 501149594,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "577f4b6ac83f0492923b961fc2f147d68727cae66536c55cf0adf8a43a7f973e",
+          "byte_count": 966338,
+          "last_modified": "2026-02-28T03:40:38Z",
+          "etag": "\"ace4a13a958115ff81fd9feb31a26996\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f026"
+    },
+    {
+      "gfs_lead_hours": 27,
+      "fields": [
+        {
+          "start": 419469394,
+          "end": 420352857,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "6dc8004bce9f277170f4f83944bf91c36b9c4b69284f51a061669bd1891c352a",
+          "byte_count": 883464,
+          "last_modified": "2026-02-28T03:55:25Z",
+          "etag": "\"8d93693a6719b88a6ccbc486dbef2918\""
+        },
+        {
+          "start": 425537980,
+          "end": 426501764,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "14f97d41ac56094ea86f0fc63f3aacc4d37f0accb5dece32f5163368accbd75a",
+          "byte_count": 963785,
+          "last_modified": "2026-02-28T03:55:25Z",
+          "etag": "\"8d93693a6719b88a6ccbc486dbef2918\""
+        },
+        {
+          "start": 426501765,
+          "end": 427448000,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "7c022ce63c9e149528af076aeb5fee902d11d3f0f7c1909a53282812f8ba23bf",
+          "byte_count": 946236,
+          "last_modified": "2026-02-28T03:55:25Z",
+          "etag": "\"8d93693a6719b88a6ccbc486dbef2918\""
+        },
+        {
+          "start": 500232001,
+          "end": 501205509,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "1cb9b82fc8788fe817ff545e7b529e4be7ae146ceaf9c76fc82811650e72f007",
+          "byte_count": 973509,
+          "last_modified": "2026-02-28T03:55:25Z",
+          "etag": "\"8d93693a6719b88a6ccbc486dbef2918\""
+        },
+        {
+          "start": 501205510,
+          "end": 502171743,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "8c3440233c9918b9c69a483468ce9c4a5b05c3453126041d046c7de32d98ab71",
+          "byte_count": 966234,
+          "last_modified": "2026-02-28T03:55:25Z",
+          "etag": "\"8d93693a6719b88a6ccbc486dbef2918\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f027"
+    },
+    {
+      "gfs_lead_hours": 28,
+      "fields": [
+        {
+          "start": 420782082,
+          "end": 421665268,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "ad9bd81e7bb5598284fd8cd70786fbaf78de67fe1747629966ecb0427fc89bbc",
+          "byte_count": 883187,
+          "last_modified": "2026-02-28T03:55:55Z",
+          "etag": "\"7ca6e03eb635d6679a580f1c51732edb\""
+        },
+        {
+          "start": 426466995,
+          "end": 427430963,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "8db2e1381605355f2b503d27404db300ed61caf363c496c09f16f0856b8e2f45",
+          "byte_count": 963969,
+          "last_modified": "2026-02-28T03:55:55Z",
+          "etag": "\"7ca6e03eb635d6679a580f1c51732edb\""
+        },
+        {
+          "start": 427430964,
+          "end": 428376657,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "8b85c7caa2a4977efec59691f62d73731c6b4fcc2d3f2604a525a46d013a3fa3",
+          "byte_count": 945694,
+          "last_modified": "2026-02-28T03:55:55Z",
+          "etag": "\"7ca6e03eb635d6679a580f1c51732edb\""
+        },
+        {
+          "start": 501785604,
+          "end": 502759270,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "d1c66ac742d0f7bade2d6fdde4ce276ed3cfd6a868b3d5a3740a28fa6d71f05f",
+          "byte_count": 973667,
+          "last_modified": "2026-02-28T03:55:55Z",
+          "etag": "\"7ca6e03eb635d6679a580f1c51732edb\""
+        },
+        {
+          "start": 502759271,
+          "end": 503724542,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "15001b54e216036bbf40fb7141edd3a560f44894c440744426199da81e4c12f4",
+          "byte_count": 965272,
+          "last_modified": "2026-02-28T03:55:55Z",
+          "etag": "\"7ca6e03eb635d6679a580f1c51732edb\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f028"
+    },
+    {
+      "gfs_lead_hours": 29,
+      "fields": [
+        {
+          "start": 419595744,
+          "end": 420478096,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "953faee40e7ce6de0626593da1095ea91a278109aaf639ca2490db24caaba590",
+          "byte_count": 882353,
+          "last_modified": "2026-02-28T03:41:25Z",
+          "etag": "\"2ff0603fa7d41e9672856238d089f55d\""
+        },
+        {
+          "start": 425281497,
+          "end": 426246012,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "b697a2534f0bd668e1a56a1baaef8a2b4b8a11d5de2fbdde56fe77b6f906dd43",
+          "byte_count": 964516,
+          "last_modified": "2026-02-28T03:41:25Z",
+          "etag": "\"2ff0603fa7d41e9672856238d089f55d\""
+        },
+        {
+          "start": 426246013,
+          "end": 427191815,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "1cc9fefe3263f13dce44317d299e71b276122f1c24fc62acb7a1bdce13ed8c47",
+          "byte_count": 945803,
+          "last_modified": "2026-02-28T03:41:25Z",
+          "etag": "\"2ff0603fa7d41e9672856238d089f55d\""
+        },
+        {
+          "start": 501124101,
+          "end": 502098279,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "75634b735280efe444c57e3fb469659b24076c87b11db64ed020fa8adea6144c",
+          "byte_count": 974179,
+          "last_modified": "2026-02-28T03:41:25Z",
+          "etag": "\"2ff0603fa7d41e9672856238d089f55d\""
+        },
+        {
+          "start": 502098280,
+          "end": 503063659,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "5ca4c576de2d6095692b919021cecf4511c689627e64d00633abf7442bc3e80f",
+          "byte_count": 965380,
+          "last_modified": "2026-02-28T03:41:25Z",
+          "etag": "\"2ff0603fa7d41e9672856238d089f55d\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f029"
+    },
+    {
+      "gfs_lead_hours": 30,
+      "fields": [
+        {
+          "start": 417021809,
+          "end": 417904783,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "7a39ee131d9e5dfbe7513f65560d1f8347e4b8c6b5bdcbc278417619fbd48687",
+          "byte_count": 882975,
+          "last_modified": "2026-02-28T03:41:34Z",
+          "etag": "\"68ea50ca31902fbf306293c358a39b78\""
+        },
+        {
+          "start": 422701067,
+          "end": 423665332,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "eb078b2427ad53883789ecec5922e36e9f0f2f20158f48b1b9606b646ef139a4",
+          "byte_count": 964266,
+          "last_modified": "2026-02-28T03:41:34Z",
+          "etag": "\"68ea50ca31902fbf306293c358a39b78\""
+        },
+        {
+          "start": 423665333,
+          "end": 424611683,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "b64539cf603c70f9efc3628fcb8f478d13d443ff2c29c70153cea737da30b2f7",
+          "byte_count": 946351,
+          "last_modified": "2026-02-28T03:41:34Z",
+          "etag": "\"68ea50ca31902fbf306293c358a39b78\""
+        },
+        {
+          "start": 498946075,
+          "end": 499919969,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "5a3892a8719701e3927a0f33d512e8a61c610b22dfb3bda170024d3ae0b1d0c0",
+          "byte_count": 973895,
+          "last_modified": "2026-02-28T03:41:34Z",
+          "etag": "\"68ea50ca31902fbf306293c358a39b78\""
+        },
+        {
+          "start": 499919970,
+          "end": 500885412,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "bdc183d65e0e0adea77d9aa73394f355f8d594a6e3f4a1aa13c2530a5070e8ad",
+          "byte_count": 965443,
+          "last_modified": "2026-02-28T03:41:34Z",
+          "etag": "\"68ea50ca31902fbf306293c358a39b78\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f030"
+    },
+    {
+      "gfs_lead_hours": 31,
+      "fields": [
+        {
+          "start": 416926590,
+          "end": 417809656,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "9e675cc97e47f32f9e27b91c6be79bb2d3839115f6647fabd8f6741594d9ff25",
+          "byte_count": 883067,
+          "last_modified": "2026-02-28T03:41:28Z",
+          "etag": "\"7d4bc26fb45efa1baaf44bb13ad8cb76\""
+        },
+        {
+          "start": 422629063,
+          "end": 423593991,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "97edac7791ac00b4150e5a8e7d59ee1cb13d5245ffb1bc56e41049b80a5303b9",
+          "byte_count": 964929,
+          "last_modified": "2026-02-28T03:41:28Z",
+          "etag": "\"7d4bc26fb45efa1baaf44bb13ad8cb76\""
+        },
+        {
+          "start": 423593992,
+          "end": 424537110,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "d570899081f0ade4de4111e1016211e4a1f72494dcdf60177de0bf54f7759eba",
+          "byte_count": 943119,
+          "last_modified": "2026-02-28T03:41:28Z",
+          "etag": "\"7d4bc26fb45efa1baaf44bb13ad8cb76\""
+        },
+        {
+          "start": 496124580,
+          "end": 497103258,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "93a40c7d766d98c16e72d4b0fee952c4dd2fc918d620eb593e3126a8babd3ade",
+          "byte_count": 978679,
+          "last_modified": "2026-02-28T03:41:28Z",
+          "etag": "\"7d4bc26fb45efa1baaf44bb13ad8cb76\""
+        },
+        {
+          "start": 497103259,
+          "end": 498068443,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "4efdb65cdd0981d8b8d9b7b4cdbd6a6ba4a07f3ab2bc634e3f3462aa1c03df02",
+          "byte_count": 965185,
+          "last_modified": "2026-02-28T03:41:28Z",
+          "etag": "\"7d4bc26fb45efa1baaf44bb13ad8cb76\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f031"
+    },
+    {
+      "gfs_lead_hours": 32,
+      "fields": [
+        {
+          "start": 415216166,
+          "end": 416095986,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "ca025c492d0b7daedf1a1ed6c8978ec333d2c168444b0a923a267ba3d207c519",
+          "byte_count": 879821,
+          "last_modified": "2026-02-28T03:56:25Z",
+          "etag": "\"a0e22c19f77320d8dbf223bcefd8bc7a\""
+        },
+        {
+          "start": 420905194,
+          "end": 421870719,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "6e10d182e9bafe7a9f963a68919b1d5e70a6597ee040097177c5a79c6be9effa",
+          "byte_count": 965526,
+          "last_modified": "2026-02-28T03:56:25Z",
+          "etag": "\"a0e22c19f77320d8dbf223bcefd8bc7a\""
+        },
+        {
+          "start": 421870720,
+          "end": 422818283,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "5482577bde7aaf103d596c28335eda1ade5ee55cdbef4e824d658b4b12bea45c",
+          "byte_count": 947564,
+          "last_modified": "2026-02-28T03:56:25Z",
+          "etag": "\"a0e22c19f77320d8dbf223bcefd8bc7a\""
+        },
+        {
+          "start": 495354920,
+          "end": 496333935,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "a8c90e51ff6cc687dddee376f5adbc0235853fb1557ec15568a88f15e42156bb",
+          "byte_count": 979016,
+          "last_modified": "2026-02-28T03:56:25Z",
+          "etag": "\"a0e22c19f77320d8dbf223bcefd8bc7a\""
+        },
+        {
+          "start": 496333936,
+          "end": 497299297,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "32da8fb8af94de08a070dff1d6859f8006d396e798027bb59d74e320f423d5da",
+          "byte_count": 965362,
+          "last_modified": "2026-02-28T03:56:25Z",
+          "etag": "\"a0e22c19f77320d8dbf223bcefd8bc7a\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f032"
+    },
+    {
+      "gfs_lead_hours": 33,
+      "fields": [
+        {
+          "start": 415170931,
+          "end": 416056708,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "f4b37214284537a4840a11d220328ea0dddb141be5f9159c3d1064dcd09e851c",
+          "byte_count": 885778,
+          "last_modified": "2026-02-28T03:42:41Z",
+          "etag": "\"08d6ae9eae5a24c8d1b4edb8a540e0d2\""
+        },
+        {
+          "start": 421246053,
+          "end": 422212335,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "6d5ff190126e71c748992787527a9520574d54949ba610991d60a09c92ad6d33",
+          "byte_count": 966283,
+          "last_modified": "2026-02-28T03:42:41Z",
+          "etag": "\"08d6ae9eae5a24c8d1b4edb8a540e0d2\""
+        },
+        {
+          "start": 422212336,
+          "end": 423155908,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "b08446190439a36b55ea05561bb4c8778da8a6ec8e97219a6ff67be03c41ec39",
+          "byte_count": 943573,
+          "last_modified": "2026-02-28T03:42:41Z",
+          "etag": "\"08d6ae9eae5a24c8d1b4edb8a540e0d2\""
+        },
+        {
+          "start": 496195068,
+          "end": 497170740,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "33d425cbb33eaba3cdd7317fe5d54e615752da86eeba6f54c294d6f87b29e6fe",
+          "byte_count": 975673,
+          "last_modified": "2026-02-28T03:42:41Z",
+          "etag": "\"08d6ae9eae5a24c8d1b4edb8a540e0d2\""
+        },
+        {
+          "start": 497170741,
+          "end": 498136622,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "4c6a9661e5fd1fcd6af262edeed78e0cf0550522f1435302e662d16b3f9d91cb",
+          "byte_count": 965882,
+          "last_modified": "2026-02-28T03:42:41Z",
+          "etag": "\"08d6ae9eae5a24c8d1b4edb8a540e0d2\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f033"
+    },
+    {
+      "gfs_lead_hours": 34,
+      "fields": [
+        {
+          "start": 415885174,
+          "end": 416769077,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "defc2068d10cac718c508908b94c4daca866741864fa725e3baad003d3168085",
+          "byte_count": 883904,
+          "last_modified": "2026-02-28T03:42:48Z",
+          "etag": "\"9c2e3d537c75aefd083a3e49291bb1e3\""
+        },
+        {
+          "start": 421951302,
+          "end": 422918962,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "3087a7a8171de9ffea05666cebc65ec0e6207ab8ea1a5bfe281a86d55e03ea7c",
+          "byte_count": 967661,
+          "last_modified": "2026-02-28T03:42:48Z",
+          "etag": "\"9c2e3d537c75aefd083a3e49291bb1e3\""
+        },
+        {
+          "start": 422918963,
+          "end": 423866614,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "a0db2bbca2a8939ca55f5420b1f6854be2eb213bf900ddf0dbd109ee486a0595",
+          "byte_count": 947652,
+          "last_modified": "2026-02-28T03:42:48Z",
+          "etag": "\"9c2e3d537c75aefd083a3e49291bb1e3\""
+        },
+        {
+          "start": 497494324,
+          "end": 498475474,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "d6097c7a2a4e127b286fec664af1e2bf600329180e097b6e3b482ed50ab3318a",
+          "byte_count": 981151,
+          "last_modified": "2026-02-28T03:42:48Z",
+          "etag": "\"9c2e3d537c75aefd083a3e49291bb1e3\""
+        },
+        {
+          "start": 498475475,
+          "end": 499442223,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "02ef226c28a79009996dd1abb185bed2445adb7273407f3a73d78a2d56921bf9",
+          "byte_count": 966749,
+          "last_modified": "2026-02-28T03:42:48Z",
+          "etag": "\"9c2e3d537c75aefd083a3e49291bb1e3\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f034"
+    },
+    {
+      "gfs_lead_hours": 35,
+      "fields": [
+        {
+          "start": 416088027,
+          "end": 416973477,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "60da8badb3b943414d67932465f085428a24567a5fed22d4cc05ab9ce3da2ba8",
+          "byte_count": 885451,
+          "last_modified": "2026-02-28T03:42:49Z",
+          "etag": "\"347b02fbb7b13f2d5ebacf9d9f70843e\""
+        },
+        {
+          "start": 422154832,
+          "end": 423123112,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "f3183429c2ddd74466001e74c04003e458409c116ab1be2b20b9aea7471a0b5a",
+          "byte_count": 968281,
+          "last_modified": "2026-02-28T03:42:49Z",
+          "etag": "\"347b02fbb7b13f2d5ebacf9d9f70843e\""
+        },
+        {
+          "start": 423123113,
+          "end": 424070747,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "9033f55299841e0db909ab1074f7a6cca194c121b3f6916c703c00bb14969af2",
+          "byte_count": 947635,
+          "last_modified": "2026-02-28T03:42:49Z",
+          "etag": "\"347b02fbb7b13f2d5ebacf9d9f70843e\""
+        },
+        {
+          "start": 498349228,
+          "end": 499330442,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "237fef9f9e2f68ea9cf738c22c411b78c86ce79bad75225bdf83f242295ba021",
+          "byte_count": 981215,
+          "last_modified": "2026-02-28T03:42:49Z",
+          "etag": "\"347b02fbb7b13f2d5ebacf9d9f70843e\""
+        },
+        {
+          "start": 499330443,
+          "end": 500297739,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "acdcc0517f10f8ce99e73f4d9a7fb730224f64e3011665f836ea5a02d31888b3",
+          "byte_count": 967297,
+          "last_modified": "2026-02-28T03:42:49Z",
+          "etag": "\"347b02fbb7b13f2d5ebacf9d9f70843e\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f035"
+    },
+    {
+      "gfs_lead_hours": 36,
+      "fields": [
+        {
+          "start": 415613803,
+          "end": 416501811,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "35ae246a02a61b645d9a78589d4bfeda34dfce840738f8d76bb73db9e7891506",
+          "byte_count": 888009,
+          "last_modified": "2026-02-28T03:43:27Z",
+          "etag": "\"9503ea8f58083e46b3758ba40099a299\""
+        },
+        {
+          "start": 421691090,
+          "end": 422660186,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "7b0e1c5867e93fdcfdd0dfc4df6c739c637aaf5b1945b8ef156c4722921b1b81",
+          "byte_count": 969097,
+          "last_modified": "2026-02-28T03:43:27Z",
+          "etag": "\"9503ea8f58083e46b3758ba40099a299\""
+        },
+        {
+          "start": 422660187,
+          "end": 423604573,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "ca73cf091cf2421c102e62918e25d09a21d697e3c1e9f78125d04c78050abf07",
+          "byte_count": 944387,
+          "last_modified": "2026-02-28T03:43:27Z",
+          "etag": "\"9503ea8f58083e46b3758ba40099a299\""
+        },
+        {
+          "start": 498382616,
+          "end": 499359925,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "a8bc1ee2c2f9b1035bbd17307e6b02e52b93d4be66afb1985ed638f4ccd3a185",
+          "byte_count": 977310,
+          "last_modified": "2026-02-28T03:43:27Z",
+          "etag": "\"9503ea8f58083e46b3758ba40099a299\""
+        },
+        {
+          "start": 499359926,
+          "end": 500327114,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "2aee6cfd8ef3c506ccae0daef35cd3fa6b1d480d43969f8b70f405396cc72ee0",
+          "byte_count": 967189,
+          "last_modified": "2026-02-28T03:43:27Z",
+          "etag": "\"9503ea8f58083e46b3758ba40099a299\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f036"
+    },
+    {
+      "gfs_lead_hours": 37,
+      "fields": [
+        {
+          "start": 417375654,
+          "end": 418264799,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "667861e8e768e4b4f3b0556bfd905f35153d1a6d97812f7fa249c423c06509fd",
+          "byte_count": 889146,
+          "last_modified": "2026-02-28T03:43:44Z",
+          "etag": "\"bbe96d66f41a1e6b5ef924a35e8f643c\""
+        },
+        {
+          "start": 423490154,
+          "end": 424459317,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "29f9eaac5b6df00a5930c7b6c89a72aea8302be2f81aeccb112ba489c33cf7b4",
+          "byte_count": 969164,
+          "last_modified": "2026-02-28T03:43:44Z",
+          "etag": "\"bbe96d66f41a1e6b5ef924a35e8f643c\""
+        },
+        {
+          "start": 424459318,
+          "end": 425408092,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "476be2f74bfb9248d34477dc87adbcf150b4584fad0b6327611a5998ee9ae063",
+          "byte_count": 948775,
+          "last_modified": "2026-02-28T03:43:44Z",
+          "etag": "\"bbe96d66f41a1e6b5ef924a35e8f643c\""
+        },
+        {
+          "start": 497446189,
+          "end": 498426951,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "5830a529a589fe912d31643f396a4843a21e7e1d7c558f70a239e71746abead0",
+          "byte_count": 980763,
+          "last_modified": "2026-02-28T03:43:44Z",
+          "etag": "\"bbe96d66f41a1e6b5ef924a35e8f643c\""
+        },
+        {
+          "start": 498426952,
+          "end": 499393735,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "bff670bdba4b72c2facbb8a90a72a8510a098179d856918efe2d61fb5c87b3d5",
+          "byte_count": 966784,
+          "last_modified": "2026-02-28T03:43:44Z",
+          "etag": "\"bbe96d66f41a1e6b5ef924a35e8f643c\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f037"
+    },
+    {
+      "gfs_lead_hours": 38,
+      "fields": [
+        {
+          "start": 417992561,
+          "end": 418885987,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "187d46c4b1b8674524259c41375d40d84795d361b45f1d66137287bc0931e415",
+          "byte_count": 893427,
+          "last_modified": "2026-02-28T03:43:53Z",
+          "etag": "\"70f1955cb7be5af90a76e7d4ba050b78\""
+        },
+        {
+          "start": 423720090,
+          "end": 424690200,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "658c9caf4c3cba9a3e9f828a6b3d701faad8c275a94778255d8999fbf2c6adc7",
+          "byte_count": 970111,
+          "last_modified": "2026-02-28T03:43:53Z",
+          "etag": "\"70f1955cb7be5af90a76e7d4ba050b78\""
+        },
+        {
+          "start": 424690201,
+          "end": 425639710,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "cb31403be3ef2daaebc50d94f8ecc0a4f961481e77c93169d54ec6b439b9bbb5",
+          "byte_count": 949510,
+          "last_modified": "2026-02-28T03:43:53Z",
+          "etag": "\"70f1955cb7be5af90a76e7d4ba050b78\""
+        },
+        {
+          "start": 498457067,
+          "end": 499438575,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "e700ae223bb5f3b9d35c22f63ab2276a3cd515663baa1bd28f48255a50356a1f",
+          "byte_count": 981509,
+          "last_modified": "2026-02-28T03:43:53Z",
+          "etag": "\"70f1955cb7be5af90a76e7d4ba050b78\""
+        },
+        {
+          "start": 499438576,
+          "end": 500406234,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "115130cf74f62a314a6bbd4269bd60c8fc3c1ababfbf12292cb934bcc3bbc7cf",
+          "byte_count": 967659,
+          "last_modified": "2026-02-28T03:43:53Z",
+          "etag": "\"70f1955cb7be5af90a76e7d4ba050b78\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f038"
+    },
+    {
+      "gfs_lead_hours": 39,
+      "fields": [
+        {
+          "start": 417273401,
+          "end": 418163261,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "c7474df61cfbb25dc95f969e6976d3e2694f74beb9e8979ed8f4c9beade36048",
+          "byte_count": 889861,
+          "last_modified": "2026-02-28T03:43:48Z",
+          "etag": "\"c747cd73afff8f24fe19364ced0319c5\""
+        },
+        {
+          "start": 422992455,
+          "end": 423962538,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "50fa624cc0877fb0c5495770576190bdb613bf0912ad8a74427dd1783f4b5737",
+          "byte_count": 970084,
+          "last_modified": "2026-02-28T03:43:48Z",
+          "etag": "\"c747cd73afff8f24fe19364ced0319c5\""
+        },
+        {
+          "start": 423962539,
+          "end": 424912454,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "460711374e971645c17686e67035b9558dfaec6215c14cf55d0c05cf049f00dd",
+          "byte_count": 949916,
+          "last_modified": "2026-02-28T03:43:48Z",
+          "etag": "\"c747cd73afff8f24fe19364ced0319c5\""
+        },
+        {
+          "start": 497958547,
+          "end": 498940019,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "2a7645cfce157d6a7a0da46116b925b6f08e190ca39e5896f3c170c0cdec7093",
+          "byte_count": 981473,
+          "last_modified": "2026-02-28T03:43:48Z",
+          "etag": "\"c747cd73afff8f24fe19364ced0319c5\""
+        },
+        {
+          "start": 498940020,
+          "end": 499908114,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "34f754e41d690ba58521a6eef6dcd60e76bb13f632c95fc39d2b866257968637",
+          "byte_count": 968095,
+          "last_modified": "2026-02-28T03:43:48Z",
+          "etag": "\"c747cd73afff8f24fe19364ced0319c5\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f039"
+    },
+    {
+      "gfs_lead_hours": 40,
+      "fields": [
+        {
+          "start": 415525481,
+          "end": 416418216,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "3db31a5bcc3cebc74a5fcff08842205ebf1c0fc40b70c1c64a3e742a0a8b6acd",
+          "byte_count": 892736,
+          "last_modified": "2026-02-28T03:43:35Z",
+          "etag": "\"99dc369ad2c529788ccf6d5e3d7777e6\""
+        },
+        {
+          "start": 421633479,
+          "end": 422604822,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "7b493d6fde69ffdb5258f84e4985020dfedae18ee8dd91d8eca9117026403ec8",
+          "byte_count": 971344,
+          "last_modified": "2026-02-28T03:43:35Z",
+          "etag": "\"99dc369ad2c529788ccf6d5e3d7777e6\""
+        },
+        {
+          "start": 422604823,
+          "end": 423555318,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "92b7afa65f5f6f674bc9769211d876c6edf7ab7ccbc138715e2b6a5682b34802",
+          "byte_count": 950496,
+          "last_modified": "2026-02-28T03:43:35Z",
+          "etag": "\"99dc369ad2c529788ccf6d5e3d7777e6\""
+        },
+        {
+          "start": 496924033,
+          "end": 497903065,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "0b2b3c21f3c471e177e29f715cd8cf2bc66661b923545e1da637ad04bc915d8b",
+          "byte_count": 979033,
+          "last_modified": "2026-02-28T03:43:35Z",
+          "etag": "\"99dc369ad2c529788ccf6d5e3d7777e6\""
+        },
+        {
+          "start": 497903066,
+          "end": 498872153,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "fc35244cb7388d01401654425bcbe2deb3da8a4ccf33b97f014abe37a1dcab71",
+          "byte_count": 969088,
+          "last_modified": "2026-02-28T03:43:35Z",
+          "etag": "\"99dc369ad2c529788ccf6d5e3d7777e6\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f040"
+    },
+    {
+      "gfs_lead_hours": 41,
+      "fields": [
+        {
+          "start": 417457365,
+          "end": 418345837,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "33243b35c1554b3099dd6050eb38abb05047e18b7f90e4778c3d94f3512fff93",
+          "byte_count": 888473,
+          "last_modified": "2026-02-28T03:44:51Z",
+          "etag": "\"2a754ddcbe80eb8aa0067f70f2eeb770\""
+        },
+        {
+          "start": 423560823,
+          "end": 424531874,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "b0ed9df4f1f3edaf02385df4036c76a6a161e2eeefa9a89905baa2d658c8b290",
+          "byte_count": 971052,
+          "last_modified": "2026-02-28T03:44:51Z",
+          "etag": "\"2a754ddcbe80eb8aa0067f70f2eeb770\""
+        },
+        {
+          "start": 424531875,
+          "end": 425482700,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "280bd21d361020588481114d410bf104d5dfcbe32e4aec765eff25bfcf62a14c",
+          "byte_count": 950826,
+          "last_modified": "2026-02-28T03:44:51Z",
+          "etag": "\"2a754ddcbe80eb8aa0067f70f2eeb770\""
+        },
+        {
+          "start": 499315851,
+          "end": 500295054,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "ae0766ebba5cceae3940eece854f76c92b5a4871ba131df3acba517b35d24f97",
+          "byte_count": 979204,
+          "last_modified": "2026-02-28T03:44:51Z",
+          "etag": "\"2a754ddcbe80eb8aa0067f70f2eeb770\""
+        },
+        {
+          "start": 500295055,
+          "end": 501264933,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "60e35f010bc281180e9b7ac86c70298b2c101b708a648673a4d845fc05d822ef",
+          "byte_count": 969879,
+          "last_modified": "2026-02-28T03:44:51Z",
+          "etag": "\"2a754ddcbe80eb8aa0067f70f2eeb770\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f041"
+    },
+    {
+      "gfs_lead_hours": 42,
+      "fields": [
+        {
+          "start": 418838385,
+          "end": 419726795,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "7e6d87e3e700f696175e9cd352adac73cead51ad7996ef6df28bb84b6abed857",
+          "byte_count": 888411,
+          "last_modified": "2026-02-28T03:44:50Z",
+          "etag": "\"f84e41ca5a06b320b8e33543eb1810fa\""
+        },
+        {
+          "start": 424553143,
+          "end": 425524010,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "b7cde12db8b3bdc9849809edf46368e7060277b4c4f0911d857a515763cf4594",
+          "byte_count": 970868,
+          "last_modified": "2026-02-28T03:44:50Z",
+          "etag": "\"f84e41ca5a06b320b8e33543eb1810fa\""
+        },
+        {
+          "start": 425524011,
+          "end": 426474780,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "23febdf2cf303c80298e7bc7bdbeca5385ea564b1a2fb8bc4d7f97b38e8f0c3b",
+          "byte_count": 950770,
+          "last_modified": "2026-02-28T03:44:50Z",
+          "etag": "\"f84e41ca5a06b320b8e33543eb1810fa\""
+        },
+        {
+          "start": 500894985,
+          "end": 501874042,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "a8b0187d68f833c4fb7f589720919e794dc67c8e79f2ed0e16cb0aa3bd0d6f37",
+          "byte_count": 979058,
+          "last_modified": "2026-02-28T03:44:50Z",
+          "etag": "\"f84e41ca5a06b320b8e33543eb1810fa\""
+        },
+        {
+          "start": 501874043,
+          "end": 502844461,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "ad50cb021b96567ef0a218aefe9a92a7a98a50bba2fda923560555d27c5a3544",
+          "byte_count": 970419,
+          "last_modified": "2026-02-28T03:44:50Z",
+          "etag": "\"f84e41ca5a06b320b8e33543eb1810fa\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f042"
+    },
+    {
+      "gfs_lead_hours": 43,
+      "fields": [
+        {
+          "start": 419592463,
+          "end": 420484758,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "a04fafa6ed771f4305ee2d41074872afa7b605b3d9fd59625f7b2636d85304c4",
+          "byte_count": 892296,
+          "last_modified": "2026-02-28T03:44:34Z",
+          "etag": "\"43103da0298229a625a20b83b0dae0b7\""
+        },
+        {
+          "start": 425321077,
+          "end": 426295298,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "4ad84ac0edee6d79ab0dd4dbebd8ef2e623a191fb607383a993517698c44d1f0",
+          "byte_count": 974222,
+          "last_modified": "2026-02-28T03:44:34Z",
+          "etag": "\"43103da0298229a625a20b83b0dae0b7\""
+        },
+        {
+          "start": 426295299,
+          "end": 427246338,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "bec03a9bd10c30a6a2cb6b42d08327ba966600347026a308a8f1675d839609e5",
+          "byte_count": 951040,
+          "last_modified": "2026-02-28T03:44:34Z",
+          "etag": "\"43103da0298229a625a20b83b0dae0b7\""
+        },
+        {
+          "start": 498934204,
+          "end": 499916746,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "86261181a5ae14cd201f5d03d3343c4ba65eba84a9a34f858970d4b5626c7942",
+          "byte_count": 982543,
+          "last_modified": "2026-02-28T03:44:34Z",
+          "etag": "\"43103da0298229a625a20b83b0dae0b7\""
+        },
+        {
+          "start": 499916747,
+          "end": 500886691,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "27e4fbc0d3ec5b9d2c8f74cad99e339e4d29c36fae2a272b5d75b6da6166b77c",
+          "byte_count": 969945,
+          "last_modified": "2026-02-28T03:44:34Z",
+          "etag": "\"43103da0298229a625a20b83b0dae0b7\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f043"
+    },
+    {
+      "gfs_lead_hours": 44,
+      "fields": [
+        {
+          "start": 419088066,
+          "end": 419980128,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "ed276e56330664d1727f49c64c4a7b1f76f06f9168e1e8f62d8525508b1c3ea6",
+          "byte_count": 892063,
+          "last_modified": "2026-02-28T03:44:49Z",
+          "etag": "\"07fd1985a2d1df23cbe23b25016d3a53\""
+        },
+        {
+          "start": 424817349,
+          "end": 425787756,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "78dfae3dad2bd8eacbdb7eb6ed0cdee983193dfbb2a0c0947db332841cd74cd3",
+          "byte_count": 970408,
+          "last_modified": "2026-02-28T03:44:49Z",
+          "etag": "\"07fd1985a2d1df23cbe23b25016d3a53\""
+        },
+        {
+          "start": 425787757,
+          "end": 426738126,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "d25687dfb40a7075d9431864bf7b1b74e4c21ca1e073b0f9f3073dce372b75a7",
+          "byte_count": 950370,
+          "last_modified": "2026-02-28T03:44:49Z",
+          "etag": "\"07fd1985a2d1df23cbe23b25016d3a53\""
+        },
+        {
+          "start": 499025646,
+          "end": 500007964,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "05f4b798d9528657a00446f063f17db790f63e274d895e97ec1bb0708bcf8d29",
+          "byte_count": 982319,
+          "last_modified": "2026-02-28T03:44:49Z",
+          "etag": "\"07fd1985a2d1df23cbe23b25016d3a53\""
+        },
+        {
+          "start": 500007965,
+          "end": 500977891,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "084029f5aa70ebd6227c69316f079f8da4d5d700eca91f5bb9a988527aba0a23",
+          "byte_count": 969927,
+          "last_modified": "2026-02-28T03:44:49Z",
+          "etag": "\"07fd1985a2d1df23cbe23b25016d3a53\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f044"
+    },
+    {
+      "gfs_lead_hours": 45,
+      "fields": [
+        {
+          "start": 417376852,
+          "end": 418266755,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "5a39bf0d3957c8aed29363efa25a9bf5693eed4566f41b85ba7edf2e3056377f",
+          "byte_count": 889904,
+          "last_modified": "2026-02-28T03:45:31Z",
+          "etag": "\"9ee25def73706f65e8458e8a2afdd2ed\""
+        },
+        {
+          "start": 423094407,
+          "end": 424063803,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "567f80c6db5ed97de142ba236c270e26632c46e49ce2f418ac953d5cfd3bdb59",
+          "byte_count": 969397,
+          "last_modified": "2026-02-28T03:45:31Z",
+          "etag": "\"9ee25def73706f65e8458e8a2afdd2ed\""
+        },
+        {
+          "start": 424063804,
+          "end": 425009286,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "d54b46e6c40d8a074eb863c1dc4e52198cc0a333f21d883c0e4ab5cacd9035cd",
+          "byte_count": 945483,
+          "last_modified": "2026-02-28T03:45:31Z",
+          "etag": "\"9ee25def73706f65e8458e8a2afdd2ed\""
+        },
+        {
+          "start": 497795085,
+          "end": 498776909,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "f3f54fe29748c25396ecd64a3925cbe4b83605fdadb2009876575c4f105996d7",
+          "byte_count": 981825,
+          "last_modified": "2026-02-28T03:45:31Z",
+          "etag": "\"9ee25def73706f65e8458e8a2afdd2ed\""
+        },
+        {
+          "start": 498776910,
+          "end": 499746292,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "eaed7845571989910b1d88bcbe5414664545bf4e682e49430e37df41179a48bf",
+          "byte_count": 969383,
+          "last_modified": "2026-02-28T03:45:31Z",
+          "etag": "\"9ee25def73706f65e8458e8a2afdd2ed\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f045"
+    },
+    {
+      "gfs_lead_hours": 46,
+      "fields": [
+        {
+          "start": 417556372,
+          "end": 418444635,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "6526830f3e3a225357998518b8bc384b105d04504640e788336ea0e79c48351d",
+          "byte_count": 888264,
+          "last_modified": "2026-02-28T03:45:38Z",
+          "etag": "\"10b1a1230f72e1f7be448888197ea436\""
+        },
+        {
+          "start": 423643772,
+          "end": 424612692,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "1616a01d8f0c1b5e2e410f6602e3ced2535fa1b09e167083b7817d8e261e6d36",
+          "byte_count": 968921,
+          "last_modified": "2026-02-28T03:45:38Z",
+          "etag": "\"10b1a1230f72e1f7be448888197ea436\""
+        },
+        {
+          "start": 424612693,
+          "end": 425561118,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "c0015c88717c3e343724a29aa36c026f20550428c76c833ba88bd092c5e11c47",
+          "byte_count": 948426,
+          "last_modified": "2026-02-28T03:45:38Z",
+          "etag": "\"10b1a1230f72e1f7be448888197ea436\""
+        },
+        {
+          "start": 498834231,
+          "end": 499816393,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "89b32bef95979a1df402dd5784e6e068e1e656f068d198289902aa5229361d2b",
+          "byte_count": 982163,
+          "last_modified": "2026-02-28T03:45:38Z",
+          "etag": "\"10b1a1230f72e1f7be448888197ea436\""
+        },
+        {
+          "start": 499816394,
+          "end": 500785644,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "fb0e34c0ea9ed721b6ad6573b3dc5b4476fcf90d924acab28d6e6bb33758933a",
+          "byte_count": 969251,
+          "last_modified": "2026-02-28T03:45:38Z",
+          "etag": "\"10b1a1230f72e1f7be448888197ea436\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f046"
+    },
+    {
+      "gfs_lead_hours": 47,
+      "fields": [
+        {
+          "start": 417239649,
+          "end": 418127690,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "d9f8c4f3b97566d57f1dcc70f0c07bdc9b5c3b8ab34d47cada92dc5dc04f2a2a",
+          "byte_count": 888042,
+          "last_modified": "2026-02-28T03:45:54Z",
+          "etag": "\"8ff8bc604af187b7ac6cd6a0c12ff83e\""
+        },
+        {
+          "start": 422932876,
+          "end": 423900084,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "4d6f6987c205bff38ca4dfb21c502eeab53b85ab09a7010c9e17c782f98c2877",
+          "byte_count": 967209,
+          "last_modified": "2026-02-28T03:45:54Z",
+          "etag": "\"8ff8bc604af187b7ac6cd6a0c12ff83e\""
+        },
+        {
+          "start": 423900085,
+          "end": 424843900,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "1110e342d2fab6abc1d578072b782578e384fe196664d065bc6cd1e2fd117393",
+          "byte_count": 943816,
+          "last_modified": "2026-02-28T03:45:54Z",
+          "etag": "\"8ff8bc604af187b7ac6cd6a0c12ff83e\""
+        },
+        {
+          "start": 498488311,
+          "end": 499465780,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "f8a6d03680e67d1c7e4eb47c647c08f305595934b5996eabe202b853312a93e1",
+          "byte_count": 977470,
+          "last_modified": "2026-02-28T03:45:54Z",
+          "etag": "\"8ff8bc604af187b7ac6cd6a0c12ff83e\""
+        },
+        {
+          "start": 499465781,
+          "end": 500435047,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "6c9fce9143ea98c6f1588130799dadf22b71e9ea991042d9af5382d92761a3ab",
+          "byte_count": 969267,
+          "last_modified": "2026-02-28T03:45:54Z",
+          "etag": "\"8ff8bc604af187b7ac6cd6a0c12ff83e\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f047"
+    },
+    {
+      "gfs_lead_hours": 48,
+      "fields": [
+        {
+          "start": 418231555,
+          "end": 419114391,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "54bcbac0b93144cf13202727fca4e0891fbd0c0f101ea05c472c7c547167277c",
+          "byte_count": 882837,
+          "last_modified": "2026-02-28T03:46:59Z",
+          "etag": "\"307aa993eaa2989563cae5e1b1d39b50\""
+        },
+        {
+          "start": 423914873,
+          "end": 424880973,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "cd7ae7ab6506a4da39076312965f95fe2f7163279b79980eafc9e5cc6593ef1d",
+          "byte_count": 966101,
+          "last_modified": "2026-02-28T03:46:59Z",
+          "etag": "\"307aa993eaa2989563cae5e1b1d39b50\""
+        },
+        {
+          "start": 424880974,
+          "end": 425828213,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "d226992c906ea398ef8a4efecf057f05b17e3c1b1296224408b03d23f717aba4",
+          "byte_count": 947240,
+          "last_modified": "2026-02-28T03:46:59Z",
+          "etag": "\"307aa993eaa2989563cae5e1b1d39b50\""
+        },
+        {
+          "start": 499893158,
+          "end": 500869306,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "dc816e47178072f8152ebb8e3fac78a68dca54c775ea290036c64a289b93f134",
+          "byte_count": 976149,
+          "last_modified": "2026-02-28T03:46:59Z",
+          "etag": "\"307aa993eaa2989563cae5e1b1d39b50\""
+        },
+        {
+          "start": 500869307,
+          "end": 501838159,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "0990e498f743842e31bf4fcceb68103831c0d824f8b0a12c7a9eb1fb8ecdc5e5",
+          "byte_count": 968853,
+          "last_modified": "2026-02-28T03:46:59Z",
+          "etag": "\"307aa993eaa2989563cae5e1b1d39b50\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f048"
+    },
+    {
+      "gfs_lead_hours": 49,
+      "fields": [
+        {
+          "start": 416390397,
+          "end": 417276745,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "146c4f33b7b0d9e13e797f6a87dd3173c7f6a7130f4e370b748546e02d74b302",
+          "byte_count": 886349,
+          "last_modified": "2026-02-28T03:46:33Z",
+          "etag": "\"c251e0601ea36ea07821f964d729fb70\""
+        },
+        {
+          "start": 422095570,
+          "end": 423060968,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "dad234cf6e9aef47d40bbb989ba6badcffdc80876bd1db126bd9c389866e1c36",
+          "byte_count": 965399,
+          "last_modified": "2026-02-28T03:46:33Z",
+          "etag": "\"c251e0601ea36ea07821f964d729fb70\""
+        },
+        {
+          "start": 423060969,
+          "end": 424007316,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "1e5fb178be2de6e8f0cfa1eaf861c8456a71d431cd650755878c8d4bc9cac102",
+          "byte_count": 946348,
+          "last_modified": "2026-02-28T03:46:33Z",
+          "etag": "\"c251e0601ea36ea07821f964d729fb70\""
+        },
+        {
+          "start": 495499127,
+          "end": 496474831,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "ee5fac2c4f6537aff8fa17fbd25aa551e4443a8c18a0cfb36700fc8396ad4ba0",
+          "byte_count": 975705,
+          "last_modified": "2026-02-28T03:46:33Z",
+          "etag": "\"c251e0601ea36ea07821f964d729fb70\""
+        },
+        {
+          "start": 496474832,
+          "end": 497443042,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "b13872016eeca993b32f71a5412c51d1a7b101d085222257db0eb5ea0a45637c",
+          "byte_count": 968211,
+          "last_modified": "2026-02-28T03:46:33Z",
+          "etag": "\"c251e0601ea36ea07821f964d729fb70\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f049"
+    },
+    {
+      "gfs_lead_hours": 50,
+      "fields": [
+        {
+          "start": 417311821,
+          "end": 418193256,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "b27db157f183b43a745040a7665d4f357d95715b171c7bf5cf8b6b419e86c458",
+          "byte_count": 881436,
+          "last_modified": "2026-02-28T03:46:42Z",
+          "etag": "\"b044081a37f274f8951752572abc8299\""
+        },
+        {
+          "start": 423005060,
+          "end": 423969867,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "79df02e9ec24111c4b141fc9c10bf259cf916ea84e4d4e87fe0daf359264bd55",
+          "byte_count": 964808,
+          "last_modified": "2026-02-28T03:46:42Z",
+          "etag": "\"b044081a37f274f8951752572abc8299\""
+        },
+        {
+          "start": 423969868,
+          "end": 424916441,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "6cf3e17b6b18bf0f50643c1fe6680243071c07c37e2e1720d9e6f2ec7c057aa7",
+          "byte_count": 946574,
+          "last_modified": "2026-02-28T03:46:42Z",
+          "etag": "\"b044081a37f274f8951752572abc8299\""
+        },
+        {
+          "start": 497172992,
+          "end": 498147930,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "8471318b9189f506ab01e7edc48f89f68a83a5391620bd989f77319e2bee4eeb",
+          "byte_count": 974939,
+          "last_modified": "2026-02-28T03:46:42Z",
+          "etag": "\"b044081a37f274f8951752572abc8299\""
+        },
+        {
+          "start": 498147931,
+          "end": 499115654,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "7b684d9f5321c24999ea56049b609b2c27a4550fbff9ee2e49930da66455977a",
+          "byte_count": 967724,
+          "last_modified": "2026-02-28T03:46:42Z",
+          "etag": "\"b044081a37f274f8951752572abc8299\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f050"
+    },
+    {
+      "gfs_lead_hours": 51,
+      "fields": [
+        {
+          "start": 415451921,
+          "end": 415965575,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "731ff47d26a20b16fa8e53e4c77a24189ab3b5f7b7d65aa9091bd19269af244e",
+          "byte_count": 513655,
+          "last_modified": "2026-02-28T03:48:02Z",
+          "etag": "\"adfe35f29697265d4a8fb9683e76339c\""
+        },
+        {
+          "start": 420409650,
+          "end": 421374842,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "092ddb2ab9d4711b8777965ac539e2b962ce1a30002ddd7818e8206690ffbd00",
+          "byte_count": 965193,
+          "last_modified": "2026-02-28T03:48:02Z",
+          "etag": "\"adfe35f29697265d4a8fb9683e76339c\""
+        },
+        {
+          "start": 421374843,
+          "end": 422317979,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "f6c9e253fd16fa6b186ced099b4a20c59b75b3684ecd5b76e83fa0f73ccee4d4",
+          "byte_count": 943137,
+          "last_modified": "2026-02-28T03:48:02Z",
+          "etag": "\"adfe35f29697265d4a8fb9683e76339c\""
+        },
+        {
+          "start": 495039933,
+          "end": 496014376,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "2b535f9b0be5972dc26d996819137c1bf39b829a2868424a100e1992e7d0f58b",
+          "byte_count": 974444,
+          "last_modified": "2026-02-28T03:48:02Z",
+          "etag": "\"adfe35f29697265d4a8fb9683e76339c\""
+        },
+        {
+          "start": 496014377,
+          "end": 496981431,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "bd7f4b001b27239a286a796709432734ab1c7a054cb33d91a98fd0bad3dffffb",
+          "byte_count": 967055,
+          "last_modified": "2026-02-28T03:48:02Z",
+          "etag": "\"adfe35f29697265d4a8fb9683e76339c\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f051"
+    },
+    {
+      "gfs_lead_hours": 52,
+      "fields": [
+        {
+          "start": 414962458,
+          "end": 415475558,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "687595485ed0154e03b79eba9efb7f98dc3b9891756ba24d7960166d44531b6e",
+          "byte_count": 513101,
+          "last_modified": "2026-02-28T03:47:02Z",
+          "etag": "\"a5d7d6ef0d9e14abcdc2f0cea236b18b\""
+        },
+        {
+          "start": 419918885,
+          "end": 420884798,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "6a5fdc3d41168767576f641122bacfbee449b28507204b1769a0469ad868833f",
+          "byte_count": 965914,
+          "last_modified": "2026-02-28T03:47:02Z",
+          "etag": "\"a5d7d6ef0d9e14abcdc2f0cea236b18b\""
+        },
+        {
+          "start": 420884799,
+          "end": 421831502,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "527ed45d1888e436934310afc95b947d33b1bebfe3db8ff696feb618701ac384",
+          "byte_count": 946704,
+          "last_modified": "2026-02-28T03:47:02Z",
+          "etag": "\"a5d7d6ef0d9e14abcdc2f0cea236b18b\""
+        },
+        {
+          "start": 495042821,
+          "end": 496017701,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "940c90274cf5e55c8a84bfd7f16fa26bb21466d41708d896f4436c16d1eb7ff9",
+          "byte_count": 974881,
+          "last_modified": "2026-02-28T03:47:02Z",
+          "etag": "\"a5d7d6ef0d9e14abcdc2f0cea236b18b\""
+        },
+        {
+          "start": 496017702,
+          "end": 496984094,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "2c5dcffdcbfda8b39683ac4f39c5f4b6d8d270d9807e716f734fcd501983c114",
+          "byte_count": 966393,
+          "last_modified": "2026-02-28T03:47:02Z",
+          "etag": "\"a5d7d6ef0d9e14abcdc2f0cea236b18b\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f052"
+    },
+    {
+      "gfs_lead_hours": 53,
+      "fields": [
+        {
+          "start": 417573745,
+          "end": 418453204,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "ee9f5b0094ea640e232347f7729ca55e16552dffb3ee68fbdc69ed7e923695ab",
+          "byte_count": 879460,
+          "last_modified": "2026-02-28T03:47:36Z",
+          "etag": "\"d07d4d9046696078e5b5311a8428f709\""
+        },
+        {
+          "start": 423249651,
+          "end": 424216194,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "9222ab15a94ea767786509078735ec251678500f4dc925209a3b16d524938a5e",
+          "byte_count": 966544,
+          "last_modified": "2026-02-28T03:47:36Z",
+          "etag": "\"d07d4d9046696078e5b5311a8428f709\""
+        },
+        {
+          "start": 424216195,
+          "end": 425160220,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "7476dc099793522762181f751bcbcc82d43ff14a70910a565ceef1bfcf3ad19d",
+          "byte_count": 944026,
+          "last_modified": "2026-02-28T03:47:36Z",
+          "etag": "\"d07d4d9046696078e5b5311a8428f709\""
+        },
+        {
+          "start": 498874133,
+          "end": 499849674,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "7121473b2d31958d65518075581126a9279a5b568aeeedd8f720c1c976721650",
+          "byte_count": 975542,
+          "last_modified": "2026-02-28T03:47:36Z",
+          "etag": "\"d07d4d9046696078e5b5311a8428f709\""
+        },
+        {
+          "start": 499849675,
+          "end": 500816686,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "e642d331df519f86e1b642bf038f9190fbfa90b03510fbce313c7a40070ecb19",
+          "byte_count": 967012,
+          "last_modified": "2026-02-28T03:47:36Z",
+          "etag": "\"d07d4d9046696078e5b5311a8428f709\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f053"
+    },
+    {
+      "gfs_lead_hours": 54,
+      "fields": [
+        {
+          "start": 417140344,
+          "end": 418019672,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "47a1a3c019cd37ebffcabb70992157cee7ee23c38bcdb89f6c43045776066214",
+          "byte_count": 879329,
+          "last_modified": "2026-02-28T03:48:36Z",
+          "etag": "\"5b838ff111f0a626d8f7194edd82fc4e\""
+        },
+        {
+          "start": 422823680,
+          "end": 423790221,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "031d800172f37ef50ccc8096a74698b75d58717c7bf058abce9cb5f3bbc28b83",
+          "byte_count": 966542,
+          "last_modified": "2026-02-28T03:48:36Z",
+          "etag": "\"5b838ff111f0a626d8f7194edd82fc4e\""
+        },
+        {
+          "start": 423790222,
+          "end": 424738016,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "f409a4f1af628677f1d2fa9e5386fa2cc365c882f2fbd01bcc28f244f86ea07f",
+          "byte_count": 947795,
+          "last_modified": "2026-02-28T03:48:36Z",
+          "etag": "\"5b838ff111f0a626d8f7194edd82fc4e\""
+        },
+        {
+          "start": 498615782,
+          "end": 499590611,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "f6549650e1b2f75b99d25c2704e29d1f92fe6f963bb0cdbbba0567dd76d51899",
+          "byte_count": 974830,
+          "last_modified": "2026-02-28T03:48:36Z",
+          "etag": "\"5b838ff111f0a626d8f7194edd82fc4e\""
+        },
+        {
+          "start": 499590612,
+          "end": 500557204,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "e9237933ed593caa1d963c70d647298f7af7b65caf3ef4537ea6d207e209c2d5",
+          "byte_count": 966593,
+          "last_modified": "2026-02-28T03:48:36Z",
+          "etag": "\"5b838ff111f0a626d8f7194edd82fc4e\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f054"
+    },
+    {
+      "gfs_lead_hours": 55,
+      "fields": [
+        {
+          "start": 415825437,
+          "end": 416705228,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "847001a1ba6307493c29ce6ebdfe52b30468f2477ccc1b0768607517e3b66c21",
+          "byte_count": 879792,
+          "last_modified": "2026-02-28T04:03:36Z",
+          "etag": "\"ecd696bedd47b3f7bbcc368b7cfe463f\""
+        },
+        {
+          "start": 421530994,
+          "end": 422498024,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "570739c59453805bb8a49d169384a53fc26d207fcdc8130f0f322ef0bea21288",
+          "byte_count": 967031,
+          "last_modified": "2026-02-28T04:03:36Z",
+          "etag": "\"ecd696bedd47b3f7bbcc368b7cfe463f\""
+        },
+        {
+          "start": 422498025,
+          "end": 423442351,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "3d7a3551a2c6e4bf237e232a2ed78b60f589673a5cabd15a7a8b68358e06f1ee",
+          "byte_count": 944327,
+          "last_modified": "2026-02-28T04:03:36Z",
+          "etag": "\"ecd696bedd47b3f7bbcc368b7cfe463f\""
+        },
+        {
+          "start": 494455796,
+          "end": 495431623,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "e0f470900e986084c57e1254a9e1c14ee59720be2595e481aaa7b97345fcf985",
+          "byte_count": 975828,
+          "last_modified": "2026-02-28T04:03:36Z",
+          "etag": "\"ecd696bedd47b3f7bbcc368b7cfe463f\""
+        },
+        {
+          "start": 495431624,
+          "end": 496398561,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "2cc5fc36882d70fccbe55b133cd51b4a2e758e65d673b365563752403334188e",
+          "byte_count": 966938,
+          "last_modified": "2026-02-28T04:03:36Z",
+          "etag": "\"ecd696bedd47b3f7bbcc368b7cfe463f\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f055"
+    },
+    {
+      "gfs_lead_hours": 56,
+      "fields": [
+        {
+          "start": 415507827,
+          "end": 416392779,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "2ec856b2bbf4ce84dff4afb5bc30213a9a42f8b19e971faa619c713e069a84eb",
+          "byte_count": 884953,
+          "last_modified": "2026-02-28T03:48:43Z",
+          "etag": "\"7a34a5783b8067310844219c4f208f3e\""
+        },
+        {
+          "start": 421207875,
+          "end": 422175682,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "61096705585a03e09e3a04cb54bad0afde55cd4068881505edc6e3ad61f872a7",
+          "byte_count": 967808,
+          "last_modified": "2026-02-28T03:48:43Z",
+          "etag": "\"7a34a5783b8067310844219c4f208f3e\""
+        },
+        {
+          "start": 422175683,
+          "end": 423123896,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "51208ed2f50ee551c2bbaa2e3da20e8a91e7fd059773188549f4e2102d0a538c",
+          "byte_count": 948214,
+          "last_modified": "2026-02-28T03:48:43Z",
+          "etag": "\"7a34a5783b8067310844219c4f208f3e\""
+        },
+        {
+          "start": 495012927,
+          "end": 495988877,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "677ff71101f416a27ae8f3e3a52163f889db18f4eb8a1d3afae432fe41973c65",
+          "byte_count": 975951,
+          "last_modified": "2026-02-28T03:48:43Z",
+          "etag": "\"7a34a5783b8067310844219c4f208f3e\""
+        },
+        {
+          "start": 495988878,
+          "end": 496955766,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "6f8a853f73b538704bbf178a8cdc3f4c1480a56228f25f8f030197dda9f15732",
+          "byte_count": 966889,
+          "last_modified": "2026-02-28T03:48:43Z",
+          "etag": "\"7a34a5783b8067310844219c4f208f3e\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f056"
+    },
+    {
+      "gfs_lead_hours": 57,
+      "fields": [
+        {
+          "start": 417014206,
+          "end": 417900451,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "ec1a3db827a77718a88997b1ca431079db664b9ce1dbc8b69a70b5ec49216884",
+          "byte_count": 886246,
+          "last_modified": "2026-02-28T03:49:39Z",
+          "etag": "\"5b45c3384ccfaf795523e95c6f3d59c5\""
+        },
+        {
+          "start": 422708274,
+          "end": 423677155,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "50bc6bbed82f391f437640d31e115853e842407803e51cb5e4ae01d7cdcd8610",
+          "byte_count": 968882,
+          "last_modified": "2026-02-28T03:49:39Z",
+          "etag": "\"5b45c3384ccfaf795523e95c6f3d59c5\""
+        },
+        {
+          "start": 423677156,
+          "end": 424622648,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "03827050bfa78dc1abda4d57b97f9a4a5bcf8754560fdebdbbec52d4b214f319",
+          "byte_count": 945493,
+          "last_modified": "2026-02-28T03:49:39Z",
+          "etag": "\"5b45c3384ccfaf795523e95c6f3d59c5\""
+        },
+        {
+          "start": 497074298,
+          "end": 498051306,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "3de3932f826dadda3ac080448829f75641dbe7e860bfb00d02a2f8263a46a571",
+          "byte_count": 977009,
+          "last_modified": "2026-02-28T03:49:39Z",
+          "etag": "\"5b45c3384ccfaf795523e95c6f3d59c5\""
+        },
+        {
+          "start": 498051307,
+          "end": 499019019,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "62268e3fff1bcf9ee90a270643f72ef0771830357f199d78bff61073e348e561",
+          "byte_count": 967713,
+          "last_modified": "2026-02-28T03:49:39Z",
+          "etag": "\"5b45c3384ccfaf795523e95c6f3d59c5\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f057"
+    },
+    {
+      "gfs_lead_hours": 58,
+      "fields": [
+        {
+          "start": 417805750,
+          "end": 418693729,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "2bea9a1bdb16f20fe64fbe73767655fc8650200d5f8b8edbea688dccee80a47f",
+          "byte_count": 887980,
+          "last_modified": "2026-02-28T03:48:41Z",
+          "etag": "\"9eb127a052e3863e58de0db19f94946f\""
+        },
+        {
+          "start": 423497485,
+          "end": 424467402,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "8436eaef08ba4edad55012bd33059530a593bbc401a6e05dd130b682d683f8b1",
+          "byte_count": 969918,
+          "last_modified": "2026-02-28T03:48:41Z",
+          "etag": "\"9eb127a052e3863e58de0db19f94946f\""
+        },
+        {
+          "start": 424467403,
+          "end": 425413118,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "e12f6f4b8334b17c4666bbd3ae09acffcdd9b3fb10969c0fae1d7e811a5e60cb",
+          "byte_count": 945716,
+          "last_modified": "2026-02-28T03:48:41Z",
+          "etag": "\"9eb127a052e3863e58de0db19f94946f\""
+        },
+        {
+          "start": 498485454,
+          "end": 499463290,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "939bdb447051f42e59f757fffeb9ed00819c9b4d4cfb6eabad98ca6c30f3e10b",
+          "byte_count": 977837,
+          "last_modified": "2026-02-28T03:48:41Z",
+          "etag": "\"9eb127a052e3863e58de0db19f94946f\""
+        },
+        {
+          "start": 499463291,
+          "end": 500431750,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "1b592898d52711b1c011b4afb79c1871641a44a6813a136f2785344d93905d7c",
+          "byte_count": 968460,
+          "last_modified": "2026-02-28T03:48:41Z",
+          "etag": "\"9eb127a052e3863e58de0db19f94946f\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f058"
+    },
+    {
+      "gfs_lead_hours": 59,
+      "fields": [
+        {
+          "start": 418857228,
+          "end": 419746138,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "5b5ba80ea963ab3a13dd31e9dcbb6a537dd94fe0d22fd955acd62e980bc50a13",
+          "byte_count": 888911,
+          "last_modified": "2026-02-28T04:03:37Z",
+          "etag": "\"7afcdf24d31e881f6084a57bfc16f525\""
+        },
+        {
+          "start": 424554900,
+          "end": 425525145,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "d89ff6b02ec213ef1cac3ea2315c2a9cd992e942af34ad50bd78d952d7e86009",
+          "byte_count": 970246,
+          "last_modified": "2026-02-28T04:03:37Z",
+          "etag": "\"7afcdf24d31e881f6084a57bfc16f525\""
+        },
+        {
+          "start": 425525146,
+          "end": 426471684,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "123f25f8a0fa8e305ecbb8ffa8e6b2e41a65d89a4ddfc1ef5067f9763142dda5",
+          "byte_count": 946539,
+          "last_modified": "2026-02-28T04:03:37Z",
+          "etag": "\"7afcdf24d31e881f6084a57bfc16f525\""
+        },
+        {
+          "start": 500128087,
+          "end": 501106464,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "f97e33eacebac9c103e7f0e0986a928af7c96b3682349d9d22f99f5202f8b363",
+          "byte_count": 978378,
+          "last_modified": "2026-02-28T04:03:37Z",
+          "etag": "\"7afcdf24d31e881f6084a57bfc16f525\""
+        },
+        {
+          "start": 501106465,
+          "end": 502075282,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "26c139043a900fb81894d7fefc2bc4c8646bfd5bbb8344e2377987db535af7aa",
+          "byte_count": 968818,
+          "last_modified": "2026-02-28T04:03:37Z",
+          "etag": "\"7afcdf24d31e881f6084a57bfc16f525\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f059"
+    },
+    {
+      "gfs_lead_hours": 60,
+      "fields": [
+        {
+          "start": 417417983,
+          "end": 418308735,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "7d7b9fbaba79470f8dd7b9d733ef5dc60564d716f81d0834d366561101a1a8b5",
+          "byte_count": 890753,
+          "last_modified": "2026-02-28T03:49:54Z",
+          "etag": "\"caa0fd25181d6938a1fe09cdffb8739e\""
+        },
+        {
+          "start": 423117373,
+          "end": 424089016,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "c7a1ba98dbd640c15a1dd17e2a209aa4cf27ba71dfadb33cf62f308f0045839f",
+          "byte_count": 971644,
+          "last_modified": "2026-02-28T03:49:54Z",
+          "etag": "\"caa0fd25181d6938a1fe09cdffb8739e\""
+        },
+        {
+          "start": 424089017,
+          "end": 425040658,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "c10e06e8450fd01f4084514cfb806466aa2df431250d14aa60ca3c65222501f2",
+          "byte_count": 951642,
+          "last_modified": "2026-02-28T03:49:54Z",
+          "etag": "\"caa0fd25181d6938a1fe09cdffb8739e\""
+        },
+        {
+          "start": 499015590,
+          "end": 499994212,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "e5804a7e795b7369609757fe3a8e216432a6d02629e18b72117f50fc9e18acda",
+          "byte_count": 978623,
+          "last_modified": "2026-02-28T03:49:54Z",
+          "etag": "\"caa0fd25181d6938a1fe09cdffb8739e\""
+        },
+        {
+          "start": 499994213,
+          "end": 500964519,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "d63e95f74aec09c1b0318b8ba97d5489a6e7a7f81bfef50f938893f675fd5a06",
+          "byte_count": 970307,
+          "last_modified": "2026-02-28T03:49:54Z",
+          "etag": "\"caa0fd25181d6938a1fe09cdffb8739e\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f060"
+    },
+    {
+      "gfs_lead_hours": 61,
+      "fields": [
+        {
+          "start": 414109426,
+          "end": 415000682,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "45aa0a06639d67b8e27f91df308a17877b30de96c8299f119cde7e5ad71ad2d8",
+          "byte_count": 891257,
+          "last_modified": "2026-02-28T03:50:02Z",
+          "etag": "\"aff69af27d73b4916903bd5396015545\""
+        },
+        {
+          "start": 419847433,
+          "end": 420819001,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "b29bef55c045743d75cd2e04f3c721f6c99fd1b1d373c6fb1bf713eedaebbe5e",
+          "byte_count": 971569,
+          "last_modified": "2026-02-28T03:50:02Z",
+          "etag": "\"aff69af27d73b4916903bd5396015545\""
+        },
+        {
+          "start": 420819002,
+          "end": 421771323,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "bd08e4837dd67fc8a2aa5074eda6e2d55bf89566d922a2529d08908a5038e1d6",
+          "byte_count": 952322,
+          "last_modified": "2026-02-28T03:50:02Z",
+          "etag": "\"aff69af27d73b4916903bd5396015545\""
+        },
+        {
+          "start": 492675158,
+          "end": 493654248,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "c16a870511cbd4cbe17e5e2e51b740a05f57ee8d2e50fb98d4f09132cdfbc493",
+          "byte_count": 979091,
+          "last_modified": "2026-02-28T03:50:02Z",
+          "etag": "\"aff69af27d73b4916903bd5396015545\""
+        },
+        {
+          "start": 493654249,
+          "end": 494624490,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "857c5a9dcb520b6b19c603a458e3342000515b199c00f9f205119662dc5025ea",
+          "byte_count": 970242,
+          "last_modified": "2026-02-28T03:50:02Z",
+          "etag": "\"aff69af27d73b4916903bd5396015545\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f061"
+    },
+    {
+      "gfs_lead_hours": 62,
+      "fields": [
+        {
+          "start": 415690594,
+          "end": 416577965,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "1c90746674995756a6dfdb251378d5f855777d2e909cb7b3ab1aae852be2eed6",
+          "byte_count": 887372,
+          "last_modified": "2026-02-28T04:04:38Z",
+          "etag": "\"b2f330faef36b9a02e2b92b6b12ed176\""
+        },
+        {
+          "start": 421411497,
+          "end": 422383340,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "3bc7116e9258696943d5aff4730557e1ec4698764c67bc5b2d0c7e009eddf718",
+          "byte_count": 971844,
+          "last_modified": "2026-02-28T04:04:38Z",
+          "etag": "\"b2f330faef36b9a02e2b92b6b12ed176\""
+        },
+        {
+          "start": 422383341,
+          "end": 423332007,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "074cd8e89ef40d79cf52e9ee9b41a75c0be346d936cfe8f17d1a3c9f2a409f10",
+          "byte_count": 948667,
+          "last_modified": "2026-02-28T04:04:38Z",
+          "etag": "\"b2f330faef36b9a02e2b92b6b12ed176\""
+        },
+        {
+          "start": 495447919,
+          "end": 496427212,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "dc457ca7ab625cd6bff70bdf58b6fc72c3529de9e9503c321b1ac4771c382ec1",
+          "byte_count": 979294,
+          "last_modified": "2026-02-28T04:04:38Z",
+          "etag": "\"b2f330faef36b9a02e2b92b6b12ed176\""
+        },
+        {
+          "start": 496427213,
+          "end": 497398137,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "972f7398447af6a9fcad43dc0352358380384f029b62133edbf265ede18b5739",
+          "byte_count": 970925,
+          "last_modified": "2026-02-28T04:04:38Z",
+          "etag": "\"b2f330faef36b9a02e2b92b6b12ed176\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f062"
+    },
+    {
+      "gfs_lead_hours": 63,
+      "fields": [
+        {
+          "start": 415261402,
+          "end": 416152107,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "b7ab1dcdd3b278614062d13bc819b9a8165f896be2e44322e63e18ead573b388",
+          "byte_count": 890706,
+          "last_modified": "2026-02-28T03:51:05Z",
+          "etag": "\"c5f0136ebbefd523f3a48b7db84f28d4\""
+        },
+        {
+          "start": 420971622,
+          "end": 421943824,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "868046f16e507c7ae24b9f03bc5b36e973dfa3fa3fd0d01675de21eb3c9ff213",
+          "byte_count": 972203,
+          "last_modified": "2026-02-28T03:51:05Z",
+          "etag": "\"c5f0136ebbefd523f3a48b7db84f28d4\""
+        },
+        {
+          "start": 421943825,
+          "end": 422892434,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "3b6d056ab17d5880be5b2476f3b2f4246f270901a7a7d406e1e242cea78d65ff",
+          "byte_count": 948610,
+          "last_modified": "2026-02-28T03:51:05Z",
+          "etag": "\"c5f0136ebbefd523f3a48b7db84f28d4\""
+        },
+        {
+          "start": 495394166,
+          "end": 496373751,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "ce6aca419623e6200b693eca08c7883f9eaa28c011bcd9ce9198c5159f3bd590",
+          "byte_count": 979586,
+          "last_modified": "2026-02-28T03:51:05Z",
+          "etag": "\"c5f0136ebbefd523f3a48b7db84f28d4\""
+        },
+        {
+          "start": 496373752,
+          "end": 497340889,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "4f2c005cdbb0f43b94194ca3d498110f16790c26d8a58887043ff1eea17d50ba",
+          "byte_count": 967138,
+          "last_modified": "2026-02-28T03:51:05Z",
+          "etag": "\"c5f0136ebbefd523f3a48b7db84f28d4\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f063"
+    },
+    {
+      "gfs_lead_hours": 64,
+      "fields": [
+        {
+          "start": 416415753,
+          "end": 417301712,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "0277c3478965b2d1f7d1ca50ea9f8ace27338387d01dd38cb190a98ecd68263a",
+          "byte_count": 885960,
+          "last_modified": "2026-02-28T03:51:04Z",
+          "etag": "\"654d8dd89f5dcfffebe64ed04adbb8a2\""
+        },
+        {
+          "start": 422116264,
+          "end": 423088596,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "a656bf2b162e25c13cfdc48bb16d4613642ca4fa61be5fed75a6c032059139b1",
+          "byte_count": 972333,
+          "last_modified": "2026-02-28T03:51:04Z",
+          "etag": "\"654d8dd89f5dcfffebe64ed04adbb8a2\""
+        },
+        {
+          "start": 423088597,
+          "end": 424037867,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "705c58305e3f635bf8e75c48e351db8281c75eef71016ac6e187cfad561008e1",
+          "byte_count": 949271,
+          "last_modified": "2026-02-28T03:51:04Z",
+          "etag": "\"654d8dd89f5dcfffebe64ed04adbb8a2\""
+        },
+        {
+          "start": 497329714,
+          "end": 498310330,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "bc877e80640ec0f9a038ce3cdde29e1f4004bb2306dfb5bcfcc35f6a90fa0181",
+          "byte_count": 980617,
+          "last_modified": "2026-02-28T03:51:04Z",
+          "etag": "\"654d8dd89f5dcfffebe64ed04adbb8a2\""
+        },
+        {
+          "start": 498310331,
+          "end": 499281989,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "199ba54f2408ae6786aff95d3c0c91c6498606de277e59bf050bb0226cd3f242",
+          "byte_count": 971659,
+          "last_modified": "2026-02-28T03:51:04Z",
+          "etag": "\"654d8dd89f5dcfffebe64ed04adbb8a2\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f064"
+    },
+    {
+      "gfs_lead_hours": 65,
+      "fields": [
+        {
+          "start": 416621334,
+          "end": 417510425,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "5ffde094ec62decb028b1cbdee2227b1f843993aea424e946e29d42fa810bf51",
+          "byte_count": 889092,
+          "last_modified": "2026-02-28T03:50:54Z",
+          "etag": "\"75b49dd49699f88ae75f5d1a4cfe7f24\""
+        },
+        {
+          "start": 422331153,
+          "end": 423303700,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "c84af6198e01e5da3a00531f52d90c3bf5d20df5bb7d2a84f94816c5f4ef457d",
+          "byte_count": 972548,
+          "last_modified": "2026-02-28T03:50:54Z",
+          "etag": "\"75b49dd49699f88ae75f5d1a4cfe7f24\""
+        },
+        {
+          "start": 423303701,
+          "end": 424253164,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "ee2322e57829f4ec2d5609c22b74f3b9b8b5b2473687490e8135f60a23d6e289",
+          "byte_count": 949464,
+          "last_modified": "2026-02-28T03:50:54Z",
+          "etag": "\"75b49dd49699f88ae75f5d1a4cfe7f24\""
+        },
+        {
+          "start": 497869931,
+          "end": 498850851,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "97cbc95a1679d5567a8722b1dcdee9efa892f898494a873c0ce46f2257d04288",
+          "byte_count": 980921,
+          "last_modified": "2026-02-28T03:50:54Z",
+          "etag": "\"75b49dd49699f88ae75f5d1a4cfe7f24\""
+        },
+        {
+          "start": 498850852,
+          "end": 499822911,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "4f2364e8e75f42fa60d22840280f56c42b06f60b402780f30bb6c5a7c0edd7a2",
+          "byte_count": 972060,
+          "last_modified": "2026-02-28T03:50:54Z",
+          "etag": "\"75b49dd49699f88ae75f5d1a4cfe7f24\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f065"
+    },
+    {
+      "gfs_lead_hours": 66,
+      "fields": [
+        {
+          "start": 415657781,
+          "end": 416175210,
+          "field": "temperature_2m_c",
+          "variable": "TMP",
+          "height_m": 2,
+          "sha256": "837477f1f591cb307b7225a4505cd6da666afc76bbc06ccda9c1e5396f2ec55f",
+          "byte_count": 517430,
+          "last_modified": "2026-02-28T03:51:30Z",
+          "etag": "\"bdd8cbc6605330a4b4084e1f97f36f33\""
+        },
+        {
+          "start": 420993235,
+          "end": 421965500,
+          "field": "wind_u_10m_ms",
+          "variable": "UGRD",
+          "height_m": 10,
+          "sha256": "8ed333d3c1d64426b2beb60eb2a679b563c4b5ba7d597e7844be677b40d0d5e3",
+          "byte_count": 972266,
+          "last_modified": "2026-02-28T03:51:30Z",
+          "etag": "\"bdd8cbc6605330a4b4084e1f97f36f33\""
+        },
+        {
+          "start": 421965501,
+          "end": 422918532,
+          "field": "wind_v_10m_ms",
+          "variable": "VGRD",
+          "height_m": 10,
+          "sha256": "34e6947ac587b48ed58c9c063a849c29dd0730411601389f5f2b9cd8d427312a",
+          "byte_count": 953032,
+          "last_modified": "2026-02-28T03:51:30Z",
+          "etag": "\"bdd8cbc6605330a4b4084e1f97f36f33\""
+        },
+        {
+          "start": 497327163,
+          "end": 498307357,
+          "field": "wind_u_100m_ms",
+          "variable": "UGRD",
+          "height_m": 100,
+          "sha256": "22aa2c9cf931683d9a34bb715875b4c6e9c5263d206ba73a87d9f1094cfd3126",
+          "byte_count": 980195,
+          "last_modified": "2026-02-28T03:51:30Z",
+          "etag": "\"bdd8cbc6605330a4b4084e1f97f36f33\""
+        },
+        {
+          "start": 498307358,
+          "end": 499279657,
+          "field": "wind_v_100m_ms",
+          "variable": "VGRD",
+          "height_m": 100,
+          "sha256": "9c4515baaefe84ea111b2429f0f449eb8799b94dfd5c3d03d282b99ed2024b23",
+          "byte_count": 972300,
+          "last_modified": "2026-02-28T03:51:30Z",
+          "etag": "\"bdd8cbc6605330a4b4084e1f97f36f33\""
+        }
+      ],
+      "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260228/00/atmos/gfs.t00z.pgrb2.0p25.f066"
+    }
+  ],
+  "available_at": "2026-02-28T04:04:38Z",
+  "availability_basis": "upper bound from original NOAA public S3 objects",
+  "retrieved_at": "2026-09-23T10:31:14.123156Z",
+  "assembled_at": "2026-09-23T11:30:53.712243Z"
+}

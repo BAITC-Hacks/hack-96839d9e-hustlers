@@ -1,0 +1,18 @@
+{
+  "train": {
+    "turbine_1": {
+      "rows": 5754,
+      "unique_target_hours": 2889,
+      "target_min": "2025-09-30T19:00:00Z",
+      "target_max": "2026-01-31T16:00:00Z",
+      "max_label_available_at": "2026-01-31T17:00:00Z"
+    },
+    "turbine_2": {
+      "rows": 5742,
+      "unique_target_hours": 2883,
+      "target_min": "2025-09-30T19:00:00Z",
+      "target_max": "2026-01-31T16:00:00Z",
+      "max_label_available_at": "2026-01-31T17:00:00Z"
+    }
+  }
+}

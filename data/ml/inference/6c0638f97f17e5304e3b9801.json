@@ -1,0 +1,23 @@
+{
+  "site_id": "turbine_1",
+  "model_version": "ml-9ffc3398a6c80f479aed4063",
+  "forecast_origin": "2026-02-20T18:00:00Z",
+  "rows": 48,
+  "clipped_predictions": 0,
+  "outside_training_range": {
+    "wind_speed_10m_ms": 0,
+    "wind_speed_100m_ms": 0,
+    "wind_u_10m_ms": 0,
+    "wind_v_10m_ms": 0,
+    "wind_u_100m_ms": 0,
+    "wind_v_100m_ms": 0,
+    "temperature_2m_c": 0,
+    "local_hour_sin": 0,
+    "local_hour_cos": 0
+  },
+  "leads_outside_training_range": {
+    "lead_hours": 0,
+    "gfs_lead_hours": 0
+  },
+  "update_accuracy_evaluated": false
+}

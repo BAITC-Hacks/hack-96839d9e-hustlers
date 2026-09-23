@@ -1,0 +1,3 @@
+# Optional participant 1 training/inference dependencies; existing pins retained.
+-r requirements.txt
+catboost==1.2.10

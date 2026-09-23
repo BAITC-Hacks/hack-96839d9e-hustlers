@@ -1,0 +1,14 @@
+{
+  "hourly_rows": 1344,
+  "full_release_rows": 2784,
+  "original_releases": 58,
+  "rule": "For local day D: steps 1–24 of original daily D−1 23:00 Asia/Almaty; no intraday updates",
+  "target_start_local": "2026-02-01T00:00:00+05:00",
+  "target_end_exclusive_local": "2026-03-01T00:00:00+05:00",
+  "february_metrics": null,
+  "reason": "No February actual power provided",
+  "checksums": {
+    "february_hourly.csv": "b6f35479eb6d2e65d0c886fc4f3db93b453f540c2ac06f694eb0c1d8d748cfdb",
+    "february_full_releases.csv": "08fe0f50a6a2308c12560d50d758d4bee04a1439701e94d8a11d461c9a52e95e"
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "status": "real_models_trained_and_integrated",
+  "data_source": "original SCADA and NOAA GFS; checksums match participant 2 report",
+  "inputs": {
+    "scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+  },
+  "scada": {
+    "turbine_1": {
+      "source_rows": 142360,
+      "invalid_timestamp_rows": 0,
+      "outside_main_window_rows": 124977,
+      "rows_in_window": 17383,
+      "complete_hours": 2891,
+      "hours": 2952,
+      "zero_power_rows_retained": 22,
+      "quality_reasons": {
+        "complete": 2891,
+        "missing_hour": 51,
+        "incomplete_hour": 10
+      },
+      "invalid_power_rows": 0,
+      "duplicate_rows": 0,
+      "off_grid_rows": 0
+    },
+    "turbine_2": {
+      "source_rows": 149499,
+      "invalid_timestamp_rows": 0,
+      "outside_main_window_rows": 132142,
+      "rows_in_window": 17357,
+      "complete_hours": 2885,
+      "hours": 2952,
+      "zero_power_rows_retained": 301,
+      "quality_reasons": {
+        "complete": 2885,
+        "missing_hour": 54,
+        "incomplete_hour": 13
+      },
+      "invalid_power_rows": 0,
+      "duplicate_rows": 0,
+      "off_grid_rows": 0
+    }
+  },
+  "weather_rows": 14592,
+  "weather_releases": 152,
+  "models": {
+    "turbine_1": {
+      "baseline_smoke": {
+        "version": "ml-15c1adbef5803682b511002d",
+        "path": "models/turbine_1/ml-15c1adbef5803682b511002d",
+        "training_cutoff": "2025-11-30T17:00:00Z",
+        "training_summary": {
+          "rows": 2786,
+          "unique_target_hours": 1405,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2025-11-30T16:00:00Z",
+          "max_label_available_at": "2025-11-30T17:00:00Z"
+        },
+        "config": {
+          "kind": "wind_table",
+          "feature_set": "weather_hour"
+        },
+        "training_seconds": 0.070367,
+        "artifact_checksums": {
+          "model.json": "ce935617cdb7a4551e9f53e8cf09cee123b7c8f9a731d4318de47a4fc253d16e",
+          "baselines.json": "418b039c4fac5d649c51b18698c9d0f30f84f0314acc7a15d60f998e6c601d42"
+        }
+      },
+      "february_final": {
+        "version": "ml-9ffc3398a6c80f479aed4063",
+        "path": "models/turbine_1/ml-9ffc3398a6c80f479aed4063",
+        "training_cutoff": "2026-01-31T17:00:00Z",
+        "training_summary": {
+          "rows": 5754,
+          "unique_target_hours": 2889,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2026-01-31T16:00:00Z",
+          "max_label_available_at": "2026-01-31T17:00:00Z"
+        },
+        "config": {
+          "kind": "catboost",
+          "feature_set": "weather_hour",
+          "params": {
+            "depth": 4,
+            "iterations": 93,
+            "learning_rate": 0.05,
+            "loss_function": "MAE",
+            "eval_metric": "MAE",
+            "random_seed": 2026,
+            "thread_count": 4,
+            "task_type": "CPU",
+            "allow_writing_files": false,
+            "verbose": false
+          }
+        },
+        "training_seconds": 0.292467,
+        "artifact_checksums": {
+          "model.cbm": "ec0e50e7edd641e58ec04037313554c98b673a6b1b86b0e544fd695c42bd59d4",
+          "baselines.json": "044bf63c2ce24526fc5b3e3610e3dc9719785b69852c14b911a71ff4cc680560"
+        }
+      },
+      "january_evaluation": {
+        "version": "ml-aa9c264cc36f7a875765c07d",
+        "path": "models/turbine_1/ml-aa9c264cc36f7a875765c07d",
+        "training_cutoff": "2025-12-31T17:00:00Z",
+        "training_summary": {
+          "rows": 4266,
+          "unique_target_hours": 2145,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2025-12-31T16:00:00Z",
+          "max_label_available_at": "2025-12-31T17:00:00Z"
+        },
+        "config": {
+          "kind": "catboost",
+          "feature_set": "weather_hour",
+          "params": {
+            "depth": 4,
+            "iterations": 93,
+            "learning_rate": 0.05,
+            "loss_function": "MAE",
+            "eval_metric": "MAE",
+            "random_seed": 2026,
+            "thread_count": 4,
+            "task_type": "CPU",
+            "allow_writing_files": false,
+            "verbose": false
+          }
+        },
+        "training_seconds": 0.272598,
+        "artifact_checksums": {
+          "model.cbm": "05e5344c429b2695dce56ddcdbc7f6ed2c1d5fb4652626567508f381c4428241",
+          "baselines.json": "462c8481a99ba51d94552032d5ebe5ec6cda52eb3a4646038d8609fc57f4831a"
+        }
+      }
+    },
+    "turbine_2": {
+      "february_final": {
+        "version": "ml-03e3b3999293875db412a925",
+        "path": "models/turbine_2/ml-03e3b3999293875db412a925",
+        "training_cutoff": "2026-01-31T17:00:00Z",
+        "training_summary": {
+          "rows": 5742,
+          "unique_target_hours": 2883,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2026-01-31T16:00:00Z",
+          "max_label_available_at": "2026-01-31T17:00:00Z"
+        },
+        "config": {
+          "kind": "catboost",
+          "feature_set": "weather_hour_lead",
+          "params": {
+            "depth": 4,
+            "iterations": 92,
+            "learning_rate": 0.05,
+            "loss_function": "MAE",
+            "eval_metric": "MAE",
+            "random_seed": 2026,
+            "thread_count": 4,
+            "task_type": "CPU",
+            "allow_writing_files": false,
+            "verbose": false
+          }
+        },
+        "training_seconds": 0.181163,
+        "artifact_checksums": {
+          "model.cbm": "0b1cfdda04030729f72d4b5acaca2ac8092a645fb079f2fba4abe5bf47beb7e1",
+          "baselines.json": "743b5bcaaa37de32dabca3a82d36d5f874079774584a22f6163ee1e13f93c57f"
+        }
+      },
+      "baseline_smoke": {
+        "version": "ml-89be508b36fd99ee1cac057d",
+        "path": "models/turbine_2/ml-89be508b36fd99ee1cac057d",
+        "training_cutoff": "2025-11-30T17:00:00Z",
+        "training_summary": {
+          "rows": 2786,
+          "unique_target_hours": 1405,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2025-11-30T16:00:00Z",
+          "max_label_available_at": "2025-11-30T17:00:00Z"
+        },
+        "config": {
+          "kind": "wind_table",
+          "feature_set": "weather_hour"
+        },
+        "training_seconds": 0.083853,
+        "artifact_checksums": {
+          "model.json": "b638be148d01a55657a9f32ef743a8af9de48f23342bbcced45314a74e2dd2ed",
+          "baselines.json": "a3225ac65be22d247c5f2e9cc76b56e7f259860fc83da3bb5673c1ee63604a40"
+        }
+      },
+      "january_evaluation": {
+        "version": "ml-db801e79d7cf6c0bb34e9600",
+        "path": "models/turbine_2/ml-db801e79d7cf6c0bb34e9600",
+        "training_cutoff": "2025-12-31T17:00:00Z",
+        "training_summary": {
+          "rows": 4254,
+          "unique_target_hours": 2139,
+          "target_start": "2025-09-30T19:00:00Z",
+          "target_end": "2025-12-31T16:00:00Z",
+          "max_label_available_at": "2025-12-31T17:00:00Z"
+        },
+        "config": {
+          "kind": "catboost",
+          "feature_set": "weather_hour_lead",
+          "params": {
+            "depth": 4,
+            "iterations": 92,
+            "learning_rate": 0.05,
+            "loss_function": "MAE",
+            "eval_metric": "MAE",
+            "random_seed": 2026,
+            "thread_count": 4,
+            "task_type": "CPU",
+            "allow_writing_files": false,
+            "verbose": false
+          }
+        },
+        "training_seconds": 0.140769,
+        "artifact_checksums": {
+          "model.cbm": "cfa0c5074cda270e5eb7bc0c32dc42eb74577847d3e234bc4fbab381e47b346a",
+          "baselines.json": "396533b83e09c9516f20125b5f34d969490ebafd77d0211ce274e0e0233b9c1e"
+        }
+      }
+    }
+  },
+  "selection_sha256": "c95df7e6a9aab2124206d1ffe2acd296c1cc09c1eb0fcc27f62f38c34e2558b2",
+  "selection_code_unchanged_after_january": true,
+  "january": {
+    "evaluation_models": {
+      "turbine_1": "ml-aa9c264cc36f7a875765c07d",
+      "turbine_2": "ml-db801e79d7cf6c0bb34e9600"
+    },
+    "metrics": [
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.2155662475581873,
+        "rmse": 0.29905057901280857,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.27178506375227685,
+        "rmse": 0.3471331761958028,
+        "model_mae_improvement_pct": 20.685027873838997
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.23933230874316938,
+        "rmse": 0.33240261186697473,
+        "model_mae_improvement_pct": 9.930151641367301
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.2007579679765566,
+        "rmse": 0.278059994900568,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.27237231182795696,
+        "rmse": 0.347686462054618,
+        "model_mae_improvement_pct": 26.292813454781456
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.22024865591397852,
+        "rmse": 0.3057583831133433,
+        "model_mae_improvement_pct": 8.849401535069667
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.23086813645920562,
+        "rmse": 0.31929443014217235,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.27117824074074076,
+        "rmse": 0.3465605194952816,
+        "model_mae_improvement_pct": 14.864800424778002
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.2590520833333333,
+        "rmse": 0.3578569278714851,
+        "model_mae_improvement_pct": 10.879644939146155
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.22058796638958098,
+        "rmse": 0.306425217330101,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.2692361111111112,
+        "rmse": 0.35029992191183684,
+        "model_mae_improvement_pct": 18.068952385608323
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "all",
+        "n_used": 1464,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.24585382513661203,
+        "rmse": 0.3418277198275493,
+        "model_mae_improvement_pct": 10.276780820063195
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.20603403227930253,
+        "rmse": 0.28575772336994637,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.26978494623655913,
+        "rmse": 0.350811101467419,
+        "model_mae_improvement_pct": 23.630271016440272
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "1–24",
+        "n_used": 744,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.22651321684587813,
+        "rmse": 0.314970661941412,
+        "model_mae_improvement_pct": 9.04105502175171
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "model",
+        "mae": 0.23562703163686874,
+        "rmse": 0.32640973598280626,
+        "model_mae_improvement_pct": null
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "constant_median",
+        "mae": 0.2686689814814815,
+        "rmse": 0.34977091819653816,
+        "model_mae_improvement_pct": 12.298386535883091
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon_band": "25–48",
+        "n_used": 720,
+        "n_excluded": 0,
+        "exclusion_reasons": {},
+        "estimator": "wind_table",
+        "mae": 0.26583912037037033,
+        "rmse": 0.3675239465302202,
+        "model_mae_improvement_pct": 11.364801648233614
+      }
+    ],
+    "clipped_predictions": {
+      "turbine_1": 0,
+      "turbine_2": 0
+    },
+    "split": {
+      "train": {
+        "turbine_1": {
+          "rows": 4266,
+          "unique_target_hours": 2145,
+          "target_min": "2025-09-30T19:00:00Z",
+          "target_max": "2025-12-31T16:00:00Z",
+          "max_label_available_at": "2025-12-31T17:00:00Z"
+        },
+        "turbine_2": {
+          "rows": 4254,
+          "unique_target_hours": 2139,
+          "target_min": "2025-09-30T19:00:00Z",
+          "target_max": "2025-12-31T16:00:00Z",
+          "max_label_available_at": "2025-12-31T17:00:00Z"
+        }
+      },
+      "evaluation": {
+        "turbine_1": {
+          "rows": 1464,
+          "unique_target_hours": 744,
+          "target_min": "2025-12-31T19:00:00Z",
+          "target_max": "2026-01-31T18:00:00Z",
+          "max_label_available_at": "2026-01-31T19:00:00Z"
+        },
+        "turbine_2": {
+          "rows": 1464,
+          "unique_target_hours": 744,
+          "target_min": "2025-12-31T19:00:00Z",
+          "target_max": "2026-01-31T18:00:00Z",
+          "max_label_available_at": "2026-01-31T19:00:00Z"
+        }
+      }
+    },
+    "independence": "No January configuration changes"
+  },
+  "backend": {
+    "mode": "real_offline_deterministic",
+    "live_llm_tested": false,
+    "forecasts": [
+      {
+        "site_id": "turbine_1",
+        "horizon": 24,
+        "forecast_id": "forecast-12e9f2d5fb07f8d10e280fe6",
+        "model_version": "ml-9ffc3398a6c80f479aed4063"
+      },
+      {
+        "site_id": "turbine_1",
+        "horizon": 48,
+        "forecast_id": "forecast-3bd7a5659d75a23ee6b9aea4",
+        "model_version": "ml-9ffc3398a6c80f479aed4063"
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon": 24,
+        "forecast_id": "forecast-d8b4dee185b786cf3132019e",
+        "model_version": "ml-03e3b3999293875db412a925"
+      },
+      {
+        "site_id": "turbine_2",
+        "horizon": 48,
+        "forecast_id": "forecast-d24f50022b3c5b929db71f38",
+        "model_version": "ml-03e3b3999293875db412a925"
+      }
+    ],
+    "adapter_final_export": true,
+    "uploaded_json_final_export": false,
+    "idempotent": true,
+    "permutation_verified": true,
+    "future_model_rejected": true,
+    "smoke_bundle": "/home/abuka/hack-96839d9e-hustlers/data/forecasts/forecast-3bd7a5659d75a23ee6b9aea4/bundle.json",
+    "january_rows_loaded": 2928,
+    "replay_releases": 58,
+    "february_export": {
+      "hourly_rows": 1344,
+      "full_release_rows": 2784,
+      "original_releases": 58,
+      "rule": "For local day D: steps 1–24 of original daily D−1 23:00 Asia/Almaty; no intraday updates",
+      "target_start_local": "2026-02-01T00:00:00+05:00",
+      "target_end_exclusive_local": "2026-03-01T00:00:00+05:00",
+      "february_metrics": null,
+      "reason": "No February actual power provided",
+      "checksums": {
+        "february_hourly.csv": "b6f35479eb6d2e65d0c886fc4f3db93b453f540c2ac06f694eb0c1d8d748cfdb",
+        "february_full_releases.csv": "08fe0f50a6a2308c12560d50d758d4bee04a1439701e94d8a11d461c9a52e95e"
+      }
+    },
+    "update": {
+      "old_forecast_id": "forecast-3bd7a5659d75a23ee6b9aea4",
+      "new_forecast_id": "forecast-947ba7c3d9c82c2805cd6be1",
+      "as_of": "2026-02-01T06:00:00Z"
+    },
+    "no_retraining": true
+  },
+  "historical_model_selection": [
+    {
+      "origin": "2025-12-01T23:00:00+05:00",
+      "site_id": "turbine_1",
+      "version": "ml-15c1adbef5803682b511002d",
+      "training_cutoff": "2025-11-30T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "baseline_smoke"
+    },
+    {
+      "origin": "2025-12-31T23:00:00+05:00",
+      "site_id": "turbine_1",
+      "version": "ml-aa9c264cc36f7a875765c07d",
+      "training_cutoff": "2025-12-31T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "january_evaluation"
+    },
+    {
+      "origin": "2026-01-31T23:00:00+05:00",
+      "site_id": "turbine_1",
+      "version": "ml-9ffc3398a6c80f479aed4063",
+      "training_cutoff": "2026-01-31T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "february_final"
+    },
+    {
+      "origin": "2025-12-01T23:00:00+05:00",
+      "site_id": "turbine_2",
+      "version": "ml-89be508b36fd99ee1cac057d",
+      "training_cutoff": "2025-11-30T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "baseline_smoke"
+    },
+    {
+      "origin": "2025-12-31T23:00:00+05:00",
+      "site_id": "turbine_2",
+      "version": "ml-db801e79d7cf6c0bb34e9600",
+      "training_cutoff": "2025-12-31T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "january_evaluation"
+    },
+    {
+      "origin": "2026-01-31T23:00:00+05:00",
+      "site_id": "turbine_2",
+      "version": "ml-03e3b3999293875db412a925",
+      "training_cutoff": "2026-01-31T17:00:00Z",
+      "normalization": "0_1",
+      "weather_schema": "gfs-0p25-nearest-v1",
+      "provider_model": "gfs_pgrb2.0p25",
+      "labels_available_by_cutoff": true,
+      "feature_version": "gfs-power-v1",
+      "purpose": "february_final"
+    }
+  ],
+  "libraries": {
+    "python": "3.14.7",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "catboost": "1.2.10"
+  },
+  "tests": {
+    "passed": 162,
+    "skipped": 0,
+    "failures": 0,
+    "junit": "artifacts/ml_tests.xml"
+  },
+  "checks": {
+    "source_files_unchanged": true,
+    "complete_weather_grid": true,
+    "target_splits_disjoint": true,
+    "model_checksums": true,
+    "compileall": "passed",
+    "pip_check": "passed",
+    "git_diff_check": "passed"
+  },
+  "assumptions": {
+    "interval_label": "start",
+    "scada_delay_minutes": 0,
+    "timestamp_format": "mixed",
+    "timezone": "Asia/Almaty",
+    "target_time": "start of hour",
+    "semantics_confirmed": false,
+    "delay_confirmed": false,
+    "assumption": "Unconfirmed interval labels and SCADA arrival delay; available at hour end plus configured delay.",
+    "quality_rule": "six valid unique on-grid observations; any duplicate/invalid/off-grid row rejects hour"
+  },
+  "limitations": [
+    "No February actuals: no February accuracy metrics",
+    "Intraday update lead range 7..54 differs from training 19..66; update accuracy not evaluated",
+    "SCADA interval semantics and arrival delay unconfirmed",
+    "Live LLM agent not tested; deterministic backend verified"
+  ]
+}

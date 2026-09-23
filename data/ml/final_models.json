@@ -1,0 +1,54 @@
+{
+  "turbine_1": {
+    "version": "ml-9ffc3398a6c80f479aed4063",
+    "config": {
+      "kind": "catboost",
+      "feature_set": "weather_hour",
+      "params": {
+        "depth": 4,
+        "iterations": 93,
+        "learning_rate": 0.05,
+        "loss_function": "MAE",
+        "eval_metric": "MAE",
+        "random_seed": 2026,
+        "thread_count": 4,
+        "task_type": "CPU",
+        "allow_writing_files": false,
+        "verbose": false
+      }
+    },
+    "training_summary": {
+      "rows": 5754,
+      "unique_target_hours": 2889,
+      "target_start": "2025-09-30T19:00:00Z",
+      "target_end": "2026-01-31T16:00:00Z",
+      "max_label_available_at": "2026-01-31T17:00:00Z"
+    }
+  },
+  "turbine_2": {
+    "version": "ml-03e3b3999293875db412a925",
+    "config": {
+      "kind": "catboost",
+      "feature_set": "weather_hour_lead",
+      "params": {
+        "depth": 4,
+        "iterations": 92,
+        "learning_rate": 0.05,
+        "loss_function": "MAE",
+        "eval_metric": "MAE",
+        "random_seed": 2026,
+        "thread_count": 4,
+        "task_type": "CPU",
+        "allow_writing_files": false,
+        "verbose": false
+      }
+    },
+    "training_summary": {
+      "rows": 5742,
+      "unique_target_hours": 2883,
+      "target_start": "2025-09-30T19:00:00Z",
+      "target_end": "2026-01-31T16:00:00Z",
+      "max_label_available_at": "2026-01-31T17:00:00Z"
+    }
+  }
+}

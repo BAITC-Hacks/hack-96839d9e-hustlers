@@ -1,0 +1,5 @@
+{"recorded_at": "2026-09-23T11:30:51.508374Z", "forecast_origin": "2026-02-08T18:00:00Z", "tool": "fetch_weather", "status": "success", "candidate_index": 0, "duration_seconds": 0.028}
+{"recorded_at": "2026-09-23T11:30:51.509159Z", "forecast_origin": "2026-02-08T18:00:00Z", "tool": "validate_weather", "status": "success"}
+{"recorded_at": "2026-09-23T11:30:51.531546Z", "forecast_origin": "2026-02-08T18:00:00Z", "tool": "predict_power", "status": "success"}
+{"recorded_at": "2026-09-23T11:30:51.531568Z", "forecast_origin": "2026-02-08T18:00:00Z", "tool": "analyse_forecast", "status": "success"}
+{"recorded_at": "2026-09-23T11:30:51.535635Z", "forecast_origin": "2026-02-08T18:00:00Z", "tool": "publish_forecast", "status": "success"}
