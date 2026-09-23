@@ -1,0 +1,245 @@
+{
+  "evaluation_models": {
+    "turbine_1": "ml-aa9c264cc36f7a875765c07d",
+    "turbine_2": "ml-db801e79d7cf6c0bb34e9600"
+  },
+  "metrics": [
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.2155662475581873,
+      "rmse": 0.29905057901280857,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.27178506375227685,
+      "rmse": 0.3471331761958028,
+      "model_mae_improvement_pct": 20.685027873838997
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.23933230874316938,
+      "rmse": 0.33240261186697473,
+      "model_mae_improvement_pct": 9.930151641367301
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.2007579679765566,
+      "rmse": 0.278059994900568,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.27237231182795696,
+      "rmse": 0.347686462054618,
+      "model_mae_improvement_pct": 26.292813454781456
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.22024865591397852,
+      "rmse": 0.3057583831133433,
+      "model_mae_improvement_pct": 8.849401535069667
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.23086813645920562,
+      "rmse": 0.31929443014217235,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.27117824074074076,
+      "rmse": 0.3465605194952816,
+      "model_mae_improvement_pct": 14.864800424778002
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.2590520833333333,
+      "rmse": 0.3578569278714851,
+      "model_mae_improvement_pct": 10.879644939146155
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.22058796638958098,
+      "rmse": 0.306425217330101,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.2692361111111112,
+      "rmse": 0.35029992191183684,
+      "model_mae_improvement_pct": 18.068952385608323
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "all",
+      "n_used": 1464,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.24585382513661203,
+      "rmse": 0.3418277198275493,
+      "model_mae_improvement_pct": 10.276780820063195
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.20603403227930253,
+      "rmse": 0.28575772336994637,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.26978494623655913,
+      "rmse": 0.350811101467419,
+      "model_mae_improvement_pct": 23.630271016440272
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "1–24",
+      "n_used": 744,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.22651321684587813,
+      "rmse": 0.314970661941412,
+      "model_mae_improvement_pct": 9.04105502175171
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "model",
+      "mae": 0.23562703163686874,
+      "rmse": 0.32640973598280626,
+      "model_mae_improvement_pct": null
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "constant_median",
+      "mae": 0.2686689814814815,
+      "rmse": 0.34977091819653816,
+      "model_mae_improvement_pct": 12.298386535883091
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon_band": "25–48",
+      "n_used": 720,
+      "n_excluded": 0,
+      "exclusion_reasons": {},
+      "estimator": "wind_table",
+      "mae": 0.26583912037037033,
+      "rmse": 0.3675239465302202,
+      "model_mae_improvement_pct": 11.364801648233614
+    }
+  ],
+  "clipped_predictions": {
+    "turbine_1": 0,
+    "turbine_2": 0
+  },
+  "split": {
+    "train": {
+      "turbine_1": {
+        "rows": 4266,
+        "unique_target_hours": 2145,
+        "target_min": "2025-09-30T19:00:00Z",
+        "target_max": "2025-12-31T16:00:00Z",
+        "max_label_available_at": "2025-12-31T17:00:00Z"
+      },
+      "turbine_2": {
+        "rows": 4254,
+        "unique_target_hours": 2139,
+        "target_min": "2025-09-30T19:00:00Z",
+        "target_max": "2025-12-31T16:00:00Z",
+        "max_label_available_at": "2025-12-31T17:00:00Z"
+      }
+    },
+    "evaluation": {
+      "turbine_1": {
+        "rows": 1464,
+        "unique_target_hours": 744,
+        "target_min": "2025-12-31T19:00:00Z",
+        "target_max": "2026-01-31T18:00:00Z",
+        "max_label_available_at": "2026-01-31T19:00:00Z"
+      },
+      "turbine_2": {
+        "rows": 1464,
+        "unique_target_hours": 744,
+        "target_min": "2025-12-31T19:00:00Z",
+        "target_max": "2026-01-31T18:00:00Z",
+        "max_label_available_at": "2026-01-31T19:00:00Z"
+      }
+    }
+  },
+  "independence": "No January configuration changes"
+}

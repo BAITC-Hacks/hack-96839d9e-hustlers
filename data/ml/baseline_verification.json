@@ -1,0 +1,37 @@
+{
+  "mode": "real_offline_deterministic",
+  "live_llm_tested": false,
+  "forecasts": [
+    {
+      "site_id": "turbine_1",
+      "horizon": 24,
+      "forecast_id": "forecast-2509ffa39628877b292032f0",
+      "model_version": "ml-15c1adbef5803682b511002d"
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon": 48,
+      "forecast_id": "forecast-171a038d5770cfffc40d60a1",
+      "model_version": "ml-15c1adbef5803682b511002d"
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon": 24,
+      "forecast_id": "forecast-603f6df9ad7ec22eabe54e09",
+      "model_version": "ml-89be508b36fd99ee1cac057d"
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon": 48,
+      "forecast_id": "forecast-e67b302928610d0bca5a2f20",
+      "model_version": "ml-89be508b36fd99ee1cac057d"
+    }
+  ],
+  "adapter_final_export": true,
+  "uploaded_json_final_export": false,
+  "idempotent": true,
+  "permutation_verified": true,
+  "future_model_rejected": true,
+  "smoke_bundle": "/home/abuka/hack-96839d9e-hustlers/data/forecasts/forecast-171a038d5770cfffc40d60a1/bundle.json",
+  "no_retraining": true
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "weather_schema": "gfs-0p25-nearest-v1",
+  "inputs": {
+    "scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+  },
+  "label_policy": {
+    "interval_label": "start",
+    "scada_delay_minutes": 0,
+    "timestamp_format": "mixed",
+    "timezone": "Asia/Almaty",
+    "target_time": "start of hour",
+    "semantics_confirmed": false,
+    "delay_confirmed": false,
+    "assumption": "Unconfirmed interval labels and SCADA arrival delay; available at hour end plus configured delay.",
+    "quality_rule": "six valid unique on-grid observations; any duplicate/invalid/off-grid row rejects hour"
+  },
+  "scada": {
+    "turbine_1": {
+      "source_rows": 142360,
+      "invalid_timestamp_rows": 0,
+      "outside_main_window_rows": 124977,
+      "rows_in_window": 17383,
+      "complete_hours": 2891,
+      "hours": 2952,
+      "zero_power_rows_retained": 22,
+      "quality_reasons": {
+        "complete": 2891,
+        "missing_hour": 51,
+        "incomplete_hour": 10
+      },
+      "invalid_power_rows": 0,
+      "duplicate_rows": 0,
+      "off_grid_rows": 0
+    },
+    "turbine_2": {
+      "source_rows": 149499,
+      "invalid_timestamp_rows": 0,
+      "outside_main_window_rows": 132142,
+      "rows_in_window": 17357,
+      "complete_hours": 2885,
+      "hours": 2952,
+      "zero_power_rows_retained": 301,
+      "quality_reasons": {
+        "complete": 2885,
+        "missing_hour": 54,
+        "incomplete_hour": 13
+      },
+      "invalid_power_rows": 0,
+      "duplicate_rows": 0,
+      "off_grid_rows": 0
+    }
+  },
+  "weather_rows": 14592,
+  "origins": 152,
+  "joined_complete_pairs": 11504,
+  "target_window": [
+    "2025-09-30T19:00:00Z",
+    "2026-01-31T19:00:00Z"
+  ],
+  "outputs": {
+    "hourly_scada.csv": "17f8e0dbbf7944780151a8b06a7aea284ddd4cdac5dd934e0ac5679dad7da047",
+    "examples.csv": "5fb1a5c3ab0392ac8c857150b4d982429704fba43e15bc8e3c193a6f7d24c233"
+  }
+}

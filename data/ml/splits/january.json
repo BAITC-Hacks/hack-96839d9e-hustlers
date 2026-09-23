@@ -1,0 +1,34 @@
+{
+  "train": {
+    "turbine_1": {
+      "rows": 4266,
+      "unique_target_hours": 2145,
+      "target_min": "2025-09-30T19:00:00Z",
+      "target_max": "2025-12-31T16:00:00Z",
+      "max_label_available_at": "2025-12-31T17:00:00Z"
+    },
+    "turbine_2": {
+      "rows": 4254,
+      "unique_target_hours": 2139,
+      "target_min": "2025-09-30T19:00:00Z",
+      "target_max": "2025-12-31T16:00:00Z",
+      "max_label_available_at": "2025-12-31T17:00:00Z"
+    }
+  },
+  "evaluation": {
+    "turbine_1": {
+      "rows": 1464,
+      "unique_target_hours": 744,
+      "target_min": "2025-12-31T19:00:00Z",
+      "target_max": "2026-01-31T18:00:00Z",
+      "max_label_available_at": "2026-01-31T19:00:00Z"
+    },
+    "turbine_2": {
+      "rows": 1464,
+      "unique_target_hours": 744,
+      "target_min": "2025-12-31T19:00:00Z",
+      "target_max": "2026-01-31T18:00:00Z",
+      "max_label_available_at": "2026-01-31T19:00:00Z"
+    }
+  }
+}
