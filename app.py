@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 import pandas as pd
 import streamlit as st
 
-from windops.ui.adapter import BackendAdapter, load_bundle_json, validate_bundle, sanitize_metadata, combine_bundles
+from windops.ui.adapter import AdapterError, BackendAdapter, load_bundle_json, validate_bundle, sanitize_metadata, combine_bundles
 from windops.ui.charts import forecast_chart, weather_chart
 from windops.ui.components import render_header, render_metric_cards, render_forecast_overview
 from windops.ui.configuration import load_configuration
@@ -274,6 +274,8 @@ def render_agent(bundle, backend, configured):
                 st.success("Новый выпуск добавлен в историю. Выберите его в боковой панели.")
             else:
                 st.info("Новых входных данных нет.")
+        except AdapterError as exc:
+            st.error(safe_text(exc))
         except Exception:
             st.error("Проверить обновления не удалось. Предыдущий выпуск доступен; проверьте подключение backend и повторите действие.")
     if not backend.capabilities.get("check_updates"):
@@ -300,6 +302,9 @@ def render_replay(backend, config):
                     st.session_state["replay_result"] = replay
                     if replay.bundles:
                         finish_run(st.session_state, replay.bundles)
+                except AdapterError as exc:
+                    st.session_state.pop("replay_result", None)
+                    st.error(safe_text(exc))
                 except Exception:
                     st.session_state.pop("replay_result", None)
                     st.error("Replay не выполнен. Проверьте backend и доступность архивов; сохранённые выпуски остаются в истории.")
@@ -328,7 +333,7 @@ def main():
     apply_theme()
     initialize_state(st.session_state)
     config = load_configuration()
-    backend = BackendAdapter(os.environ.get("WINDOPS_BACKEND_MODULE") or None)
+    backend = BackendAdapter(os.environ.get("WINDOPS_BACKEND_MODULE") or "windops.backend")
     with st.sidebar:
         st.markdown("### Параметры выпуска")
         st.caption("Исторический прогноз · февраль 2026")
@@ -369,6 +374,8 @@ def main():
                     finish_run(st.session_state, bundles)
                     if bundles:
                         st.session_state["history_choice"] = bundles[-1].forecast_id
+                except AdapterError as exc:
+                    fail_run(st.session_state, "Новый выпуск не сформирован. " + safe_text(exc))
                 except Exception:
                     fail_run(st.session_state, "Новый выпуск не сформирован. Предыдущий успешный выпуск сохранён. Проверьте backend, конфигурацию и доступность архивных данных.")
         st.divider()

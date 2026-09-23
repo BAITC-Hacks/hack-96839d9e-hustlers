@@ -1,0 +1,5 @@
+-r requirements.txt
+requests==2.34.2
+eccodes==2.48.0
+openai==3.19.0
+jsonschema==4.26.0

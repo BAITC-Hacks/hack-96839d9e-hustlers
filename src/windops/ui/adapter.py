@@ -393,7 +393,10 @@ class BackendAdapter:
             raise AdapterError(f"Вызов {name} не подключён. Проверьте контракт backend.")
         try:
             return getattr(self._module, name)(**kwargs)
-        except Exception:
+        except Exception as exc:
+            from windops.core import BackendError
+            if isinstance(exc, BackendError):
+                raise AdapterError(str(sanitize_metadata(str(exc)))) from None
             raise AdapterError(f"Backend не выполнил {name}. Сохранённые выпуски доступны; проверьте конфигурацию и архивы.") from None
 
     def run_forecast(self, site_ids: list[str], forecast_origin: Any, horizon_hours: int) -> list[ForecastBundle]:

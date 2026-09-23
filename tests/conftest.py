@@ -2,8 +2,15 @@
 
 import pandas as pd
 import pytest
+from pathlib import Path
 
 from windops.ui.adapter import ForecastBundle
+
+
+def pytest_sessionstart(session):
+    # pytest creates basetemp itself, but not its missing parent in a fresh clone.
+    if session.config.option.basetemp:
+        Path(session.config.option.basetemp).parent.mkdir(parents=True, exist_ok=True)
 
 
 @pytest.fixture
