@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-09-23T10:56:13.709948Z",
+  "weather_csv": "data/weather/weather_for_ml.csv",
+  "weather_csv_sha256": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0",
+  "rows": 14592,
+  "complete_daily_releases": 152,
+  "sites": 2,
+  "hours_per_release_per_site": 48,
+  "first_origin_local": "2025-09-30 23:00:00+05:00",
+  "last_origin_local": "2026-02-28 23:00:00+05:00",
+  "first_target_local": "2025-10-01 00:00:00+05:00",
+  "last_target_local": "2026-03-02 23:00:00+05:00",
+  "duplicate_keys": 0,
+  "missing_values": 0,
+  "future_weather_rows": 0,
+  "offline_cache_verified": true,
+  "original_scada": [
+    {
+      "site_id": "turbine_1",
+      "sha256": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+      "byte_identical": true
+    },
+    {
+      "site_id": "turbine_2",
+      "sha256": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+      "byte_identical": true
+    }
+  ],
+  "pytest": {
+    "passed": 131,
+    "skipped": 1,
+    "skip_reason": "real ML forecast artifact not supplied"
+  },
+  "compileall": "passed",
+  "pip_check": "passed",
+  "git_diff_check": "passed",
+  "real_ml_end_to_end": "not run: participant 1 module missing",
+  "live_openai_tool_call": "not run: OPENAI_API_KEY and OPENAI_MODEL not configured"
+}

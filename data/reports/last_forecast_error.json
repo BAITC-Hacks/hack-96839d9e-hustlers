@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-09-23T10:35:32.380558Z",
+  "site_id": "turbine_1",
+  "forecast_origin": "2026-01-31T23:00:00+05:00",
+  "error": {
+    "code": "MODEL_NOT_CONFIGURED",
+    "message": "Укажите WINDOPS_ML_MODULE: модуль участника №1 с get_model_metadata и predict_power.",
+    "retryable": false
+  },
+  "events": []
+}

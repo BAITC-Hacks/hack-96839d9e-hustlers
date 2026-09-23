@@ -1,0 +1,20 @@
+{
+  "copied_at": "2026-09-23T10:32:03.550190Z",
+  "byte_identical": true,
+  "files": [
+    {
+      "site_id": "turbine_1",
+      "original_filename": "Dataset HackAlemAI для участников 11.03.2023-28.02.2026 - turbine 1.csv",
+      "local_filename": "turbine_1.csv",
+      "sha256": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+      "bytes": 6049266
+    },
+    {
+      "site_id": "turbine_2",
+      "original_filename": "Dataset HackAlemAI для участников 11.03.2023-28.02.2026 - turbine 2.csv",
+      "local_filename": "turbine_2.csv",
+      "sha256": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+      "bytes": 6354725
+    }
+  ]
+}

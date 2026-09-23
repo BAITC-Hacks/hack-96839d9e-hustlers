@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-09-23T10:22:37.806556Z",
+  "files": {
+    "turbine_1": {
+      "file": "scada/turbine_1.csv",
+      "sha256": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+      "rows": 142360,
+      "first_timestamp": "2023-03-11 00:00:00",
+      "last_timestamp": "2026-01-31 23:50:00",
+      "duplicate_timestamps": 0,
+      "missing_10minute_timestamps": 9992,
+      "complete_hours": 23667,
+      "power_min": 0.0,
+      "power_max": 1.0,
+      "invalid_power_values": 0,
+      "coordinates": {
+        "latitude": 43.64515,
+        "longitude": 78.535604
+      },
+      "time_basis": "Kazakhstan local time, per user; pre-March-2024 normalization not confirmed",
+      "interval_label": "not confirmed; participant 1 must document aggregation convention"
+    },
+    "turbine_2": {
+      "file": "scada/turbine_2.csv",
+      "sha256": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+      "rows": 149499,
+      "first_timestamp": "2023-03-11 00:00:00",
+      "last_timestamp": "2026-01-31 23:50:00",
+      "duplicate_timestamps": 0,
+      "missing_10minute_timestamps": 2853,
+      "complete_hours": 24785,
+      "power_min": 0.0,
+      "power_max": 1.0,
+      "invalid_power_values": 0,
+      "coordinates": {
+        "latitude": 43.643198,
+        "longitude": 78.538828
+      },
+      "time_basis": "Kazakhstan local time, per user; pre-March-2024 normalization not confirmed",
+      "interval_label": "not confirmed; participant 1 must document aggregation convention"
+    }
+  },
+  "february_observations_provided": false
+}
