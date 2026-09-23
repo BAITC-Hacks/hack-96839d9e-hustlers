@@ -1,0 +1,6 @@
+streamlit==1.64.0
+plotly==6.9.0
+pandas==2.3.3
+# pandas 2.3 uses timedelta operations deprecated by NumPy 2.5.
+numpy==2.3.5
+tzdata==2026.4

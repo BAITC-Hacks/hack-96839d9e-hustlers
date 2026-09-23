@@ -24,6 +24,18 @@ htmlcov/
 .coverage
 .coverage.*
 
-# No runtime/framework has been selected yet.
-# Add its actual dependency, virtualenv, build and generated-file paths when selected.
-# Keep source, lockfiles, shared configuration, templates and documentation tracked.
+# Python / Streamlit
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Private local data, models, configuration and generated exports
+config.local.json
+data/
+artifacts/
+models/
+exports/
+test-results/
+.playwright/
