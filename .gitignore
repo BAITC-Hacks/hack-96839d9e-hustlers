@@ -34,7 +34,6 @@ __pycache__/
 # Private local data, models, configuration and generated exports
 config.local.json
 artifacts/
-models/
 exports/
 test-results/
 .playwright/

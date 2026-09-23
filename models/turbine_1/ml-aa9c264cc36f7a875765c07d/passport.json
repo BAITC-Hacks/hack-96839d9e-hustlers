@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "site_id": "turbine_1",
+  "version": "ml-aa9c264cc36f7a875765c07d",
+  "purpose": "january_evaluation",
+  "identity": {
+    "site_id": "turbine_1",
+    "purpose": "january_evaluation",
+    "cutoff": "2025-12-31T17:00:00Z",
+    "config": {
+      "kind": "catboost",
+      "feature_set": "weather_hour",
+      "params": {
+        "depth": 4,
+        "iterations": 93,
+        "learning_rate": 0.05,
+        "loss_function": "MAE",
+        "eval_metric": "MAE",
+        "random_seed": 2026,
+        "thread_count": 4,
+        "task_type": "CPU",
+        "allow_writing_files": false,
+        "verbose": false
+      }
+    },
+    "prepared": "f596b433029b0c3ae999537ac2bfa43189ce4897cf6c46b79e7ec056ea68713c",
+    "selection_digest": "c95df7e6a9aab2124206d1ffe2acd296c1cc09c1eb0fcc27f62f38c34e2558b2",
+    "training_data_sha256": "5ffbfacb6257ac37d67fed26ea0901df498ec9c0559ddb48e24c647a82155e4e",
+    "feature_version": "gfs-power-v1",
+    "code_sha256": "c2fc1926cc4ce838933df6166bd169707e4f94e487eb16a35be24c7f2bdc5c4f",
+    "libraries": {
+      "python": "3.14.7",
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "catboost": "1.2.10"
+    }
+  },
+  "training_cutoff": "2025-12-31T17:00:00Z",
+  "config": {
+    "kind": "catboost",
+    "feature_set": "weather_hour",
+    "params": {
+      "depth": 4,
+      "iterations": 93,
+      "learning_rate": 0.05,
+      "loss_function": "MAE",
+      "eval_metric": "MAE",
+      "random_seed": 2026,
+      "thread_count": 4,
+      "task_type": "CPU",
+      "allow_writing_files": false,
+      "verbose": false
+    }
+  },
+  "normalization": "0_1",
+  "weather_schema": "gfs-0p25-nearest-v1",
+  "provider_model": "gfs_pgrb2.0p25",
+  "weather_source": "data/weather/weather_for_ml.csv; NOAA GFS archived forecasts",
+  "labels_available_by_cutoff": true,
+  "feature_version": "gfs-power-v1",
+  "features": [
+    "wind_speed_10m_ms",
+    "wind_speed_100m_ms",
+    "wind_u_10m_ms",
+    "wind_v_10m_ms",
+    "wind_u_100m_ms",
+    "wind_v_100m_ms",
+    "temperature_2m_c",
+    "local_hour_sin",
+    "local_hour_cos"
+  ],
+  "feature_dtype": "float64",
+  "feature_ranges": {
+    "wind_speed_10m_ms": {
+      "min": 0.0762595163332225,
+      "max": 14.622677536102046
+    },
+    "wind_speed_100m_ms": {
+      "min": 0.0990436841742919,
+      "max": 20.068480484094064
+    },
+    "wind_u_10m_ms": {
+      "min": -13.8074462890625,
+      "max": 13.63767822265625
+    },
+    "wind_v_10m_ms": {
+      "min": -6.84272216796875,
+      "max": 6.53935546875
+    },
+    "wind_u_100m_ms": {
+      "min": -19.1825390625,
+      "max": 18.214189453125
+    },
+    "wind_v_100m_ms": {
+      "min": -8.5098583984375,
+      "max": 8.319768066406251
+    },
+    "temperature_2m_c": {
+      "min": -9.898808593749948,
+      "max": 22.05195312500001
+    },
+    "local_hour_sin": {
+      "min": -1.0,
+      "max": 1.0
+    },
+    "local_hour_cos": {
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  "training_weather_lead_ranges": {
+    "lead_hours": {
+      "min": 1.0,
+      "max": 48.0
+    },
+    "gfs_lead_hours": {
+      "min": 19.0,
+      "max": 66.0
+    }
+  },
+  "label_policy": {
+    "interval_label": "start",
+    "scada_delay_minutes": 0,
+    "timestamp_format": "mixed",
+    "timezone": "Asia/Almaty",
+    "target_time": "start of hour",
+    "semantics_confirmed": false,
+    "delay_confirmed": false,
+    "assumption": "Unconfirmed interval labels and SCADA arrival delay; available at hour end plus configured delay.",
+    "quality_rule": "six valid unique on-grid observations; any duplicate/invalid/off-grid row rejects hour"
+  },
+  "input_checksums": {
+    "scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+  },
+  "training_summary": {
+    "rows": 4266,
+    "unique_target_hours": 2145,
+    "target_start": "2025-09-30T19:00:00Z",
+    "target_end": "2025-12-31T16:00:00Z",
+    "max_label_available_at": "2025-12-31T17:00:00Z"
+  },
+  "output_policy": "reject nonfinite predictions; fixed clip to [0,1] in all paths",
+  "training_prediction_clipped": 0,
+  "trained_at": "2026-09-23T11:30:17.308017Z",
+  "training_seconds": 0.272598,
+  "limitations": [
+    "SCADA interval semantics and arrival delay unconfirmed",
+    "Update origins/leads may differ from training; update accuracy not evaluated",
+    "Normalized power, rated MW unknown; February actuals unavailable"
+  ],
+  "artifact_checksums": {
+    "model.cbm": "05e5344c429b2695dce56ddcdbc7f6ed2c1d5fb4652626567508f381c4428241",
+    "baselines.json": "462c8481a99ba51d94552032d5ebe5ec6cda52eb3a4646038d8609fc57f4831a"
+  },
+  "save_load_predictions_identical": true
+}
