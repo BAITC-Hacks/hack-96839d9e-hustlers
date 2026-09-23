@@ -1,0 +1,29 @@
+# Secrets: only the empty example template belongs in Git.
+.env
+.env.*
+!.env.example
+
+# OS and local IDE state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs, caches, temporary files and test reports
+*.log
+.cache/
+tmp/
+temp/
+*.tmp
+coverage/
+htmlcov/
+.coverage
+.coverage.*
+
+# No runtime/framework has been selected yet.
+# Add its actual dependency, virtualenv, build and generated-file paths when selected.
+# Keep source, lockfiles, shared configuration, templates and documentation tracked.
