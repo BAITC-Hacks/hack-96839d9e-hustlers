@@ -1,0 +1,1242 @@
+{
+  "protocol_sha256": "a8e58429924dad62b7c3abba797f101ee81c3bed8869d9e780ff232731312d06",
+  "january_used_in_this_selection": false,
+  "january_previously_observed": true,
+  "selected": {
+    "turbine_1": {
+      "site_id": "turbine_1",
+      "candidate_index": 2,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 88,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19689810772539126,
+          "rmse": 0.28027530216688573,
+          "bias": 0.018400848388214704
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18910041997702723,
+          "rmse": 0.27182633017283125,
+          "bias": 0.02994382849359335
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20495790262496075,
+          "rmse": 0.28874856290222156,
+          "bias": 0.0064698689515628165
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.1160768194780912
+      },
+      "clipped_predictions": 2,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-02.cbm",
+      "model_sha256": "9b674a7e1d6481c65e28cf2ddd3eaa9cb8bbd536db8e6832ead78a1c57afed8d"
+    },
+    "turbine_2": {
+      "site_id": "turbine_2",
+      "candidate_index": 5,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 92,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19632673224971314,
+          "rmse": 0.27718233654742386,
+          "bias": 0.014084228266541059
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.18675316058193173,
+          "rmse": 0.2683575644908706,
+          "bias": 0.026916959912108403
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20622483177063966,
+          "rmse": 0.28602011887512035,
+          "bias": 0.0008164887685816212
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.4832368596189982
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-05.cbm",
+      "model_sha256": "4f00eb21c1b9064e489d2a22f91f61bfbaab447c82b3db8dfecac9d837b3dfb7"
+    }
+  },
+  "incumbents": {
+    "turbine_1": {
+      "all": {
+        "n_used": 1452,
+        "mae": 0.19912044485323993,
+        "rmse": 0.28991450576537364,
+        "bias": 0.032451520281785856
+      },
+      "1-24": {
+        "n_used": 738,
+        "mae": 0.19144613397219676,
+        "rmse": 0.2822516086942041,
+        "bias": 0.04447266496056633
+      },
+      "25-48": {
+        "n_used": 714,
+        "mae": 0.20705271576389797,
+        "rmse": 0.297627698925889,
+        "bias": 0.02002630351296235
+      }
+    },
+    "turbine_2": {
+      "all": {
+        "n_used": 1440,
+        "mae": 0.19928256470419992,
+        "rmse": 0.2916653414083122,
+        "bias": 0.029220672777974206
+      },
+      "1-24": {
+        "n_used": 732,
+        "mae": 0.19090787416975014,
+        "rmse": 0.28420797907045753,
+        "bias": 0.04204858780760456
+      },
+      "25-48": {
+        "n_used": 708,
+        "mae": 0.20794114305337674,
+        "rmse": 0.2991801188687586,
+        "bias": 0.015957913171068247
+      }
+    }
+  },
+  "experiments": [
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 0,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 3,
+          "iterations": 129,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19871120788649016,
+          "rmse": 0.2917558679286681,
+          "bias": 0.026601309260442393
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18925110410565413,
+          "rmse": 0.2826464049182427,
+          "bias": 0.03828709308455117
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.208489298349035,
+          "rmse": 0.3008818122711307,
+          "bias": 0.014522725980061066
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: rmse degraded",
+          "1-24: rmse degraded",
+          "25-48: mae degraded",
+          "25-48: rmse degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.20552232446617702
+      },
+      "clipped_predictions": 6,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-00.cbm",
+      "model_sha256": "f071d80d40ec870180113ed0e538ea40e05f93a030e0b861c0743a9b5135d5e6"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 1,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 4,
+          "iterations": 82,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19805688858247258,
+          "rmse": 0.28359640299824934,
+          "bias": 0.01634331591116439
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18911484515203877,
+          "rmse": 0.2740299906061165,
+          "bias": 0.027631898830949277
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20729950490132423,
+          "rmse": 0.2931564671356707,
+          "bias": 0.004675284826008584
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.5341271066118959
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-01.cbm",
+      "model_sha256": "4bfb8107d8072f14c64cd17a67071a63784465f67e4ec49547486b499afd2618"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 2,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 88,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19689810772539126,
+          "rmse": 0.28027530216688573,
+          "bias": 0.018400848388214704
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18910041997702723,
+          "rmse": 0.27182633017283125,
+          "bias": 0.02994382849359335
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20495790262496075,
+          "rmse": 0.28874856290222156,
+          "bias": 0.0064698689515628165
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.1160768194780912
+      },
+      "clipped_predictions": 2,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-02.cbm",
+      "model_sha256": "9b674a7e1d6481c65e28cf2ddd3eaa9cb8bbd536db8e6832ead78a1c57afed8d"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 3,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 3,
+          "iterations": 102,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19802028634268606,
+          "rmse": 0.2873902209106096,
+          "bias": 0.021045739333585875
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.1882134215183556,
+          "rmse": 0.27853808724826595,
+          "bias": 0.033477759570296264
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20815679368212012,
+          "rmse": 0.29626205371737213,
+          "bias": 0.008195836063708748
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.5525090662411535
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-03.cbm",
+      "model_sha256": "e6e0ed2bb422ef887a7f4de01cb6f16452e815df7d232cffb48bc9d7b621e27b"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 4,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 4,
+          "iterations": 84,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.1972351819011955,
+          "rmse": 0.28440016682535424,
+          "bias": 0.0197619449191572
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18683903866972892,
+          "rmse": 0.2746164265316301,
+          "bias": 0.030823105700324264
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20798077532531645,
+          "rmse": 0.29417098628945454,
+          "bias": 0.008328980414253416
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.9467952692823478
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-04.cbm",
+      "model_sha256": "69a4b63b2ae9eb4fc7249725ae1badeffa5d0383a2c603938ef0ce7c3a7ad3e0"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 5,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 81,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19694536188803108,
+          "rmse": 0.27623442878807497,
+          "bias": 0.009528219393571619
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18816832746500403,
+          "rmse": 0.2669588464501719,
+          "bias": 0.020792323578712323
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20601742267821876,
+          "rmse": 0.285505258659288,
+          "bias": -0.0021145101423301203
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.0923453725768737
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_1/candidate-05.cbm",
+      "model_sha256": "1451263e7d7ecfaa5f74aa7b0d895159ca19b44f01b4fa28b95c53c346a80ba1"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 0,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 3,
+          "iterations": 142,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19939841714630854,
+          "rmse": 0.2925149992118625,
+          "bias": 0.020518111832194135
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.1890674478734077,
+          "rmse": 0.2820242712144739,
+          "bias": 0.03175676975950952
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21007958876744334,
+          "rmse": 0.30297966337952226,
+          "bias": 0.008898482449715518
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "all: rmse degraded",
+          "25-48: mae degraded",
+          "25-48: rmse degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.05813476070051074
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-00.cbm",
+      "model_sha256": "aa7723a6493f85d19a75487f2db04c83020212a130159ec09037d01dff07abe6"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 1,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 4,
+          "iterations": 92,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19894806339396512,
+          "rmse": 0.285324826163001,
+          "bias": 0.012075509058512507
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.18971232363769341,
+          "rmse": 0.27554095037797394,
+          "bias": 0.022937137357526904
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.2084968790741782,
+          "rmse": 0.2950994958770537,
+          "bias": 0.0008456899697010088
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.16785277263533102
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-01.cbm",
+      "model_sha256": "14410af55b9d2668cba9f0e121ab06432fb44ca739e1a7d516b104c17f7d5a94"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 2,
+      "requested_config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 88,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19893343008846429,
+          "rmse": 0.2810463108112856,
+          "bias": 0.01479931389449847
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.1907499076633079,
+          "rmse": 0.2721881397920375,
+          "bias": 0.026442318009366864
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.2073943600534565,
+          "rmse": 0.2899203300390053,
+          "bias": 0.0027616316740413207
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.1751957659988265
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-02.cbm",
+      "model_sha256": "828c12405ca23269b38195353d0683ec1a32359379190b2d40d6c97cdc283ea5"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 3,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 3,
+          "iterations": 130,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19781394680005626,
+          "rmse": 0.2872875594144147,
+          "bias": 0.018109571530484887
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.18782011512608776,
+          "rmse": 0.27751595195830764,
+          "bias": 0.028529576224973437
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.2081465524290745,
+          "rmse": 0.29705263176419505,
+          "bias": 0.007336346337878074
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.7369525308566559
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-03.cbm",
+      "model_sha256": "41448d7e63e6b54d2dce8ec03ca6e8e8eebe74fb53e6020b75f1df6ad731f586"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 4,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 4,
+          "iterations": 120,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19655585905552006,
+          "rmse": 0.28966181616161935,
+          "bias": 0.021781248023889796
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.18642757579544111,
+          "rmse": 0.2813907667952102,
+          "bias": 0.03477946264440318
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20702747395153376,
+          "rmse": 0.2979719457603507,
+          "bias": 0.008342415958613243
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.3682610180811217
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-04.cbm",
+      "model_sha256": "bda6689444ed0ba7b8991c2708a381116472329fa99c0391ff7a272a677fcb5f"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 5,
+      "requested_config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "config": {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 92,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "features": [
+        "wind_speed_10m_ms",
+        "wind_speed_100m_ms",
+        "wind_u_10m_ms",
+        "wind_v_10m_ms",
+        "wind_u_100m_ms",
+        "wind_v_100m_ms",
+        "temperature_2m_c",
+        "local_hour_sin",
+        "local_hour_cos",
+        "lead_hours",
+        "gfs_lead_hours",
+        "wind_unit_u_10m",
+        "wind_unit_v_10m",
+        "wind_unit_u_100m",
+        "wind_unit_v_100m",
+        "wind_speed_vertical_difference",
+        "wind_speed_vertical_ratio",
+        "wind_vector_alignment"
+      ],
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19632673224971314,
+          "rmse": 0.27718233654742386,
+          "bias": 0.014084228266541059
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.18675316058193173,
+          "rmse": 0.2683575644908706,
+          "bias": 0.026916959912108403
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20622483177063966,
+          "rmse": 0.28602011887512035,
+          "bias": 0.0008164887685816212
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 1.4832368596189982
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_weather_geometry_v1/december/turbine_2/candidate-05.cbm",
+      "model_sha256": "4f00eb21c1b9064e489d2a22f91f61bfbaab447c82b3db8dfecac9d837b3dfb7"
+    }
+  ]
+}

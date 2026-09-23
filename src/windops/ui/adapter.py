@@ -41,6 +41,7 @@ class ForecastBundle:
     executor: str = "unknown"
     verification_origin: str = "uploaded_unverified"
     members: list["ForecastBundle"] = field(default_factory=list)
+    revises_forecast_id: str | None = None
 
 
 @dataclass
@@ -288,6 +289,9 @@ def _bundle(value: Any, trusted: bool = False) -> ForecastBundle:
             raise AdapterError(f"Поле {name} должно быть массивом.")
     if value.get("timezone") is not None and not isinstance(value["timezone"], str):
         raise AdapterError("timezone должен быть строкой с именем часового пояса.")
+    revision = value.get("revises_forecast_id")
+    if revision is not None and (not isinstance(revision, str) or not revision.strip()):
+        raise AdapterError("revises_forecast_id должен быть непустой строкой или null.")
     mode = str(value.get("source_mode", "cached"))
     return ForecastBundle(
         forecast_id=value["forecast_id"], rows=rows,
@@ -299,6 +303,7 @@ def _bundle(value: Any, trusted: bool = False) -> ForecastBundle:
         source_mode=mode if trusted or mode == "demo" else "cached",
         executor=str(sanitize_metadata(value.get("executor", "unknown"))),
         verification_origin="backend" if trusted else "uploaded_unverified",
+        revises_forecast_id=revision,
     )
 
 

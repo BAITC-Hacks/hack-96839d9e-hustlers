@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import pandas as pd
 
 from .charts import forecast_chart
-from .components import render_metric_cards
+from .components import POWER_UNIT_HELP, render_metric_cards
 from .adapter import sanitize_metadata
 from .theme import PLOT_CONFIG
 
@@ -150,8 +150,9 @@ def evaluate_backtest(artifact: BacktestArtifact) -> pd.DataFrame:
 def render_quality(timezone: str | None = None, site_labels: dict[str, str] | None = None) -> None:
     import streamlit as st
 
-    st.markdown("### Независимая январская проверка")
+    st.markdown("### Январская проверка качества")
     st.caption("MAE и RMSE в шкале нормализованной мощности. Фактических значений февраля нет.")
+    st.caption(POWER_UNIT_HELP)
     uploaded = st.file_uploader("Загрузить январский backtest JSON", type=["json"], key="quality_upload",
                                 help="Формат локального артефакта описан в docs/INTEGRATION.md. Вкладка не обучает модель.")
     if uploaded is not None and st.button("Проверить артефакт", key="check_quality"):
@@ -166,10 +167,12 @@ def render_quality(timezone: str | None = None, site_labels: dict[str, str] | No
         st.text(st.session_state["quality_error"])
     artifact = st.session_state.get("quality_artifact")
     if artifact is None:
-        st.info("Реальный январский backtest пока не предоставлен. Метрики и график факта появятся после загрузки проверочного артефакта участника 1.")
-        st.caption("Обучение и команда расчёта backtest ещё не подключены. Доступное действие — загрузить сохранённый результат по docs/INTEGRATION.md.")
+        st.info("Январский backtest пока не загружен в эту сессию. Метрики и график факта появятся после загрузки проверочного артефакта.")
+        st.caption("Загрузите сохранённый январский JSON и нажмите «Проверить артефакт».")
         return
     rows = artifact.rows
+    if artifact.provenance.get("evaluation_independent") is False:
+        st.warning("Разработочное сравнение: январь уже просматривался при разработке этой версии. Это не новая независимая проверка.")
     labels = site_labels or {}
     if timezone and artifact.timezone != timezone:
         st.warning(f"Часовой пояс артефакта: {artifact.timezone}; конфигурация UI: {timezone}. Для проверки используется зона артефакта.")
@@ -207,7 +210,7 @@ def render_quality(timezone: str | None = None, site_labels: dict[str, str] | No
     run_id = st.selectbox("Проверочный выпуск на графике", run_options, format_func=run_label, key="quality_run")
     selected = part[part["run_id"] == run_id].copy()
     cutoff = selected["training_cutoff"].iloc[0].tz_convert(artifact.timezone)
-    st.caption(f"Последнее обучающее наблюдение: {cutoff:%d.%m.%Y %H:%M %z} · модель {model}")
+    st.caption(f"Граница доступности обучающих ответов: {cutoff:%d.%m.%Y %H:%M %z} · модель {model}")
     plotted = selected.copy()
     plotted.loc[~_valid_pairs(plotted), ["prediction", "actual"]] = float("nan")
     st.plotly_chart(forecast_chart(plotted, artifact.timezone, labels, actuals=True), width="stretch",

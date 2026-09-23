@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-09-23T12:48:56.342162+00:00",
+  "status": "passed_before_publication",
+  "upstream_integrated": "c1c2e496d770b23dfd52271b391ceb78c4efb58c",
+  "pytest": {
+    "tests": 175,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "compileall": "passed",
+  "pip_check": "passed",
+  "clean_checkout": {
+    "source": "Git staged files only",
+    "fresh_local_config": true,
+    "portable_data_paths": true,
+    "same_installed_python_environment": true,
+    "replay_releases": 58,
+    "february_rows": 1344,
+    "full_release_rows": 2784,
+    "direct_backend_export": true,
+    "future_model_rejected": true,
+    "idempotent": true,
+    "no_retraining": true
+  },
+  "browser": {
+    "mode": "real_offline_deterministic",
+    "live_llm_tested": false,
+    "selected_forecast_rows": 96,
+    "viewports": [
+      {
+        "width": 1366,
+        "height": 768,
+        "horizontal_overflow": false
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "horizontal_overflow": false
+      },
+      {
+        "width": 800,
+        "height": 900,
+        "horizontal_overflow": false
+      }
+    ],
+    "january_artifact_loaded": true,
+    "january_evaluation_independent": false,
+    "update_via_ui": true,
+    "replay_releases": 58,
+    "replay_errors": 0,
+    "full_replay_rows": 2784,
+    "february_rows": 1344,
+    "downloads_match_saved_predictions": true,
+    "javascript_errors": [],
+    "status": "passed",
+    "model_artifacts_unchanged": true
+  },
+  "models": {
+    "turbine_1": "ml-483c8ee3abe0fe0e00412708",
+    "turbine_2": "ml-fbef3053c41202da61a895a2"
+  },
+  "original_protected_files_unchanged": 35,
+  "january_v2_evaluation_independent": false,
+  "february_metrics": null,
+  "live_llm_retested": false,
+  "previous_live_llm_evidence": "data/reports/llm_smoke_verification.json"
+}

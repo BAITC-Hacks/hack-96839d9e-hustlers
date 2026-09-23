@@ -1,0 +1,1740 @@
+{
+  "protocol_sha256": "27aaa91eda78dc3da76312b72cf921194a773e26e4d44d5c48260d097cef310b",
+  "january_used_in_this_selection": false,
+  "january_previously_observed": true,
+  "selected": {
+    "turbine_1": null,
+    "turbine_2": null
+  },
+  "incumbents": {
+    "turbine_1": {
+      "all": {
+        "n_used": 1452,
+        "mae": 0.19912044485323993,
+        "rmse": 0.28991450576537364,
+        "bias": 0.032451520281785856
+      },
+      "1-24": {
+        "n_used": 738,
+        "mae": 0.19144613397219676,
+        "rmse": 0.2822516086942041,
+        "bias": 0.04447266496056633
+      },
+      "25-48": {
+        "n_used": 714,
+        "mae": 0.20705271576389797,
+        "rmse": 0.297627698925889,
+        "bias": 0.02002630351296235
+      }
+    },
+    "turbine_2": {
+      "all": {
+        "n_used": 1440,
+        "mae": 0.19928256470419992,
+        "rmse": 0.2916653414083122,
+        "bias": 0.029220672777974206
+      },
+      "1-24": {
+        "n_used": 732,
+        "mae": 0.19090787416975014,
+        "rmse": 0.28420797907045753,
+        "bias": 0.04204858780760456
+      },
+      "25-48": {
+        "n_used": 708,
+        "mae": 0.20794114305337674,
+        "rmse": 0.2991801188687586,
+        "bias": 0.015957913171068247
+      }
+    }
+  },
+  "experiments": [
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 0,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 159,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.19837506022145573,
+          "rmse": 0.2894895814261594,
+          "bias": 0.02603028112683282
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.1901111762375526,
+          "rmse": 0.2820803876209096,
+          "bias": 0.038688558116353876
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20691672181826326,
+          "rmse": 0.2969535975359313,
+          "bias": 0.01294651583514298
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.37433857298459516
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-00.cbm",
+      "model_sha256": "e0a36c3bab3f8ee12bf71d428d1dc16f669de591effa836067bbe810ac7d6dd8"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 1,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 132,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.198507233390429,
+          "rmse": 0.2845233688937851,
+          "bias": 0.025899604273456077
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.19068848940550057,
+          "rmse": 0.2766711769864755,
+          "bias": 0.038257472513543576
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20658879229922064,
+          "rmse": 0.2924179816137897,
+          "bias": 0.013126345504290015
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.3079600707315079
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-01.cbm",
+      "model_sha256": "1ceace0f627c647c03acefc68ff640bc6ad65e5f25abaa40ded21a7420fcd6b9"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 2,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 139,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.20130637936988807,
+          "rmse": 0.28552600166939524,
+          "bias": 0.029306483277161174
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.19374529947588875,
+          "rmse": 0.27802110720302275,
+          "bias": 0.04160175127766084
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20912161320990422,
+          "rmse": 0.2930812560070085,
+          "bias": 0.016597928957316963
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -1.0977951150416856
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-02.cbm",
+      "model_sha256": "34128aff360db5d9df9289926a4ae74d78ec13f9d59507b762f0863d1a469bfc"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 3,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 161,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.21009464932385585,
+          "rmse": 0.2798284593779504,
+          "bias": 0.05075340041117329
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.20654684716577354,
+          "rmse": 0.27650819523589676,
+          "bias": 0.061769269183119105
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.21376170533599134,
+          "rmse": 0.283219422997854,
+          "bias": 0.03936725033596879
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -5.5113398720580244
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-03.cbm",
+      "model_sha256": "c772a91b1e4de3780fff7fc156dd3e2b87444bb6a32f5d2ce3c57b19259cb7e5"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 4,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 140,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.213941028873243,
+          "rmse": 0.27787326443280624,
+          "bias": 0.040291442248826845
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.21148339867286406,
+          "rmse": 0.2751494446892842,
+          "bias": 0.05140153252328304
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.2164812684921222,
+          "rmse": 0.28066086001032753,
+          "bias": 0.028807903561783903
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -7.443024763693386
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-04.cbm",
+      "model_sha256": "a1d801b829bf12f96ef44062e1208136da65f3b396a38ea9564ba1b2efc20f11"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 5,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 128,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.2006359997422868,
+          "rmse": 0.2846381594509051,
+          "bias": 0.009034945692266589
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.19235524769487433,
+          "rmse": 0.2757468889455224,
+          "bias": 0.02237594832779998
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.209195096396335,
+          "rmse": 0.2935453917844636,
+          "bias": -0.004754494006646073
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.7611247002606354
+      },
+      "clipped_predictions": 40,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-05.cbm",
+      "model_sha256": "e3f72c1d6a3c40038f44ab95aab58ee52991a2865d7b212b7f90063283cb23dc"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 6,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 158,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.1980943602713452,
+          "rmse": 0.289098784295808,
+          "bias": 0.02554077948139171
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18964171166093932,
+          "rmse": 0.2811291666916903,
+          "bias": 0.03671170326675313
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.20683113152411767,
+          "rmse": 0.29711169963036443,
+          "bias": 0.013994362459547539
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.5153085021736489
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-06.cbm",
+      "model_sha256": "6de6ed423c2d70f2d7ab6a85ced9b059b9b6aac1001c8b3bc78d6e5904d86dbc"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 7,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 112,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.20033916860743906,
+          "rmse": 0.28803119307910424,
+          "bias": 0.02459693794547059
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.19134109535275345,
+          "rmse": 0.28022318297054205,
+          "bias": 0.037182084865647086
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.2096396981059797,
+          "rmse": 0.2958851885477565,
+          "bias": 0.011588760876716732
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.6120535513554999
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-07.cbm",
+      "model_sha256": "42fd75cccc7157ebc702a61339a1dbb3ab7ce14b051b6e9caa9bd7f710a2cba6"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 8,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 121,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.20256620173807502,
+          "rmse": 0.2850674723037858,
+          "bias": 0.023885692737958483
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.1947843342006978,
+          "rmse": 0.27887395743560356,
+          "bias": 0.04021493645659155
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.21060964465485985,
+          "rmse": 0.2913308218380803,
+          "bias": 0.007007566877522636
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -1.7304887438227425
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-08.cbm",
+      "model_sha256": "e708c7860b44560b045e53226ef6bae41af7704a2cf5c9c28a4236ab6d65fa04"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 9,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 175,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.20795015640339498,
+          "rmse": 0.27844528383426215,
+          "bias": 0.049031951829368946
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.20304755675057212,
+          "rmse": 0.2758246005688161,
+          "bias": 0.06335457886842738
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.2130175493218589,
+          "rmse": 0.2811283828461141,
+          "bias": 0.03422789194866146
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -4.434357083052379
+      },
+      "clipped_predictions": 2,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-09.cbm",
+      "model_sha256": "7bd55e36667be107b8e55f392dba1eface5169f648ad1536343f942eb85d853c"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 10,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 151,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.21366394323658436,
+          "rmse": 0.27898106581360327,
+          "bias": 0.04229920559219549
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.2107908240562897,
+          "rmse": 0.2778609704537112,
+          "bias": 0.058086446922105114
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.21663363785151069,
+          "rmse": 0.28013410451655457,
+          "bias": 0.02598130068817127
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -7.303869973805851
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-10.cbm",
+      "model_sha256": "16d4bc1e2b7a7f63aa5525a85fc97cf62578932a8408d4c5eff4ff5af43ddeed"
+    },
+    {
+      "site_id": "turbine_1",
+      "candidate_index": 11,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 94,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1452,
+          "mae": 0.20075418799877265,
+          "rmse": 0.28232490986476727,
+          "bias": -0.010139672042908844
+        },
+        "1-24": {
+          "n_used": 738,
+          "mae": 0.18987322147504743,
+          "rmse": 0.27270878969333534,
+          "bias": 0.007360523748005215
+        },
+        "25-48": {
+          "n_used": 714,
+          "mae": 0.2120009012964046,
+          "rmse": 0.291931549413997,
+          "bias": -0.028228109709147752
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.8204798591811376
+      },
+      "clipped_predictions": 24,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_1/candidate-11.cbm",
+      "model_sha256": "3354cee4e8962fb85f9b863f349f13dc3d768907588f1a8392e7276bf5b06830"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 0,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 159,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19923264927150552,
+          "rmse": 0.29277207503242075,
+          "bias": 0.0224335308193849
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.1901851548642585,
+          "rmse": 0.2839272787570362,
+          "bias": 0.03444046759365041
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20858683840442194,
+          "rmse": 0.30164413518755434,
+          "bias": 0.010019579239212081
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: rmse degraded",
+          "25-48: mae degraded",
+          "25-48: rmse degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.025047566388199854
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-00.cbm",
+      "model_sha256": "acc0c0f93756a779e4fdfde32978c72628e2027cc62d1c112a5253e79a7a3ed4"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 1,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 183,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19824356761012174,
+          "rmse": 0.28969227463742014,
+          "bias": 0.032868120024477886
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19088538575531866,
+          "rmse": 0.2823221883618339,
+          "bias": 0.04525699423280367
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20585117935830796,
+          "rmse": 0.29712004016028143,
+          "bias": 0.020059283978581748
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.5213687888954986
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-01.cbm",
+      "model_sha256": "dfbc16f0c2d05e5bc7e744689c58b7a50e1a9ff294dc38d21f3581faa7557284"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 2,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 148,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19928379725432177,
+          "rmse": 0.286628008374676,
+          "bias": 0.02998545723286558
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19242976393624303,
+          "rmse": 0.2799403870061404,
+          "bias": 0.041836610281137
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20637017068487779,
+          "rmse": 0.2933820897700885,
+          "bias": 0.01773257018295782
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.0006184937070054981
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-02.cbm",
+      "model_sha256": "935e9feeb52d4c46681defd5b6b4d5e551c6ab9a1faddcc0b276cad43e505037"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 3,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 207,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.2126128717731053,
+          "rmse": 0.28291426415503307,
+          "bias": 0.05472944115256766
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.21051446961771242,
+          "rmse": 0.2807911256286196,
+          "bias": 0.0662222025896924
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21478240620495226,
+          "rmse": 0.2850927495034579,
+          "bias": 0.04284709458198104
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -6.689148691302674
+      },
+      "clipped_predictions": 4,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-03.cbm",
+      "model_sha256": "afefad7edf5d271575c1cc60e9a8c0027b6f4e0dd468d9def33acd4cc8139c62"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 4,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 187,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.21540125719162925,
+          "rmse": 0.2839044674966264,
+          "bias": 0.05228249151697962
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.21373957954120834,
+          "rmse": 0.2817995565957565,
+          "bias": 0.06342482316786434
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21711926289799666,
+          "rmse": 0.28606444704106465,
+          "bias": 0.04076245370843781
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -8.08836062068687
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-04.cbm",
+      "model_sha256": "315ab5edff135f748face2578875016d40796d9f565d638e845c732c1abb9c90"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 5,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour",
+        "params": {
+          "iterations": 117,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.20176451938816164,
+          "rmse": 0.2867347668397425,
+          "bias": 0.0054059525757098395
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19312837656030143,
+          "rmse": 0.27765781860594885,
+          "bias": 0.018479519265591545
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21069341282035614,
+          "rmse": 0.2958267204541018,
+          "bias": -0.008110785866371236
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -1.2454449728935175
+      },
+      "clipped_predictions": 23,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-05.cbm",
+      "model_sha256": "978386f50af146ac69da4de7e2a38857ae34d291907f292816d076f240041e20"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 6,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 246,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 3
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19861945318694219,
+          "rmse": 0.29154503501280543,
+          "bias": 0.02869891585389152
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19041806395615685,
+          "rmse": 0.2843037300153371,
+          "bias": 0.039895099430319186
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20709885561199132,
+          "rmse": 0.2988473797872192,
+          "bias": 0.01712320063080529
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "1-24: rmse degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": 0.3327493894119657
+      },
+      "clipped_predictions": 2,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-06.cbm",
+      "model_sha256": "e530ef22d91a09e82367b07d56fcd7577cc64300bdfcb7dfec86a4cdd06539ca"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 7,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 135,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 5
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.2005129943407552,
+          "rmse": 0.2915838135150507,
+          "bias": 0.032010006824196316
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19270632560684853,
+          "rmse": 0.28528391827702587,
+          "bias": 0.04458726599786645
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20858429591309938,
+          "rmse": 0.2979572452778556,
+          "bias": 0.0190063998819272
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "1-24: rmse degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.6174296473861841
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-07.cbm",
+      "model_sha256": "13916394eb8659739ec0ce2b37dfb3717d29ed85e29ee1c7958bc76f92e72a42"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 8,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 156,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "MAE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.19930504690807208,
+          "rmse": 0.28683178016452954,
+          "bias": 0.03144704057248967
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19174545399840442,
+          "rmse": 0.2813640004750418,
+          "bias": 0.04689738758634129
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.20712089720450808,
+          "rmse": 0.2923774164955429,
+          "bias": 0.01547295298189731
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -0.011281570921937092
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-08.cbm",
+      "model_sha256": "d5bdede74a253e753191a6def8d7b19363d7dc4fc6393a88c6b9946b8fc95bdb"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 9,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 208,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.20803944575898098,
+          "rmse": 0.2810903599474596,
+          "bias": 0.055745190343050526
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.20411025220706608,
+          "rmse": 0.27969066528914377,
+          "bias": 0.0708517048278325
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21210183231265572,
+          "rmse": 0.28253021111607,
+          "bias": 0.04012659062149629
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -4.394203310148642
+      },
+      "clipped_predictions": 1,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-09.cbm",
+      "model_sha256": "5c20046e0f297b08d166a0840f6b8979d83ee4e0fa2484bdf044f79151c5ff19"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 10,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 167,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "RMSE",
+          "depth": 6
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.21241611040059286,
+          "rmse": 0.2800802712234289,
+          "bias": 0.047815496996802036
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.20954921168960783,
+          "rmse": 0.27933837757911517,
+          "bias": 0.06346811863391612
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21538019211872997,
+          "rmse": 0.280845253214391,
+          "bias": 0.031632278016056954
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -6.590413825658752
+      },
+      "clipped_predictions": 0,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-10.cbm",
+      "model_sha256": "989d0db75b65ae5086ab65f9fadf74444f43fded084a2cf7c8b1140a0c5aa9b7"
+    },
+    {
+      "site_id": "turbine_2",
+      "candidate_index": 11,
+      "requested_config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead",
+        "params": {
+          "iterations": 99,
+          "learning_rate": 0.03,
+          "eval_metric": "MAE",
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false,
+          "l2_leaf_reg": 10,
+          "loss_function": "Huber:delta=0.1",
+          "depth": 4
+        }
+      },
+      "metrics": {
+        "all": {
+          "n_used": 1440,
+          "mae": 0.20393206130438546,
+          "rmse": 0.2886339213875934,
+          "bias": -0.004135641664734527
+        },
+        "1-24": {
+          "n_used": 732,
+          "mae": 0.19235592332180054,
+          "rmse": 0.2797884973198992,
+          "bias": 0.014947066720303782
+        },
+        "25-48": {
+          "n_used": 708,
+          "mae": 0.21590061074400718,
+          "rmse": 0.2975028007811581,
+          "bias": -0.02386522152045211
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "all: mae degraded",
+          "1-24: mae degraded",
+          "25-48: mae degraded",
+          "overall MAE improvement below 1%"
+        ],
+        "mae_improvement_pct": -2.3331176046870468
+      },
+      "clipped_predictions": 13,
+      "model_path": "models/experiments/ml_guarded_v1/december/turbine_2/candidate-11.cbm",
+      "model_sha256": "5c48794f5e7f0a06fbc30d930df27422cb906dcf18f35edfacc302dfd6f267e9"
+    }
+  ]
+}

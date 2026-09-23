@@ -13,7 +13,7 @@ import time
 import numpy as np
 
 from windops.core import BackendError, ROOT, WEATHER_SCHEMA, atomic_json, digest, iso, now, read_json, stamp
-from .features import FEATURE_SETS, FEATURE_VERSION, bounded_predictions, prepare_features
+from .features import FEATURE_SETS, bounded_predictions, feature_version_for, prepare_features
 
 BASELINES = ("constant_median", "wind_table")
 
@@ -88,7 +88,8 @@ def read_passport(folder):
     for name, expected in card["artifact_checksums"].items():
         if Path(name).name != name or not (folder / name).is_file() or digest((folder / name).read_bytes()) != expected:
             raise BackendError("ML_CORRUPT_MODEL", "Повреждён артефакт модели.")
-    if card["feature_version"] != FEATURE_VERSION or card["features"] != list(FEATURE_SETS[card["config"]["feature_set"]]):
+    if (card["feature_version"] != feature_version_for(card["config"]["feature_set"]) or
+            card["features"] != list(FEATURE_SETS[card["config"]["feature_set"]])):
         raise BackendError("ML_FEATURE_SCHEMA", "Несовместимый порядок/версия признаков.")
     if (card["labels_available_by_cutoff"] is not True or
             stamp(card["training_summary"]["max_label_available_at"]) > stamp(card["training_cutoff"])):
@@ -108,7 +109,7 @@ def load_model(folder, card=None):
     return estimator
 
 
-def train_artifact(train, config, *, site_id, purpose, cutoff, prepared, models=None, selection_digest=None):
+def train_artifact(train, config, *, site_id, purpose, cutoff, prepared, models=None, selection_digest=None, experiment_context=None):
     models = models or model_root()
     if train.empty or set(train.site_id) != {site_id}:
         raise BackendError("ML_TRAINING_LABELS", f"Нет допустимых данных одной турбины: {site_id}.")
@@ -118,10 +119,13 @@ def train_artifact(train, config, *, site_id, purpose, cutoff, prepared, models=
             (train.forecast_origin < cutoff)).all():
         raise BackendError("ML_TRAINING_LABELS", "Обучающие ответы не прошли проверку cutoff/полноты.")
     features = prepare_features(train, config["feature_set"])
+    feature_version = feature_version_for(config["feature_set"])
     identity = {"site_id": site_id, "purpose": purpose, "cutoff": iso(cutoff), "config": config,
                 "prepared": digest(prepared), "selection_digest": selection_digest,
                 "training_data_sha256": digest(train.to_csv(index=False).encode()),
-                "feature_version": FEATURE_VERSION, "code_sha256": implementation_hash(), "libraries": library_versions()}
+                "feature_version": feature_version, "code_sha256": implementation_hash(), "libraries": library_versions()}
+    if experiment_context is not None:
+        identity["experiment_context"] = experiment_context
     model_version = "ml-" + digest(identity)[:24]
     folder = models / site_id / model_version
     if folder.exists():
@@ -144,7 +148,7 @@ def train_artifact(train, config, *, site_id, purpose, cutoff, prepared, models=
                 "identity": identity, "training_cutoff": iso(cutoff), "config": config,
                 "normalization": "0_1", "weather_schema": WEATHER_SCHEMA, "provider_model": "gfs_pgrb2.0p25",
                 "weather_source": "data/weather/weather_for_ml.csv; NOAA GFS archived forecasts",
-                "labels_available_by_cutoff": True, "feature_version": FEATURE_VERSION,
+                "labels_available_by_cutoff": True, "feature_version": feature_version,
                 "features": list(features.columns), "feature_dtype": "float64",
                 "feature_ranges": {name: {"min": float(features[name].min()), "max": float(features[name].max())} for name in features},
                 "training_weather_lead_ranges": {name: {"min": float(train[name].min()), "max": float(train[name].max())}
@@ -160,6 +164,8 @@ def train_artifact(train, config, *, site_id, purpose, cutoff, prepared, models=
                                 "Update origins/leads may differ from training; update accuracy not evaluated",
                                 "Normalized power, rated MW unknown; February actuals unavailable"],
                 "artifact_checksums": {name: digest((temporary / name).read_bytes()) for name in (model_file, "baselines.json")}}
+        if experiment_context is not None:
+            card["experiment_context"] = experiment_context
         loaded = load_model(temporary, card)
         reloaded, _ = predict_model(loaded, config, train)
         if not np.array_equal(probe, reloaded):

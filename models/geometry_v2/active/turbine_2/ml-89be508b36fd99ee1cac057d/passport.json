@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "site_id": "turbine_2",
+  "version": "ml-89be508b36fd99ee1cac057d",
+  "purpose": "baseline_smoke",
+  "identity": {
+    "site_id": "turbine_2",
+    "purpose": "baseline_smoke",
+    "cutoff": "2025-11-30T17:00:00Z",
+    "config": {
+      "kind": "wind_table",
+      "feature_set": "weather_hour"
+    },
+    "prepared": "f596b433029b0c3ae999537ac2bfa43189ce4897cf6c46b79e7ec056ea68713c",
+    "selection_digest": null,
+    "training_data_sha256": "e0249a15832249dfbcbe0c1490f0712b84cb4526fec19a577426384cb4e011b9",
+    "feature_version": "gfs-power-v1",
+    "code_sha256": "c2fc1926cc4ce838933df6166bd169707e4f94e487eb16a35be24c7f2bdc5c4f",
+    "libraries": {
+      "python": "3.14.7",
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "catboost": "1.2.10"
+    }
+  },
+  "training_cutoff": "2025-11-30T17:00:00Z",
+  "config": {
+    "kind": "wind_table",
+    "feature_set": "weather_hour"
+  },
+  "normalization": "0_1",
+  "weather_schema": "gfs-0p25-nearest-v1",
+  "provider_model": "gfs_pgrb2.0p25",
+  "weather_source": "data/weather/weather_for_ml.csv; NOAA GFS archived forecasts",
+  "labels_available_by_cutoff": true,
+  "feature_version": "gfs-power-v1",
+  "features": [
+    "wind_speed_10m_ms",
+    "wind_speed_100m_ms",
+    "wind_u_10m_ms",
+    "wind_v_10m_ms",
+    "wind_u_100m_ms",
+    "wind_v_100m_ms",
+    "temperature_2m_c",
+    "local_hour_sin",
+    "local_hour_cos"
+  ],
+  "feature_dtype": "float64",
+  "feature_ranges": {
+    "wind_speed_10m_ms": {
+      "min": 0.0762595163332225,
+      "max": 14.162949431423568
+    },
+    "wind_speed_100m_ms": {
+      "min": 0.0990436841742919,
+      "max": 18.73834751929119
+    },
+    "wind_u_10m_ms": {
+      "min": -13.30888671875,
+      "max": 13.63767822265625
+    },
+    "wind_v_10m_ms": {
+      "min": -5.9253564453125005,
+      "max": 6.16100830078125
+    },
+    "wind_u_100m_ms": {
+      "min": -17.65067626953125,
+      "max": 18.214189453125
+    },
+    "wind_v_100m_ms": {
+      "min": -6.824716796875,
+      "max": 7.048681640625
+    },
+    "temperature_2m_c": {
+      "min": -2.183671874999959,
+      "max": 22.05195312500001
+    },
+    "local_hour_sin": {
+      "min": -1.0,
+      "max": 1.0
+    },
+    "local_hour_cos": {
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  "training_weather_lead_ranges": {
+    "lead_hours": {
+      "min": 1.0,
+      "max": 48.0
+    },
+    "gfs_lead_hours": {
+      "min": 19.0,
+      "max": 66.0
+    }
+  },
+  "label_policy": {
+    "interval_label": "start",
+    "scada_delay_minutes": 0,
+    "timestamp_format": "mixed",
+    "timezone": "Asia/Almaty",
+    "target_time": "start of hour",
+    "semantics_confirmed": false,
+    "delay_confirmed": false,
+    "assumption": "Unconfirmed interval labels and SCADA arrival delay; available at hour end plus configured delay.",
+    "quality_rule": "six valid unique on-grid observations; any duplicate/invalid/off-grid row rejects hour"
+  },
+  "input_checksums": {
+    "scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+  },
+  "training_summary": {
+    "rows": 2786,
+    "unique_target_hours": 1405,
+    "target_start": "2025-09-30T19:00:00Z",
+    "target_end": "2025-11-30T16:00:00Z",
+    "max_label_available_at": "2025-11-30T17:00:00Z"
+  },
+  "output_policy": "reject nonfinite predictions; fixed clip to [0,1] in all paths",
+  "training_prediction_clipped": 0,
+  "trained_at": "2026-09-23T11:29:35.251956Z",
+  "training_seconds": 0.083853,
+  "limitations": [
+    "SCADA interval semantics and arrival delay unconfirmed",
+    "Update origins/leads may differ from training; update accuracy not evaluated",
+    "Normalized power, rated MW unknown; February actuals unavailable"
+  ],
+  "artifact_checksums": {
+    "model.json": "b638be148d01a55657a9f32ef743a8af9de48f23342bbcced45314a74e2dd2ed",
+    "baselines.json": "a3225ac65be22d247c5f2e9cc76b56e7f259860fc83da3bb5673c1ee63604a40"
+  },
+  "save_load_predictions_identical": true
+}

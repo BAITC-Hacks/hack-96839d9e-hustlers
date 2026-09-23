@@ -1,5 +1,5 @@
 {
-  "sha256": "5943eecc35247282fe142d2b85a63e8ebd30c1e9e80558f1be3cc868090608fd",
+  "sha256": "44f228a86f878cb918e31704e89b2d55e98b0905b7c36589124048fdb1ce7a8b",
   "payload": {
     "weather_version": "gfs-8e9ba8aecc67611f65bf768c",
     "schema_version": "gfs-0p25-nearest-v1",
@@ -5629,6 +5629,6 @@
     "available_at": "2026-01-31T04:03:06Z",
     "availability_basis": "upper bound from original NOAA public S3 objects",
     "retrieved_at": "2026-09-23T10:22:58.929451Z",
-    "assembled_at": "2026-09-23T10:55:55.302505Z"
+    "assembled_at": "2026-09-23T12:42:47.405251Z"
   }
 }

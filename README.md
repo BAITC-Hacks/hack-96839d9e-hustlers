@@ -8,6 +8,32 @@
 
 ## Что реализовано
 
+### Финальная ML-версия: geometry v2
+
+После указанной выше приёмки v1 добавлены погодные признаки и отдельно сохранены
+улучшенные модели. На уже просмотренном январе MAE снизилась на **3.76% / 4.32%**;
+MAE и RMSE улучшились на обоих горизонтах. Это **разработочное сравнение**, а
+исходный независимый backtest v1 сохранён. Для v2 прошли **175 тестов** и реальный
+браузерный сценарий. Отчёт команды о живом LLM выше относится к исходной v1;
+v2 проверялась в детерминированном режиме.
+
+После установки зависимостей ниже рекомендуемый запуск на Linux/macOS:
+
+```bash
+bash scripts/run_improved.sh
+```
+
+Скрипт подготавливает локальные пути к включённому погодному кэшу и запускает
+существующее приложение. Готовые веса находятся в `models/geometry_v2/active/`;
+данные v2 — в `data/experiments/ml_weather_geometry_v1/runtime_data/`.
+`ml/january_backtest.json` внутри этого каталога содержит явно помеченное
+разработочное сравнение, `ml/february_hourly.csv` — новые 1344 прогноза февраля.
+Старые пути `data/ml/` и `models/<site_id>/` ниже относятся к сохранённой v1.
+Подробности, команды для обеих версий и откат:
+[MODEL_IMPROVEMENT.md](docs/MODEL_IMPROVEMENT.md).
+
+### Возможности приложения
+
 - **Интерфейс на русском языке:** выбор одной или двух турбин, даты выпуска и горизонта; графики, почасовые таблицы, история выпусков, паспорт данных и журнал событий.
 - **Архивная погода:** загрузка выбранных полей оригинальных GFS, извлечение двух площадок, возобновляемый файловый кэш и CSV для обучения модели.
 - **Обученные модели:** отдельные CatBoost для двух турбин, сохранённые веса и паспорта; январские проверочные модели отделены от финальных февральских. Повторное обучение для запуска не требуется.
@@ -181,6 +207,9 @@ $env:PYTHONPATH = "src"
 $env:WINDOPS_ML_MODULE = "windops.ml.plugin"
 $env:WINDOPS_EXECUTION_MODE = "deterministic"
 $env:WINDOPS_OFFLINE = "1"
+.\.venv\Scripts\python.exe scripts/prepare_improved_runtime.py
+$env:WINDOPS_MODEL_DIR = "$PWD/models/geometry_v2/active"
+$env:WINDOPS_DATA_DIR = "$PWD/data/experiments/ml_weather_geometry_v1/runtime_data"
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
@@ -191,6 +220,9 @@ export PYTHONPATH=src
 export WINDOPS_ML_MODULE=windops.ml.plugin
 export WINDOPS_EXECUTION_MODE=deterministic
 export WINDOPS_OFFLINE=1
+.venv/bin/python scripts/prepare_improved_runtime.py
+export WINDOPS_MODEL_DIR="$PWD/models/geometry_v2/active"
+export WINDOPS_DATA_DIR="$PWD/data/experiments/ml_weather_geometry_v1/runtime_data"
 .venv/bin/python -m streamlit run app.py
 ```
 
@@ -320,7 +352,7 @@ export WINDOPS_OFFLINE=1
 
 **Проверенный локальный LLM-результат:** `turbine_1`, выпуск от 31.01.2026 23:00 +05:00, 48 строк, шесть успешных инструментов от выбора погоды до сохранения. Проверены контрольные суммы, погодная сетка и историческая доступность, загрузка ML-модели, диапазон прогноза и совпадение с детерминированным расчётом. [Отчёт проверки сохранённого запуска](data/reports/llm_smoke_verification.json) содержит журнал и ограничения. Старый `data/ml/backend_verification.json` относится к предшествующей детерминированной приёмке.
 
-### Результаты январской проверки
+### Результаты исходной независимой январской проверки v1
 
 По сохранённым `data/ml/run_summary.json` и `data/ml/january_backtest.json`, на одинаковых 1 464 прогнозных парах каждой турбины:
 
@@ -338,6 +370,7 @@ export WINDOPS_OFFLINE=1
 ```bash
 export PYTHONPATH=src
 export WINDOPS_DATA_DIR="$PWD/data"
+export WINDOPS_MODEL_DIR="$PWD/models"
 export WINDOPS_ML_MODULE=windops.ml.plugin
 export WINDOPS_EXECUTION_MODE=deterministic
 export WINDOPS_OFFLINE=1
@@ -400,7 +433,7 @@ uv pip check --python .venv/bin/python
 
 **В текущей версии подготовленные файлы `data/` уже отслеживаются Git:** в них входят обе исходные CSV-копии, погодный архив и отчёты. При передаче только исходного кода каталог данных нужно предоставить отдельно, а погодный архив можно восстановить загрузчиком.
 
-В актуальной версии `models/` отслеживается Git: сохранены baseline, январские и финальные модели двух турбин. Для `.env`, `config.local.json` и `artifacts/` настроены правила игнорирования; эти локальные файлы не входят в текущий набор отслеживаемых файлов. Подробности backend — в [docs/BACKEND.md](docs/BACKEND.md); фактический состав данных сверяйте с Git, поскольку прежние заметки описывают первоначально локальное хранение.
+Для передачи готовой версии включены исходные модели и проверенные артефакты `models/geometry_v2/`. Остальные новые экспериментальные модели игнорируются. `.env`, `config.local.json`, `artifacts/`, локальные ссылки и пересоздаваемый кэш прогнозов v2 не включаются в Git. Подробности backend — в [docs/BACKEND.md](docs/BACKEND.md); фактический состав данных сверяйте с Git, поскольку прежние заметки описывают первоначально локальное хранение.
 
 ## Ограничения текущей версии
 
@@ -414,6 +447,8 @@ uv pip check --python .venv/bin/python
 
 ## Документация
 
+- [Geometry v2: улучшение, готовые модели, запуск и откат](docs/MODEL_IMPROVEMENT.md).
+- [Сверка ТЗ](docs/TZ_AUDIT.md) и [разбор смысла и ошибок модели](docs/MODEL_REVIEW.md).
 - [ML: обучение, версии, результаты и воспроизведение](docs/ML.md).
 - [Backend, архив погоды и контракт ML-модуля](docs/BACKEND.md).
 - [Форматы прогнозов, январской проверки и интерфейсная интеграция](docs/INTEGRATION.md).

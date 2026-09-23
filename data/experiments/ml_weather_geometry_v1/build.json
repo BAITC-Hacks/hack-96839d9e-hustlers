@@ -1,0 +1,179 @@
+{
+  "context": {
+    "experiment": "ml_weather_geometry_v1",
+    "january_independent": false,
+    "selection": "Configuration and tree count frozen on December; promotion compared on previously viewed January labels available by final cutoff",
+    "promotion_labels_cutoff": "2026-01-31T17:00:00Z",
+    "promotion_checks_sha256": "6cae9e7882711bf334d13a2fef79c76483e2cde46e04e91af1f27891ef9cfd12",
+    "december_selection_sha256": "39767937e0bff7ba0f37c1ded46ef0a06839e7492acf806247886820e55059cd",
+    "original_independent_backtest": "data/ml/january_backtest.json",
+    "build_script_sha256": "2d0ffcf7c040eff45f37d43dd5f51ca20672a81eae997d366c1fee032116f4ee"
+  },
+  "promotion_checks": {
+    "turbine_1": {
+      "n_used": 1460,
+      "n_excluded_after_cutoff": 4,
+      "max_label_available_at": "2026-01-31T17:00:00Z",
+      "incumbent": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2158996825781386,
+          "rmse": 0.2994064080958672,
+          "bias": 0.09856835099955355
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.20103490310947783,
+          "rmse": 0.27838239900295597,
+          "bias": 0.09119570595675515
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.23126133489811945,
+          "rmse": 0.31968371370775095,
+          "bias": 0.1061874354309692
+        }
+      },
+      "candidate": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2075313948221139,
+          "rmse": 0.28308804843016955,
+          "bias": 0.08294285618323509
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.19374920903515144,
+          "rmse": 0.2644001148993036,
+          "bias": 0.07787333821978935
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.22177426648496376,
+          "rmse": 0.3011847655103795,
+          "bias": 0.08818182878612744
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 3.8760074383138714
+      }
+    },
+    "turbine_2": {
+      "n_used": 1460,
+      "n_excluded_after_cutoff": 4,
+      "max_label_available_at": "2026-01-31T17:00:00Z",
+      "incumbent": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2209313547809268,
+          "rmse": 0.3067880734194106,
+          "bias": 0.10011199248098346
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.20631331212503737,
+          "rmse": 0.2860832853519503,
+          "bias": 0.09238156956615165
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.23603802281807157,
+          "rmse": 0.3268095981665871,
+          "bias": 0.10810081393335837
+        }
+      },
+      "candidate": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.21109368276852847,
+          "rmse": 0.28864763216708544,
+          "bias": 0.07814403145816895
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.19578923172395937,
+          "rmse": 0.26888613546570667,
+          "bias": 0.07013043363451808
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.22690970320734502,
+          "rmse": 0.30773923537395115,
+          "bias": 0.08642549327592511
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 4.452818397892529
+      }
+    }
+  },
+  "final_models": {
+    "turbine_1": {
+      "version": "ml-483c8ee3abe0fe0e00412708",
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_geometry",
+        "params": {
+          "depth": 6,
+          "iterations": 88,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "training_summary": {
+        "rows": 5754,
+        "unique_target_hours": 2889,
+        "target_start": "2025-09-30T19:00:00Z",
+        "target_end": "2026-01-31T16:00:00Z",
+        "max_label_available_at": "2026-01-31T17:00:00Z"
+      }
+    },
+    "turbine_2": {
+      "version": "ml-fbef3053c41202da61a895a2",
+      "config": {
+        "kind": "catboost",
+        "feature_set": "weather_hour_lead_geometry",
+        "params": {
+          "depth": 6,
+          "iterations": 92,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      "training_summary": {
+        "rows": 5742,
+        "unique_target_hours": 2883,
+        "target_start": "2025-09-30T19:00:00Z",
+        "target_end": "2026-01-31T16:00:00Z",
+        "max_label_available_at": "2026-01-31T17:00:00Z"
+      }
+    }
+  },
+  "evaluation_models": {
+    "turbine_1": "ml-bc4040bbfc0e9d38b07e40a3",
+    "turbine_2": "ml-dfb2d3859639a9b9f93e9102"
+  },
+  "model_directory": "/home/abuka/hack-96839d9e-hustlers/models/geometry_v2/active",
+  "data_directory": "/home/abuka/hack-96839d9e-hustlers/data/experiments/ml_weather_geometry_v1/runtime_data",
+  "status": "built_not_yet_activated",
+  "feature_equivalence_verified": true,
+  "original_artifacts_unchanged": true
+}

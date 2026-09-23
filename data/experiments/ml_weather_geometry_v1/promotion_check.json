@@ -1,0 +1,110 @@
+{
+  "kind": "promotion_check_at_final_cutoff",
+  "independent": false,
+  "reason": "All decisions for first February origin must use labels available by Jan 31 22:00 local; full January diagnostics are not the promotion cohort",
+  "cutoff": "2026-01-31 17:00:00+00:00",
+  "sites": {
+    "turbine_1": {
+      "used_pairs": 1460,
+      "excluded_after_cutoff": 4,
+      "max_label_available_at": "2026-01-31 17:00:00+00:00",
+      "incumbent": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2158996825781386,
+          "rmse": 0.2994064080958672,
+          "bias": 0.09856835099955355
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.20103490310947783,
+          "rmse": 0.27838239900295597,
+          "bias": 0.09119570595675515
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.23126133489811945,
+          "rmse": 0.31968371370775095,
+          "bias": 0.1061874354309692
+        }
+      },
+      "candidate": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2075313948221139,
+          "rmse": 0.28308804843016955,
+          "bias": 0.08294285618323509
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.19374920903515144,
+          "rmse": 0.2644001148993036,
+          "bias": 0.07787333821978935
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.22177426648496376,
+          "rmse": 0.3011847655103795,
+          "bias": 0.08818182878612744
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 3.8760074383138714
+      },
+      "predictions_sha256": "eca17459f52fbcee0bad0bc238ea0969610a0ea7fef89d82fb354483cb729f8f"
+    },
+    "turbine_2": {
+      "used_pairs": 1460,
+      "excluded_after_cutoff": 4,
+      "max_label_available_at": "2026-01-31 17:00:00+00:00",
+      "incumbent": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.2209313547809268,
+          "rmse": 0.3067880734194106,
+          "bias": 0.10011199248098346
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.20631331212503737,
+          "rmse": 0.2860832853519503,
+          "bias": 0.09238156956615165
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.23603802281807157,
+          "rmse": 0.3268095981665871,
+          "bias": 0.10810081393335837
+        }
+      },
+      "candidate": {
+        "all": {
+          "n_used": 1460,
+          "mae": 0.21109368276852847,
+          "rmse": 0.28864763216708544,
+          "bias": 0.07814403145816895
+        },
+        "1-24": {
+          "n_used": 742,
+          "mae": 0.19578923172395937,
+          "rmse": 0.26888613546570667,
+          "bias": 0.07013043363451808
+        },
+        "25-48": {
+          "n_used": 718,
+          "mae": 0.22690970320734502,
+          "rmse": 0.30773923537395115,
+          "bias": 0.08642549327592511
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "mae_improvement_pct": 4.452818397892529
+      },
+      "predictions_sha256": "4c40cde914f4d28d37393be9fe7dd2f6705e3cf7c1dc5b0a92ed1a022ba44680"
+    }
+  }
+}

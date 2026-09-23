@@ -16,7 +16,21 @@ FEATURE_SETS = {
     "weather_hour": (*WEATHER_FIELDS, "local_hour_sin", "local_hour_cos"),
     "weather_hour_lead": (*WEATHER_FIELDS, "local_hour_sin", "local_hour_cos", "lead_hours", "gfs_lead_hours"),
 }
+GEOMETRY_FIELDS = (
+    "wind_unit_u_10m", "wind_unit_v_10m", "wind_unit_u_100m", "wind_unit_v_100m",
+    "wind_speed_vertical_difference", "wind_speed_vertical_ratio", "wind_vector_alignment",
+)
+FEATURE_SETS.update({base + "_geometry": (*FEATURE_SETS[base], *GEOMETRY_FIELDS)
+                     for base in ("weather_hour", "weather_hour_lead")})
+FEATURE_VERSIONS = {name: "gfs-power-geometry-v2" if name.endswith("_geometry") else FEATURE_VERSION
+                    for name in FEATURE_SETS}
 TIME_FIELDS = ("forecast_origin", "target_time", "run_initialized_at", "availability_upper_bound")
+
+
+def feature_version_for(feature_set):
+    if feature_set not in FEATURE_VERSIONS:
+        raise BackendError("ML_FEATURE_SCHEMA", "Неизвестная версия набора признаков.")
+    return FEATURE_VERSIONS[feature_set]
 
 
 def utc_series(values):
@@ -63,6 +77,17 @@ def prepare_features(rows, feature_set="weather_hour"):
     hour = frame.target_time.dt.tz_convert("Asia/Almaty").dt.hour
     frame["local_hour_sin"] = np.sin(2 * np.pi * hour / 24)
     frame["local_hour_cos"] = np.cos(2 * np.pi * hour / 24)
+    if feature_set.endswith("_geometry"):
+        for height in (10, 100):
+            speed = frame[f"wind_speed_{height}m_ms"].to_numpy()
+            for component in ("u", "v"):
+                values = frame[f"wind_{component}_{height}m_ms"].to_numpy()
+                frame[f"wind_unit_{component}_{height}m"] = np.divide(
+                    values, speed, out=np.zeros_like(speed), where=speed > 1e-6)
+        frame["wind_speed_vertical_difference"] = frame.wind_speed_100m_ms - frame.wind_speed_10m_ms
+        frame["wind_speed_vertical_ratio"] = frame.wind_speed_100m_ms / (frame.wind_speed_10m_ms + .5)
+        frame["wind_vector_alignment"] = (frame.wind_unit_u_10m * frame.wind_unit_u_100m +
+                                          frame.wind_unit_v_10m * frame.wind_unit_v_100m)
     return frame.loc[:, FEATURE_SETS[feature_set]].astype("float64")
 
 

@@ -22,8 +22,13 @@ def get_model_metadata(*, site_id, forecast_origin):
     if len(candidates) != 1:
         raise BackendError("ML_MODEL_AMBIGUOUS", "Несколько моделей с одинаковым cutoff; используйте отдельный WINDOPS_MODEL_DIR для экспериментов.")
     card = candidates[0]
-    return {key: card[key] for key in ("site_id", "version", "training_cutoff", "normalization", "weather_schema",
-                                      "provider_model", "labels_available_by_cutoff", "feature_version", "purpose")}
+    metadata = {key: card[key] for key in ("site_id", "version", "training_cutoff", "normalization", "weather_schema",
+                                         "provider_model", "labels_available_by_cutoff", "feature_version", "purpose")}
+    context = card.get("experiment_context", {})
+    if context.get("january_independent") is False:
+        metadata["january_comparison_independent"] = False
+        metadata["evaluation_status"] = "Разработочное сравнение на январе; январь уже использовался при разработке."
+    return metadata
 
 
 def predict_power(*, site_id, weather_rows, model_version):

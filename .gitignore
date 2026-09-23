@@ -33,7 +33,15 @@ __pycache__/
 
 # Private local data, models, configuration and generated exports
 config.local.json
+models/
 artifacts/
 exports/
 test-results/
 .playwright/
+
+# Recreated locally from the shipped models and weather cache.
+data/experiments/*/runtime_data/weather
+data/experiments/*/runtime_data/scada
+data/experiments/*/runtime_data/forecasts/
+data/experiments/*/runtime_data/ml/inference/
+data/experiments/*/runtime_data/reports/

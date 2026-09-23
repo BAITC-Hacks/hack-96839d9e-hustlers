@@ -1,0 +1,159 @@
+{
+  "created_at": "2026-09-23T12:28:57.902678Z",
+  "identity": {
+    "candidates": [
+      {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      {
+        "base_features": "weather_hour",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 3,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 4,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      },
+      {
+        "base_features": "weather_hour_lead",
+        "params": {
+          "depth": 6,
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "loss_function": "MAE",
+          "eval_metric": "MAE",
+          "l2_leaf_reg": 3,
+          "random_seed": 2026,
+          "thread_count": 4,
+          "task_type": "CPU",
+          "allow_writing_files": false,
+          "verbose": false
+        }
+      }
+    ],
+    "december_min_mae_gain": 0.01,
+    "january_min_mae_gain": 0.02,
+    "selection": "lowest December MAE among candidates with >=1% gain and no MAE/RMSE regression in either horizon",
+    "january_rule": "only frozen December winner; >=2% MAE gain and no MAE/RMSE regression in either horizon",
+    "january_previously_observed": true,
+    "new_independent_evaluation": false,
+    "feature_semantics": "GFS unit wind vectors, 100m minus 10m speed, ratio with fixed 0.5 m/s denominator offset, vector alignment; each row independently",
+    "libraries": {
+      "python": "3.14.7",
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "catboost": "1.2.10"
+    },
+    "ml_code_sha256": "c2fc1926cc4ce838933df6166bd169707e4f94e487eb16a35be24c7f2bdc5c4f",
+    "scripts": {
+      "improve_weather_features.py": "24375cc17f2c71d37c8eef211943da18957dd299c083b4e6133166d5c702833c",
+      "improve_model.py": "52c79798f0fde07444ccfbd5d5b4a19ee0587b6de14e410226169235e439e0a6"
+    },
+    "protected_files": {
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-15c1adbef5803682b511002d/model.json": "ce935617cdb7a4551e9f53e8cf09cee123b7c8f9a731d4318de47a4fc253d16e",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-15c1adbef5803682b511002d/baselines.json": "418b039c4fac5d649c51b18698c9d0f30f84f0314acc7a15d60f998e6c601d42",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-15c1adbef5803682b511002d/passport.json": "f87eef106c3fb7af1b171b37fd1a82bfdb6abd726c00a6c466c945b5124c7aa7",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-15c1adbef5803682b511002d/passport_checksum.json": "c4938a0bae761aeed6ce0a4239c75a03eb4a352fd0f5887ff918aa74c087b9cc",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-aa9c264cc36f7a875765c07d/model.cbm": "05e5344c429b2695dce56ddcdbc7f6ed2c1d5fb4652626567508f381c4428241",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-aa9c264cc36f7a875765c07d/baselines.json": "462c8481a99ba51d94552032d5ebe5ec6cda52eb3a4646038d8609fc57f4831a",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-aa9c264cc36f7a875765c07d/passport.json": "ed322d7da289c5574c569b0fbd2fed8b6eed00f9965a2f7ac207d23e5dfe8406",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-aa9c264cc36f7a875765c07d/passport_checksum.json": "168968f7fd5da354e5d94dae559f3c0579e6f1ae0cb9408a6aa149e24ede19c0",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-9ffc3398a6c80f479aed4063/model.cbm": "ec0e50e7edd641e58ec04037313554c98b673a6b1b86b0e544fd695c42bd59d4",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-9ffc3398a6c80f479aed4063/baselines.json": "044bf63c2ce24526fc5b3e3610e3dc9719785b69852c14b911a71ff4cc680560",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-9ffc3398a6c80f479aed4063/passport.json": "b90a429c328aab790f450a9ad1bc84432f614ff4afd00edb362ced79a1418e1d",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_1/ml-9ffc3398a6c80f479aed4063/passport_checksum.json": "b0241ce88169d4690331a27defb6322a7177d9ddbfb73a7996071acec512f091",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-89be508b36fd99ee1cac057d/model.json": "b638be148d01a55657a9f32ef743a8af9de48f23342bbcced45314a74e2dd2ed",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-89be508b36fd99ee1cac057d/baselines.json": "a3225ac65be22d247c5f2e9cc76b56e7f259860fc83da3bb5673c1ee63604a40",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-89be508b36fd99ee1cac057d/passport.json": "71a0e9fa396342be831fa746fd9621642dfc684d0fddecb948f7ab0be3a01b1a",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-89be508b36fd99ee1cac057d/passport_checksum.json": "750be57521332e65e4b90d74434897c8e67a58d53bde72bfe0c08373ac23ec41",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-db801e79d7cf6c0bb34e9600/model.cbm": "cfa0c5074cda270e5eb7bc0c32dc42eb74577847d3e234bc4fbab381e47b346a",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-db801e79d7cf6c0bb34e9600/baselines.json": "396533b83e09c9516f20125b5f34d969490ebafd77d0211ce274e0e0233b9c1e",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-db801e79d7cf6c0bb34e9600/passport.json": "c4de763f85bda51dd326c7a23bcbeb7b1660768cbac9474e3ad381f82f3beb4b",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-db801e79d7cf6c0bb34e9600/passport_checksum.json": "137b042dab1f84a66cc15204858b37007573cfd4ee88f82db6b6a8e7d5e056af",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-03e3b3999293875db412a925/model.cbm": "0b1cfdda04030729f72d4b5acaca2ac8092a645fb079f2fba4abe5bf47beb7e1",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-03e3b3999293875db412a925/baselines.json": "743b5bcaaa37de32dabca3a82d36d5f874079774584a22f6163ee1e13f93c57f",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-03e3b3999293875db412a925/passport.json": "b9dbb8dc91448f60ae426e3b8f56328ae132cb16d8388206f1af5cd8f184463c",
+      "/home/abuka/hack-96839d9e-hustlers/models/turbine_2/ml-03e3b3999293875db412a925/passport_checksum.json": "95a5aaf0e28c36a200eb55fc7b15762476159303cc33319579db1aac2d185fa3",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/prepared.json": "0e428f31377798e3e31c770e9b26a124b75534c526dafc92831c93f8a71a8ccb",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/selection.json": "ce62b109ad9bdd7c8ab281137d31d172227c78dc240ac213e70605a892b854c2",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/selection_checksum.json": "39e9d39f25c960065e46898f47fa3298f96b1131145aa9467776b83c7513c25b",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/january_backtest.json": "e080be61870524d3efe8460c25bb4251b0e07dccc51326b4d4acfa487e5f934e",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/january_metrics.json": "bd470f126493c052771527125eab4f7997f4595a14ef2c08ad73140cd8d0beea",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/final_models.json": "3fdba2148f771fd052900203fa66fbde1c7956f6a3b9bb3d562f6c6cfdb87dca",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/february_hourly.csv": "b6f35479eb6d2e65d0c886fc4f3db93b453f540c2ac06f694eb0c1d8d748cfdb",
+      "/home/abuka/hack-96839d9e-hustlers/data/ml/february_full_releases.csv": "08fe0f50a6a2308c12560d50d758d4bee04a1439701e94d8a11d461c9a52e95e",
+      "/home/abuka/hack-96839d9e-hustlers/data/scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+      "/home/abuka/hack-96839d9e-hustlers/data/scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+      "/home/abuka/hack-96839d9e-hustlers/data/weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+    }
+  },
+  "protocol_sha256": "a8e58429924dad62b7c3abba797f101ee81c3bed8869d9e780ff232731312d06"
+}

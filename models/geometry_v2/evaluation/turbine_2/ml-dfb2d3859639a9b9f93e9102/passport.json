@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "site_id": "turbine_2",
+  "version": "ml-dfb2d3859639a9b9f93e9102",
+  "purpose": "january_development",
+  "identity": {
+    "site_id": "turbine_2",
+    "purpose": "january_development",
+    "cutoff": "2025-12-31T17:00:00Z",
+    "config": {
+      "kind": "catboost",
+      "feature_set": "weather_hour_lead_geometry",
+      "params": {
+        "depth": 6,
+        "iterations": 92,
+        "learning_rate": 0.05,
+        "loss_function": "MAE",
+        "eval_metric": "MAE",
+        "l2_leaf_reg": 3,
+        "random_seed": 2026,
+        "thread_count": 4,
+        "task_type": "CPU",
+        "allow_writing_files": false,
+        "verbose": false
+      }
+    },
+    "prepared": "f596b433029b0c3ae999537ac2bfa43189ce4897cf6c46b79e7ec056ea68713c",
+    "selection_digest": "39767937e0bff7ba0f37c1ded46ef0a06839e7492acf806247886820e55059cd",
+    "training_data_sha256": "63b61a91efe726ff44a513dbc9d049ed96f22758c2a1df974c6054f1c9c51224",
+    "feature_version": "gfs-power-geometry-v2",
+    "code_sha256": "cae940c023cd9a0d0b51d2d5457bcbacdefd81017bdbbbe9fb08c9bfb16fe41c",
+    "libraries": {
+      "python": "3.14.7",
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "catboost": "1.2.10"
+    },
+    "experiment_context": {
+      "experiment": "ml_weather_geometry_v1",
+      "january_independent": false,
+      "selection": "Configuration and tree count frozen on December; promotion compared on previously viewed January labels available by final cutoff",
+      "promotion_labels_cutoff": "2026-01-31T17:00:00Z",
+      "promotion_checks_sha256": "6cae9e7882711bf334d13a2fef79c76483e2cde46e04e91af1f27891ef9cfd12",
+      "december_selection_sha256": "39767937e0bff7ba0f37c1ded46ef0a06839e7492acf806247886820e55059cd",
+      "original_independent_backtest": "data/ml/january_backtest.json",
+      "build_script_sha256": "2d0ffcf7c040eff45f37d43dd5f51ca20672a81eae997d366c1fee032116f4ee"
+    }
+  },
+  "training_cutoff": "2025-12-31T17:00:00Z",
+  "config": {
+    "kind": "catboost",
+    "feature_set": "weather_hour_lead_geometry",
+    "params": {
+      "depth": 6,
+      "iterations": 92,
+      "learning_rate": 0.05,
+      "loss_function": "MAE",
+      "eval_metric": "MAE",
+      "l2_leaf_reg": 3,
+      "random_seed": 2026,
+      "thread_count": 4,
+      "task_type": "CPU",
+      "allow_writing_files": false,
+      "verbose": false
+    }
+  },
+  "normalization": "0_1",
+  "weather_schema": "gfs-0p25-nearest-v1",
+  "provider_model": "gfs_pgrb2.0p25",
+  "weather_source": "data/weather/weather_for_ml.csv; NOAA GFS archived forecasts",
+  "labels_available_by_cutoff": true,
+  "feature_version": "gfs-power-geometry-v2",
+  "features": [
+    "wind_speed_10m_ms",
+    "wind_speed_100m_ms",
+    "wind_u_10m_ms",
+    "wind_v_10m_ms",
+    "wind_u_100m_ms",
+    "wind_v_100m_ms",
+    "temperature_2m_c",
+    "local_hour_sin",
+    "local_hour_cos",
+    "lead_hours",
+    "gfs_lead_hours",
+    "wind_unit_u_10m",
+    "wind_unit_v_10m",
+    "wind_unit_u_100m",
+    "wind_unit_v_100m",
+    "wind_speed_vertical_difference",
+    "wind_speed_vertical_ratio",
+    "wind_vector_alignment"
+  ],
+  "feature_dtype": "float64",
+  "feature_ranges": {
+    "wind_speed_10m_ms": {
+      "min": 0.0762595163332225,
+      "max": 14.622677536102046
+    },
+    "wind_speed_100m_ms": {
+      "min": 0.0990436841742919,
+      "max": 20.068480484094064
+    },
+    "wind_u_10m_ms": {
+      "min": -13.8074462890625,
+      "max": 13.63767822265625
+    },
+    "wind_v_10m_ms": {
+      "min": -6.84272216796875,
+      "max": 6.53935546875
+    },
+    "wind_u_100m_ms": {
+      "min": -19.1825390625,
+      "max": 18.214189453125
+    },
+    "wind_v_100m_ms": {
+      "min": -8.5098583984375,
+      "max": 8.319768066406251
+    },
+    "temperature_2m_c": {
+      "min": -9.898808593749948,
+      "max": 22.05195312500001
+    },
+    "local_hour_sin": {
+      "min": -1.0,
+      "max": 1.0
+    },
+    "local_hour_cos": {
+      "min": -1.0,
+      "max": 1.0
+    },
+    "lead_hours": {
+      "min": 1.0,
+      "max": 48.0
+    },
+    "gfs_lead_hours": {
+      "min": 19.0,
+      "max": 66.0
+    },
+    "wind_unit_u_10m": {
+      "min": -0.9999966566471428,
+      "max": 0.9999999997969148
+    },
+    "wind_unit_v_10m": {
+      "min": -0.9989042838326747,
+      "max": 0.9995485960283804
+    },
+    "wind_unit_u_100m": {
+      "min": -0.9999938940987514,
+      "max": 0.9999999961344447
+    },
+    "wind_unit_v_100m": {
+      "min": -0.9999798247867598,
+      "max": 0.9995982041554328
+    },
+    "wind_speed_vertical_difference": {
+      "min": -1.1691895450425638,
+      "max": 5.6768751131675526
+    },
+    "wind_speed_vertical_ratio": {
+      "min": 0.12165951821862976,
+      "max": 2.114342445718183
+    },
+    "wind_vector_alignment": {
+      "min": -0.9530480219744066,
+      "max": 0.9999999950581846
+    }
+  },
+  "training_weather_lead_ranges": {
+    "lead_hours": {
+      "min": 1.0,
+      "max": 48.0
+    },
+    "gfs_lead_hours": {
+      "min": 19.0,
+      "max": 66.0
+    }
+  },
+  "label_policy": {
+    "interval_label": "start",
+    "scada_delay_minutes": 0,
+    "timestamp_format": "mixed",
+    "timezone": "Asia/Almaty",
+    "target_time": "start of hour",
+    "semantics_confirmed": false,
+    "delay_confirmed": false,
+    "assumption": "Unconfirmed interval labels and SCADA arrival delay; available at hour end plus configured delay.",
+    "quality_rule": "six valid unique on-grid observations; any duplicate/invalid/off-grid row rejects hour"
+  },
+  "input_checksums": {
+    "scada/turbine_1.csv": "c4c341582fb2dd348b7187f0128cff265fe055f469413871ebb5db50eef58b5b",
+    "scada/turbine_2.csv": "820578cd18bb557cd30c2e102f3ae5a386dfc6c489a5a15743339c2b017305e5",
+    "weather/weather_for_ml.csv": "5c1efc17beac322ea545ca77ed4dfdce6a678c070a3b8b38a1cbb329994f4dc0"
+  },
+  "training_summary": {
+    "rows": 4254,
+    "unique_target_hours": 2139,
+    "target_start": "2025-09-30T19:00:00Z",
+    "target_end": "2025-12-31T16:00:00Z",
+    "max_label_available_at": "2025-12-31T17:00:00Z"
+  },
+  "output_policy": "reject nonfinite predictions; fixed clip to [0,1] in all paths",
+  "training_prediction_clipped": 0,
+  "trained_at": "2026-09-23T12:33:56.384329Z",
+  "training_seconds": 0.186136,
+  "limitations": [
+    "SCADA interval semantics and arrival delay unconfirmed",
+    "Update origins/leads may differ from training; update accuracy not evaluated",
+    "Normalized power, rated MW unknown; February actuals unavailable"
+  ],
+  "artifact_checksums": {
+    "model.cbm": "b395377c3da8ca9a6facc091624e36c9974e0c81797c8c8ff3ee53657cad4b7d",
+    "baselines.json": "396533b83e09c9516f20125b5f34d969490ebafd77d0211ce274e0e0233b9c1e"
+  },
+  "experiment_context": {
+    "experiment": "ml_weather_geometry_v1",
+    "january_independent": false,
+    "selection": "Configuration and tree count frozen on December; promotion compared on previously viewed January labels available by final cutoff",
+    "promotion_labels_cutoff": "2026-01-31T17:00:00Z",
+    "promotion_checks_sha256": "6cae9e7882711bf334d13a2fef79c76483e2cde46e04e91af1f27891ef9cfd12",
+    "december_selection_sha256": "39767937e0bff7ba0f37c1ded46ef0a06839e7492acf806247886820e55059cd",
+    "original_independent_backtest": "data/ml/january_backtest.json",
+    "build_script_sha256": "2d0ffcf7c040eff45f37d43dd5f51ca20672a81eae997d366c1fee032116f4ee"
+  },
+  "save_load_predictions_identical": true
+}

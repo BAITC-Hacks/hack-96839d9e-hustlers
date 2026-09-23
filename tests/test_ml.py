@@ -85,13 +85,14 @@ def test_zero_hour_retained_and_old_time_not_localized():
     assert audit["outside_main_window_rows"] == audit["invalid_timestamp_rows"] == 1
 
 
-def test_features_ignore_future_measurements_and_keep_column_order():
+@pytest.mark.parametrize("feature_set", ["weather_hour_lead", "weather_hour_lead_geometry"])
+def test_features_ignore_future_measurements_and_keep_column_order(feature_set):
     rows = weather_rows()
-    expected = prepare_features(rows, "weather_hour_lead")
+    expected = prepare_features(rows, feature_set)
     augmented = [{**row, "actual": np.nan, "Средняя скорость ветра(m/s)": 1e20,
                   "retrieved_at": "2099-01-01", "ID": 234} for row in rows]
-    pd.testing.assert_frame_equal(expected, prepare_features(augmented, "weather_hour_lead"))
-    assert list(expected.columns) == list(FEATURE_SETS["weather_hour_lead"])
+    pd.testing.assert_frame_equal(expected, prepare_features(augmented, feature_set))
+    assert list(expected.columns) == list(FEATURE_SETS[feature_set])
     assert all(dtype == "float64" for dtype in expected.dtypes)
     assert expected.iloc[0].local_hour_sin == 0  # local midnight
     assert expected.iloc[0].lead_hours == 1 and expected.iloc[0].gfs_lead_hours == 19
@@ -178,25 +179,27 @@ def test_split_boundaries_cutoff_and_overlapping_origins(prepared_fixture):
 
 
 @pytest.mark.parametrize("kind", ["wind_table", "catboost"])
-def test_real_estimator_save_load_plugin_contract_on_fixtures(prepared_fixture, monkeypatch, kind):
+@pytest.mark.parametrize("feature_set", ["weather_hour_lead", "weather_hour_lead_geometry"])
+def test_real_estimator_save_load_plugin_contract_on_fixtures(prepared_fixture, monkeypatch, kind, feature_set):
     root, frame, manifest = prepared_fixture
     models = root / "test_models"
     monkeypatch.setenv("WINDOPS_MODEL_DIR", str(models))
     monkeypatch.setenv("WINDOPS_DATA_DIR", str(root))
     monkeypatch.setenv("WINDOPS_ML_MODULE", "windops.ml.plugin")
     monkeypatch.setenv("WINDOPS_EXECUTION_MODE", "deterministic")
-    config = {"kind": kind, "feature_set": "weather_hour_lead"}
+    config = {"kind": kind, "feature_set": feature_set}
+    context = {"january_independent": False} if feature_set.endswith("_geometry") else None
     if kind == "catboost":
         config["params"] = {"iterations": 5, "depth": 2, "thread_count": 2, "random_seed": 2026,
                             "verbose": False, "allow_writing_files": False, "task_type": "CPU", "loss_function": "MAE"}
     train = training_rows(frame, "january")
     train = train.loc[train.site_id == "turbine_1"]
     card = train_artifact(train, config, site_id="turbine_1", purpose="explicit_test_fixture",
-                          cutoff=CUTOFFS["january"], prepared=manifest, models=models)
+                          cutoff=CUTOFFS["january"], prepared=manifest, models=models, experiment_context=context)
     folder = models / "turbine_1" / card["version"]
     assert read_passport(folder)["save_load_predictions_identical"]
     repeated = train_artifact(train, config, site_id="turbine_1", purpose="explicit_test_fixture",
-                              cutoff=CUTOFFS["january"], prepared=manifest, models=models)
+                              cutoff=CUTOFFS["january"], prepared=manifest, models=models, experiment_context=context)
     assert repeated == card
     with pytest.raises(BackendError, match="ML_MODEL_MISSING"):
         get_model_metadata(site_id="turbine_1", forecast_origin="2025-12-01T00:00:00Z")
@@ -206,6 +209,11 @@ def test_real_estimator_save_load_plugin_contract_on_fixtures(prepared_fixture, 
         weather = weather_rows("2026-01-31T23:00:00+05:00", horizon=horizon)
         metadata = get_model_metadata(site_id="turbine_1", forecast_origin=weather[0]["forecast_origin"])
         assert metadata["version"] == card["version"]
+        if context:
+            assert metadata["january_comparison_independent"] is False
+            assert metadata["feature_version"] == "gfs-power-geometry-v2"
+        else:
+            assert metadata["feature_version"] == "gfs-power-v1"
         result = predict_power(site_id="turbine_1", weather_rows=weather, model_version=card["version"])
         expected, _ = predict_model(load_model(folder), config, weather)
         np.testing.assert_array_equal([r["prediction"] for r in result], expected)

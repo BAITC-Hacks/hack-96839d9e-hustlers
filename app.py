@@ -14,7 +14,7 @@ import streamlit as st
 
 from windops.ui.adapter import AdapterError, BackendAdapter, load_bundle_json, validate_bundle, sanitize_metadata, combine_bundles
 from windops.ui.charts import forecast_chart, weather_chart
-from windops.ui.components import render_header, render_metric_cards, render_forecast_overview
+from windops.ui.components import POWER_UNIT_HELP, render_header, render_metric_cards, render_forecast_overview
 from windops.ui.configuration import load_configuration
 from windops.ui.exports import selected_csv, passport_json, replay_csv, february_csv
 from windops.ui.fixtures import synthetic_bundle
@@ -23,7 +23,7 @@ from windops.ui.state import initialize_state, begin_run, finish_run, fail_run, 
 from windops.ui.theme import apply_theme, PLOT_CONFIG
 
 
-FEBRUARY_NOTICE = "Фактическая выработка за февраль 2026 не предоставлена. Показан прогноз; ошибка на этом периоде не рассчитана"
+FEBRUARY_NOTICE = "Фактическая мощность за февраль 2026 не предоставлена. Показан прогноз; ошибка на этом периоде не рассчитана"
 SOURCE_LABELS = {"real": "Архивные данные · новый расчёт", "cached": "Сохранённый выпуск", "demo": "Синтетические данные"}
 
 
@@ -127,6 +127,11 @@ def render_forecast(bundle, configured):
         st.warning("Для графика нужны корректные прогнозные строки и подтверждённый часовой пояс.")
     if all(q in rows and rows[q].notna().any() for q in ("p10", "p90")):
         st.caption("P10–P90 — заявленный моделью прогнозный диапазон, не гарантия. Независимое покрытие не оценено на этом экране.")
+    st.caption(POWER_UNIT_HELP)
+    if any(isinstance(member.provenance.get("model"), dict) and
+           member.provenance["model"].get("january_comparison_independent") is False
+           for member in (getattr(bundle, "members", []) or [bundle])):
+        st.caption("Качество этой версии сравнивалось на уже просмотренном январе. Это разработочная оценка; точность февраля пока неизвестна.")
     st.info(FEBRUARY_NOTICE)
     issue_details(result)
 
@@ -220,7 +225,7 @@ def render_agent(bundle, backend, configured):
                 st.markdown(f"**{name}**")
                 data = member_provenance.get(area, {})
                 data = data if isinstance(data, dict) else {}
-                labels = {"source": "Источник", "version": "Версия", "run_initialized_at": "Инициализация погодной модели", "available_at": "Исторически доступно с", "availability_upper_bound": "Верхняя оценка доступности", "availability_basis": "Основание оценки доступности", "retrieved_at": "Время скачивания", "training_cutoff": "Последнее обучающее наблюдение", "data_kind": "Тип источника", "normalization": "Нормировка"}
+                labels = {"source": "Источник", "version": "Версия", "run_initialized_at": "Инициализация погодной модели", "available_at": "Исторически доступно с", "availability_upper_bound": "Верхняя оценка доступности", "availability_basis": "Основание оценки доступности", "retrieved_at": "Время скачивания", "training_cutoff": "Граница доступности обучающих ответов", "data_kind": "Тип источника", "normalization": "Нормировка", "evaluation_status": "Оценка качества"}
                 for key, title in labels.items():
                     if key in data:
                         st.text(f"{title}: {data[key]}")
@@ -318,9 +323,11 @@ def render_replay(backend, config):
                 st.download_button("Все версии replay · диагностический CSV", replay_csv(replay.bundles), "diagnostic_invalid_replay.csv", "text/csv", on_click="ignore")
                 final_ok = all(validate_bundle(b).exportable for b in replay.bundles) and not replay.errors
                 st.download_button("Все версии replay · итоговый CSV", replay_csv(replay.bundles, final=True) if final_ok else b"", "replay_all_versions.csv", "text/csv", disabled=not final_ok, on_click="ignore")
-                agreed = st.checkbox("Для таблицы февраля выбираю последний доступный выпуск до целевого часа", key="february_rule")
-                st.caption("Это выбранное правило команды, не утверждённый формат организаторов. Полные выпуски сохраняют часы марта.")
-                if agreed:
+                agreed = st.checkbox("Для каждого дня беру часы 1–24 исходного выпуска предыдущего дня в 23:00", key="february_rule")
+                st.caption("Внутридневные обновления не заменяют исходные выпуски. Это правило команды, не утверждённый формат организаторов.")
+                if agreed and not final_ok:
+                    st.warning("Итоговая таблица недоступна: replay содержит ошибки или непроверенные выпуски.")
+                if agreed and final_ok:
                     try:
                         data = february_csv(replay.bundles, list(config.sites), config.timezone, final=True)
                         st.download_button("Февраль · один прогноз на час", data, "february_selected.csv", "text/csv", on_click="ignore")

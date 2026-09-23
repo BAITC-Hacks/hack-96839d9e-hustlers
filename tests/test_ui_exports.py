@@ -69,10 +69,10 @@ def month_bundles(make_bundle):
             for day, origin in enumerate(pd.date_range("2026-01-31T23:00:00Z", periods=28, freq="D"))]
 
 
-def test_february_grid_and_latest_historical_release(make_bundle):
+def test_february_grid_and_original_previous_day_release(make_bundle):
     bundles = month_bundles(make_bundle)
     frame = read_csv(february_csv(bundles, ["site-a", "site-b"], "UTC",
-                                  rule="latest_available_before_target", final=True))
+                                  rule="daily_previous_day_23", final=True))
     assert len(frame) == 1344
     times = pd.to_datetime(frame.target_time, utc=True)
     expected = set(pd.date_range("2026-02-01T00:00:00Z", periods=672, freq="h"))
@@ -87,6 +87,42 @@ def test_february_grid_and_latest_historical_release(make_bundle):
 def test_february_partial_grid_never_passes_as_complete(make_bundle):
     with pytest.raises(ExportBlocked):
         february_csv([make_bundle()], ["site-a", "site-b"], "UTC", final=True)
+
+
+def test_february_almaty_uses_originals_and_excludes_updates(make_bundle):
+    bundles = [make_bundle(origin=origin.isoformat(), forecast_id=f"day-{day}")
+               for day, origin in enumerate(pd.date_range("2026-01-31 23:00", periods=29, freq="D", tz="Asia/Almaty"))]
+    for bundle in bundles:
+        bundle.timezone = "Asia/Almaty"
+    original = february_csv(bundles, ["site-a", "site-b"], "Asia/Almaty", final=True)
+    intraday = make_bundle(origin="2026-02-01T11:00:00+05:00", forecast_id="intraday")
+    intraday.timezone = "Asia/Almaty"
+    intraday.rows["prediction"] = .9
+    intraday.revises_forecast_id = bundles[0].forecast_id
+    same_origin = make_bundle(origin=bundles[0].rows.issued_at.iloc[0], forecast_id="revised-at-original-origin")
+    same_origin.timezone = "Asia/Almaty"
+    same_origin.revises_forecast_id = bundles[0].forecast_id
+    same_origin.rows["prediction"] = .8
+    actual = february_csv([*bundles, intraday, same_origin], ["site-a", "site-b"], "Asia/Almaty", final=True)
+    assert actual == original
+    frame = read_csv(actual)
+    target = pd.to_datetime(frame.target_time, utc=True).dt.tz_convert("Asia/Almaty")
+    issued = pd.to_datetime(frame.issued_at, utc=True)
+    assert issued.eq(target.dt.normalize() - pd.Timedelta(hours=1)).all()
+    assert frame.horizon_step.between(1, 24).all() and len(frame) == 1344
+    assert target.min() == pd.Timestamp("2026-02-01T00:00:00+05:00")
+    assert target.max() == pd.Timestamp("2026-02-28T23:00:00+05:00")
+
+
+def test_update_link_survives_adapter_and_passport(make_bundle):
+    from windops.ui.adapter import _bundle, load_bundle_json
+    original = make_bundle(forecast_id="revision")
+    original.revises_forecast_id = "previous-release"
+    adapted = _bundle(original, trusted=True)
+    assert adapted.revises_forecast_id == "previous-release"
+    uploaded = load_bundle_json(passport_json(adapted))
+    assert uploaded.revises_forecast_id == "previous-release"
+    assert uploaded.verification_origin == "uploaded_unverified"
 
 
 def test_unknown_february_selection_rule_rejected(make_bundle):

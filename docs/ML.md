@@ -1,6 +1,14 @@
 # ML участника №1
 
-## Фактическое состояние этого checkout
+## Текущая версия geometry v2
+
+По последующему запросу добавлены семь признаков геометрии прогнозного ветра.
+Новые модели прошли условия замены без ухудшения MAE/RMSE по обоим горизонтам;
+подробности, статус январского сравнения, пути и запуск —
+[MODEL_IMPROVEMENT.md](MODEL_IMPROVEMENT.md). Быстрый запуск:
+`bash scripts/run_improved.sh`. Исходные модели и независимая оценка v1 сохранены.
+
+## Исходная версия v1: методика и результаты
 
 Реализованы подготовка данных, два обучаемых baseline, ограниченный выбор
 CatBoost на декабре, отдельная январская проверка, финальное обучение,
@@ -39,12 +47,17 @@ data/weather/bundles/
 Применение `eval_set`, `early_stopping_rounds` и `use_best_model` соответствует
 [официальному контракту fit](https://catboost.ai/docs/en/concepts/python-reference_catboostregressor_fit).
 
+Ниже команды исходного v1. После добавления v2 для повторения зафиксированного
+выбора нужен сохранённый исходный код `artifacts/ml_original_source/`;
+восстановление из существующего commit описано в MODEL_IMPROVEMENT.md.
 Из корня репозитория:
 
 ```bash
 python -m venv .venv
 .venv/bin/python -m pip install -r requirements-dev.txt -r requirements-ml.txt
-export PYTHONPATH=src
+export PYTHONPATH="$PWD/artifacts/ml_original_source"
+export WINDOPS_DATA_DIR="$PWD/data"
+export WINDOPS_MODEL_DIR="$PWD/models"
 export WINDOPS_ML_MODULE=windops.ml.plugin
 export WINDOPS_EXECUTION_MODE=deterministic
 export WINDOPS_OFFLINE=1
@@ -75,6 +88,7 @@ forecast_id="$(.venv/bin/python -c 'import json; from windops.core import data_r
 .venv/bin/python -m pytest -q tests/test_ui_smoke.py
 
 # Полные проверки, включая настоящий ML/backend:
+export PYTHONPATH="$PWD/src"
 export WINDOPS_RUN_REAL_ML_TEST=1
 .venv/bin/python -m pytest -q
 .venv/bin/python -m compileall -q src tests
@@ -100,7 +114,7 @@ f007…f054; будущий цикл 06 UTC должен отклоняться 
 Ни одна из этих проверок не подтверждает работу живого LLM-агента.
 
 `WINDOPS_DATA_DIR` позволяет указать настоящий каталог данных в другом месте.
-`WINDOPS_MODEL_DIR` переопределяет игнорируемую папку `models/`.
+`WINDOPS_MODEL_DIR` переопределяет папку `models/`.
 Плагин не требует `.env`; экспортируйте переменные в оболочке.
 
 ## Время и качество цели
@@ -243,8 +257,10 @@ target_time в том же порядке. Она не читает SCADA, не 
 | `data/ml/february_export.json` | Правило отбора, точная сетка, контрольные суммы |
 
 Все перечисленные результаты созданы на настоящих локальных данных.
-Папки `models/`, `artifacts/`, `test-results/` исключены из Git. Исходные данные
-в `data/` уже отслеживаются; новые расчёты не коммитились и не отправлялись.
+Правило `.gitignore` исключает новые файлы `models/`, `artifacts/`, `test-results/`.
+Команда ранее добавила исходные данные и шесть моделей в Git; уже отслеживаемые
+файлы не становятся игнорируемыми. Аудит сохранил их и историю пользователя.
+Commit и push при аудите не выполнялись.
 
 ## Метрики и ограничения
 
@@ -313,6 +329,12 @@ D−1 в 23:00. Промежуточные обновления исключен
 январских прогнозов: 0 для обеих моделей. Январский JSON содержит 2 928 строк
 и принимается существующим UI. Эти метрики не являются оценкой финальных моделей.
 
+Дополнительная проверка качества выявила среднее завышение +0.0984/+0.1000
+и абсолютную ошибку более 0.50 у 12.02%/12.64% январских пар.
+Прохождение тестов не означает высокой точности. Единицы, месяцы, графики и
+конкретные ошибки разобраны в [MODEL_REVIEW.md](MODEL_REVIEW.md);
+эта диагностика не меняет модели и не используется для настройки по январю.
+
 Сохранённые версии (в каждой папке `model.cbm` и паспорт):
 
 | Назначение | turbine_1 | turbine_2 |
@@ -335,15 +357,22 @@ D−1 в 23:00. Промежуточные обновления исключен
 
 ## Выполненные проверки
 
-На этом рабочем месте: **162 passed, без пропусков** с настоящими данными,
+На этом рабочем месте: **164 passed, без пропусков** с настоящими данными,
 `WINDOPS_RUN_REAL_ML_TEST=1` и `WINDOPS_SMOKE_BUNDLE` на реальный финальный выпуск.
 Пройдены сохранение/загрузка, оба горизонта обеих турбин, перестановка входов,
 повторы без новых версий, настоящий offline GFS, UI backtest, прямой BackendAdapter,
 его итоговый экспорт и отказ итогового экспорта для загруженного JSON.
-Результаты — `data/ml/backend_verification.json` и `artifacts/ml_tests.xml`.
+Результаты — `data/ml/backend_verification.json` и `artifacts/tz_tests.xml`.
 Общий отчёт с контрольными суммами, версиями, объёмами обучения, метриками,
 проверками и ограничениями — `data/ml/run_summary.json`.
 `compileall`, `pip check`, `git diff --check` также пройдены.
+
+Дополнительный аудит по ТЗ — [TZ_AUDIT.md](TZ_AUDIT.md): независимое восстановление
+5904 часовых целей из raw CSV, проверка 7296 объектов кэша, воспроизведение всех
+16 декабрьских экспериментов и четырёх фиксированных CatBoost refit в памяти.
+Код ML, исходный выбор, сохранённые модели и январские результаты не менялись.
+Команда: `PYTHONPATH=src .venv/bin/python scripts/audit_ml.py`.
+Браузерная проверка настоящего прогноза, обновления и выгрузки описана в [DEMO.md](DEMO.md).
 
 ```bash
 .venv/bin/python -m pytest -q

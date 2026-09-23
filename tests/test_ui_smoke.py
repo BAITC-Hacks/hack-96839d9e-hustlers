@@ -30,8 +30,20 @@ def test_app_without_backend_is_empty_and_demo_off(isolated_environment):
     assert app.button(key="run_forecast").disabled
     assert not app.session_state["history"]
     assert len(app.tabs) == 3
-    assert any("Фактическая выработка за февраль" in item.value for item in app.info)
-    assert any("backtest пока не предоставлен" in item.value for item in app.info)
+    assert any("Фактическая мощность за февраль" in item.value for item in app.info)
+    assert any("backtest пока не загружен" in item.value for item in app.info)
+
+
+def test_development_comparison_is_not_presented_as_independent(isolated_environment):
+    from test_ui_charts_quality import backtest_payload
+    from windops.ui.quality import load_backtest
+    payload = backtest_payload()
+    payload["provenance"]["evaluation_independent"] = False
+    app = AppTest.from_file(str(APP), default_timeout=20).run()
+    app.session_state["quality_artifact"] = load_backtest(payload)
+    app.run()
+    assert not app.exception
+    assert any("Это не новая независимая проверка" in item.value for item in app.warning)
 
 
 def test_explicit_demo_load_and_draft_parameters_do_not_replace_result(isolated_environment):
@@ -203,6 +215,9 @@ def test_partial_backend_replay_shows_errors_and_blocks_final_export(monkeypatch
     downloads = app.get("download_button")
     final = next(item for item in downloads if item.proto.label == "Все версии replay · итоговый CSV")
     assert final.proto.disabled
+    app.checkbox(key="february_rule").set_value(True).run()
+    assert any("replay содержит ошибки" in item.value for item in app.warning)
+    assert not any(item.proto.label == "Февраль · один прогноз на час" for item in app.get("download_button"))
     app.run()
     assert not app.exception
     assert len(calls) == 1

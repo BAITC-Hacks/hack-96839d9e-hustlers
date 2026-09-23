@@ -4,12 +4,18 @@ from html import escape
 from collections.abc import Mapping, Sequence
 
 
+POWER_UNIT_HELP = (
+    "Каждая точка — средняя нормализованная мощность за час, начинающийся в указанное время. "
+    "Шкала 0–1. Для перевода в МВт и МВт·ч нужны подтверждённые параметры нормировки мощности."
+)
+
+
 def render_header(mode_label: str = "Исторический запуск", status_label: str = "Нет данных", demo: bool = False) -> None:
     import streamlit as st
 
     st.html(
         '<header class="windops-header"><div><h1 class="windops-brand">WindOps <span>AI</span></h1>'
-        '<p class="windops-subtitle">Почасовой прогноз выработки ВЭС</p></div>'
+        '<p class="windops-subtitle">Почасовая мощность ВЭС · шкала 0–1</p></div>'
         '<div class="windops-badges"><span class="windops-badge">'
         + escape(str(mode_label)) + '</span><span class="windops-badge">'
         + escape(str(status_label)) + '</span></div></header>'

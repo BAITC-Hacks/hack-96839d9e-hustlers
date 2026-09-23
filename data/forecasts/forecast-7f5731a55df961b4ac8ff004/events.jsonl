@@ -1,0 +1,7 @@
+{"recorded_at": "2026-09-23T11:54:36.026931Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "weather_updated", "status": "success", "old_weather_version": "gfs-8e9ba8aecc67611f65bf768c", "new_weather_version": "gfs-4af0dea4da39acdac6609114"}
+{"recorded_at": "2026-09-23T11:54:36.028038Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "fetch_weather", "status": "error", "error_code": "FUTURE_WEATHER"}
+{"recorded_at": "2026-09-23T11:54:36.055692Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "fetch_weather", "status": "success", "candidate_index": 1, "duration_seconds": 0.028}
+{"recorded_at": "2026-09-23T11:54:36.056506Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "validate_weather", "status": "success"}
+{"recorded_at": "2026-09-23T11:54:36.080987Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "predict_power", "status": "success"}
+{"recorded_at": "2026-09-23T11:54:36.081007Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "analyse_forecast", "status": "success"}
+{"recorded_at": "2026-09-23T11:54:36.086182Z", "forecast_origin": "2026-02-01T06:00:00Z", "tool": "publish_forecast", "status": "success"}

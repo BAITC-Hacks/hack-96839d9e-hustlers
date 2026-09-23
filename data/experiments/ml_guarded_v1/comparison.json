@@ -1,0 +1,15 @@
+{
+  "kind": "posthoc_model_comparison",
+  "independent": false,
+  "selection_sha256": "f79589af5de900965fa26d74c77dec26838974a6d492a90cc7e0027e264a7c8c",
+  "sites": {
+    "turbine_1": {
+      "replace": false,
+      "reason": "No candidate passed the December gate"
+    },
+    "turbine_2": {
+      "replace": false,
+      "reason": "No candidate passed the December gate"
+    }
+  }
+}

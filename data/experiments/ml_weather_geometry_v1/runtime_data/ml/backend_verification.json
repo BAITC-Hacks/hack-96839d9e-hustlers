@@ -1,0 +1,58 @@
+{
+  "mode": "real_offline_deterministic",
+  "live_llm_tested": false,
+  "forecasts": [
+    {
+      "site_id": "turbine_1",
+      "horizon": 24,
+      "forecast_id": "forecast-11e566290ac1448833fa4103",
+      "model_version": "ml-483c8ee3abe0fe0e00412708"
+    },
+    {
+      "site_id": "turbine_1",
+      "horizon": 48,
+      "forecast_id": "forecast-02326c986e2fb5c389d27361",
+      "model_version": "ml-483c8ee3abe0fe0e00412708"
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon": 24,
+      "forecast_id": "forecast-588d0d73beb0244cd9ea9ab3",
+      "model_version": "ml-fbef3053c41202da61a895a2"
+    },
+    {
+      "site_id": "turbine_2",
+      "horizon": 48,
+      "forecast_id": "forecast-5d1b519213bd817d80087b52",
+      "model_version": "ml-fbef3053c41202da61a895a2"
+    }
+  ],
+  "adapter_final_export": true,
+  "uploaded_json_final_export": false,
+  "idempotent": true,
+  "permutation_verified": true,
+  "future_model_rejected": true,
+  "smoke_bundle": "/home/abuka/hack-96839d9e-hustlers/data/experiments/ml_weather_geometry_v1/runtime_data/forecasts/forecast-02326c986e2fb5c389d27361/bundle.json",
+  "january_rows_loaded": 2928,
+  "replay_releases": 58,
+  "february_export": {
+    "hourly_rows": 1344,
+    "full_release_rows": 2784,
+    "original_releases": 58,
+    "rule": "For local day D: steps 1–24 of original daily D−1 23:00 Asia/Almaty; no intraday updates",
+    "target_start_local": "2026-02-01T00:00:00+05:00",
+    "target_end_exclusive_local": "2026-03-01T00:00:00+05:00",
+    "february_metrics": null,
+    "reason": "No February actual power provided",
+    "checksums": {
+      "february_hourly.csv": "1309795d7ea51ce544516f6ae693f9eca8be698f223b0dcee11691a11cec1c2a",
+      "february_full_releases.csv": "9c208d32152596141c0234646d4b158696f647275e216c50bec92e751a537a6c"
+    }
+  },
+  "update": {
+    "old_forecast_id": "forecast-02326c986e2fb5c389d27361",
+    "new_forecast_id": "forecast-d4a18feaf7c7e19ba83e9dca",
+    "as_of": "2026-02-01T06:00:00Z"
+  },
+  "no_retraining": true
+}

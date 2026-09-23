@@ -1,0 +1,63 @@
+{
+  "status": "active",
+  "activated_at": "2026-09-23T12:43:13.581171+00:00",
+  "url": "http://127.0.0.1:8501",
+  "model_directory": "/home/abuka/hack-96839d9e-hustlers/models/geometry_v2/active",
+  "data_directory": "/home/abuka/hack-96839d9e-hustlers/data/experiments/ml_weather_geometry_v1/runtime_data",
+  "models": {
+    "turbine_1": "ml-483c8ee3abe0fe0e00412708",
+    "turbine_2": "ml-fbef3053c41202da61a895a2"
+  },
+  "january_comparison_independent": false,
+  "promotion_labels_cutoff": "2026-01-31T17:00:00Z",
+  "both_cutoff_aware_gates_passed": true,
+  "original_protected_files_unchanged": 35,
+  "source_and_model_implementation_hash_verified": "cae940c023cd9a0d0b51d2d5457bcbacdefd81017bdbbbe9fb08c9bfb16fe41c",
+  "pytest": {
+    "tests": 175,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "compileall": "passed",
+  "pip_check": "passed",
+  "original_reproduction_audit": "artifacts/original_after_geometry.json",
+  "active_ui_browser_report": "test-results/browser-geometry-v2-active/results.json",
+  "backend_report": "data/experiments/ml_weather_geometry_v1/runtime_data/ml/backend_verification.json",
+  "browser": {
+    "mode": "real_offline_deterministic",
+    "live_llm_tested": false,
+    "selected_forecast_rows": 96,
+    "viewports": [
+      {
+        "width": 1366,
+        "height": 768,
+        "horizontal_overflow": false
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "horizontal_overflow": false
+      },
+      {
+        "width": 800,
+        "height": 900,
+        "horizontal_overflow": false
+      }
+    ],
+    "january_artifact_loaded": true,
+    "january_evaluation_independent": false,
+    "update_via_ui": true,
+    "replay_releases": 58,
+    "replay_errors": 0,
+    "full_replay_rows": 2784,
+    "february_rows": 1344,
+    "downloads_match_saved_predictions": true,
+    "javascript_errors": [],
+    "status": "passed",
+    "model_artifacts_unchanged": true
+  },
+  "february_metrics": null,
+  "reason_no_february_metrics": "No actual February power provided",
+  "live_llm_tested": false
+}
